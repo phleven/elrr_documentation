@@ -492,6 +492,12 @@ Delete local Git Branch:
    a. git branch -d BugFix_RGHT-135859-ignore-customized-questions
 
 
+Remove remote Git Repository:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git remote remove ellr_documentation
+
+
 
 Create a new local Git Repository:
 1. Open terminal
@@ -507,7 +513,32 @@ Commit files to local Git Repository:
    c. git commit -m "Initial commit."
 
 
+Create a Remote GitHub Repository:
+1. Open http://www.github.com/ in browser  
 
+2. Log into GitHub
+   a. user name - phleven
+   b. password = phil55.cindy61 
+     (email = phleven@deloitte.com)
+   c. New -or- Create Repository
+      1. Repository name = elrr_documentation
+      2. Check public
+      3. Check Add readMe file
+
+
+
+Add Remote Git repository to Local Git Repository:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git remote add elrr_documentation https://github.com/phleven/elrr_documentation.git
+   c. git remote
  
+
+
+Synchronize Local and Remote Git Repositories:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git pull elrr_documentation main --allow-unrelated-histories
+   c. git push elrr_documentation main
 
 
