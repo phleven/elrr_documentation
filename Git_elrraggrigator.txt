@@ -1,0 +1,513 @@
+elrr
+
+
+Use Java 17
+Install Dependencies
+Clone Remote Git Repository
+Create a new Eclipse Workspace
+Import Project Into Eclipse
+Modify application.properties for elrrexternalservices
+Modify application-local.properties for elrrexternalservices
+Modify application-local.properties for ellrdatasynch
+Create Docker Containers
+Create and populate PostgreSQL staging schema
+Run elrrexternalservices
+Application UI
+Run elrrexternalservices
+Run elrrdatasynch
+Run elrraggregation
+Run Postman to populate lrs-db
+Remove Application from Docker
+View runnung Docker containers
+View Kafka topics
+View Kafka topic messages
+KafkaMagic
+
+Commit To Remote Git Repository From Command Line
+Create a new Git feature branch from an existing branch
+Create Pull Request
+Analyzing code with the Maven PMD plugin
+Update Maven Project
+List Files In Local Git Repo
+Show Git Remote Tracking Branches
+Show Maven Effective POM
+Show Git Remote Origin
+Git Remove a file that you have added but not committed
+Git Discard Changes in Working Directory
+Git Remove single file from committed area (local latest commit)
+Git Undo Last Commit to Local Repository
+Show Git Configuration
+Delete local Git Branch
+Create a new local Git Repository
+Commit files to local Git Repository
+
+
+
+Use Java 17:
+   c. java -version
+   d. echo $JAVA_HOME
+
+
+
+Install Dependencies:
+1. Install git
+2. Install Maven
+3. Install Docker Desktop
+
+
+
+Clone elrraggregator Remote Git Repository (NOT USED):
+1. Open terminal
+   a. md C:\Dev\elrraggrigator
+   b. cd C:\Dev\elrraggrigator
+   c. git clone -b agg-update https://github.com/US-ELRR/elrraggregator.git
+
+
+
+Create a new Eclipse Workspace:
+1. Open Eclipse
+   a. Set Java version in Eclipse
+      1. Eclipse --> Preferences --> Java --> Installed JREs
+         a. Check Java SE 17
+
+         b. Right click on ellraggrigator --> Properties --> Project Facets
+            1. Java = 17 --> Apply and Close
+
+   b. Import Project into Eclipse
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrraggregator.git
+         b. Select agg-update branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\ellr\elrraggregator
+        
+      2. Eclipse --> Show View --> Git Repositories -->Right click on ellaggrigator [agg-update] C:\Users\phleven\git\elrraggregator\.git 
+	--> Working Tree - C:\Users\phleven\git\elrraggregator\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrraggregator
+         b. Check all folders
+        
+
+      3. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrexternalservices.git
+         b. Select ext-update branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrrexternalservices
+        
+      4. Eclipse --> Show View --> Git Repositories -->Right click on ellrexternalservices [ext-update] C:\Users\phleven\git\elrrexternalservices\.git 
+	--> Working Tree - C:\Users\phleven\git\elrraggregator\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrexternalservices
+         b. Check all folders
+
+
+      5. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrdatasync.git
+         b. Select pom-update branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrrdtatsynch
+        
+      6. Eclipse --> Show View --> Git Repositories -->Right click on ellrdatasynch [pom-update] C:\Users\phleven\git\elrrdatasynch\.git 
+	--> Working Tree - C:\Users\phleven\git\elrrdatasynch\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrdatasynch
+         b. Check all folders
+
+
+      7. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrservices.git
+         b. Select svc-update branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrrservices
+        
+      8. Eclipse --> Show View --> Git Repositories -->Right click on ellrservices [ext-update] C:\Users\phleven\git\elrrservices\.git 
+	--> Working Tree - C:\Users\phleven\git\elrrservices\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrservices
+         b. Check all folders
+
+   c. Modify application.properties for elrrexternalservices
+      ##server.use-forward-headers=true
+
+   d. Modify application-local.properties for each elrrexternalservices
+	#lrs.url=ENC(TKizOCFQLrB9Inn7WSwf7VL4pApgBW4b3srw0bYT4f8X6gZD2s2fjt6GANLa59L57qEXQbikEKcSbrGAUR9Kb9vRYN0gKQ7Hlc9mhyJUMNw=)
+	#lrs.username=ENC(SBKUQHXtVO0crH+J98hBcx/FW+s4WfJyMvxqEuNS//aHJ2V4BE9rT0QrbkIqERqz2dcKlK49m8UVHuKRmzNW8eEIef+MeznReyHxu7i9vHg=)
+	#lrs.password=ENC(OkZckJquUf+sH9pdcvAt/	+yyDS7Mpf67RwPUgnLMErzAl1GXRQkhwHdX8O29x/yVW0Zoh8CVmStR3VXM5zFUxQQmJ0N2Qp/uGBktp3pL2AajEMehsiphEdS6X+TZq+WPh5RMFRdtFpQD7PhdqY4NYg==)
+
+	lrs.url=http://localhost:8083/xapi
+	lrs.username=my_key
+	lrs.password=my_secret
+
+      	##server.use-forward-headers=true
+
+   e. Modify application-local.properties for elrrdatasynch
+      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
+      ##spring.datasource.username=${PG_RW_USER}
+      ##spring.datasource.password=${PG_RW_PASSWORD}
+      ##spring.datasource.platform=staging
+      ##spring.jpa.properties.hibernate.default_schema=staging
+      ##spring.jpa.show-sql=true
+
+      spring.datasource.url=jdbc:postgresql://localhost:5431/sync_db
+      spring.datasource.username=sync_user
+      spring.datasource.password=sync_password
+      spring.datasource.platform=staging
+      spring.jpa.properties.hibernate.default_schema=staging
+      spring.jpa.show-sql=true      
+
+      ##brokerUrl=elrr-kafka:9092
+      brokerUrl=localhost:9092
+
+      ##server.use-forward-headers=true
+
+   f. Modify application.properties for ellrdatasynch
+      ##spring.datasource.url={PG_DATABASE}/postgres
+      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
+      ##spring.datasource.username=${PG_RW_USER}
+      ##spring.datasource.password=${PG_RW_PASSWORD}
+      ##spring.datasource.platform=staging
+      ##spring.jpa.properties.hibernate.default_schema=staging
+      ##spring.jpa.show-sql=true
+
+      spring.datasource.url=jdbc:postgresql://localhost:5431/sync_db
+      spring.datasource.username=sync_user
+      spring.datasource.password=sync_password
+      spring.datasource.platform=staging
+      spring.jpa.properties.hibernate.default_schema=staging
+      spring.jpa.show-sql=true
+
+      cronExpression=0 0/1 * * * *
+
+      ##brokerUrl=elrr-kafka:9092
+      brokerUrl=localhost:9092
+
+      ##server.use-forward-headers=true
+
+   h. Modify application.properties for elrraggregator
+      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
+      ##spring.datasource.username=${PG_RW_USER}
+      ##spring.datasource.password=${PG_RW_PASSWORD}
+      ##spring.datasource.platform=elrr
+      ##spring.jpa.properties.hibernate.default_schema=elrr
+      ##spring.jpa.show-sql=true
+
+      spring.datasource.url=jdbc:postgresql://localhost:5431/services_db
+      spring.datasource.username=service_user
+      spring.datasource.password=service_password
+      spring.datasource.platform=staging
+      spring.jpa.properties.hibernate.default_schema=staging
+      spring.jpa.show-sql=true
+
+      ##brokerUrl=elrr-kafka:9092
+      brokerUrl=localhost:9092
+
+      ##server.use-forward-headers=true
+     
+   g. Modify application-local.properties for elrraggregator
+      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
+      ##spring.datasource.username=${PG_RW_USER}
+      ##spring.datasource.password=${PG_RW_PASSWORD}
+
+      spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
+      spring.datasource.username=service_user
+      spring.datasource.password=service_password
+
+      spring.datasource.platform=elrr
+      spring.jpa.properties.hibernate.default_schema=elrr
+      spring.jpa.show-sql=true
+
+   h. Modify application.properties for elrraggregator
+      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
+      ##spring.datasource.username=${PG_RW_USER}
+      ##spring.datasource.password=${PG_RW_PASSWORD}
+
+      spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
+      spring.datasource.username=service_user
+      spring.datasource.password=service_password
+
+      spring.datasource.platform=elrr
+      spring.jpa.properties.hibernate.default_schema=elrr
+      spring.jpa.show-sql=true
+
+      ##brokerUrl=elrr-kafka:9092
+      brokerUrl=localhost:9092
+
+      ##server.use-forward-headers=true
+  
+
+
+Create Docker Containers:
+1. Start Docker Desktop
+2. Open terminal
+   a. cd C:\Dev\elrr_docker_resources
+   b. docker compose up
+   c. Check for new containers in Docker Desktop
+      1. elrr_docker_resources
+         a. sync-db-1
+         b. lrs-db-1
+         c. zookeeper-1
+         d. services-db-1
+         e. lrs-1
+         f. kalfka-1
+
+
+
+Create and populate PostgreSQL staging schema:
+1. Open DBeaver
+2. Run "C:\Dev\elrrSQL\Create_sync_db.sql"
+3. Run "C:\Dev\elrrSQL\sync_db_insert.sql"
+4. Run "C:\Dev\elrrSQL\Create_service_db.sql"
+5. Run "C:\Dev\elrrSQL\service_db_insert.sql"
+
+
+
+Run elrrexternalservices:
+1. Open terminal
+   a. cd C:\Users\phleven\git\elrrexternalservices
+   b. mvn clean
+   c. mvn spring-boot:run
+   d. Ctrl+C to end --> Terminate batch job = Y 
+
+
+
+Run elrrdatasynch:
+1. Run elrrexternalservices
+   a. Open terminal
+      1. cd C:\Users\phleven\git\elrrexternalservices
+      2. mvn clean
+      3. mvn spring-boot:run
+      4. Ctrl+C to end --> Terminate batch job = Y 
+
+2. Run elrrdatasynch:
+   a. Open terminal
+      1. cd C:\Users\phleven\git\elrrdatasync
+      2. mvn clean
+      3. mvn spring-boot:run
+      4. Ctrl+C to end --> Terminate batch job = Y 
+
+
+
+Run elrraggregation:
+    1. Open terminal
+      a. cd C:\Users\phleven\git\elrraggregation
+      b. mvn clean
+      c. mvn spring-boot:run
+      d. Ctrl+C to end --> Terminate batch job = Y 
+
+
+
+
+Application UI:
+1. http://localhost:8088/api/lrsdata
+
+2. Yet (lrs) 
+   a. http://localhost:8083
+      user = my_username
+      password = my_password
+
+   b. STATEMENT BROWSER
+      1. Credentiails to use = my_key
+
+
+
+Run Postman to populate lrs-db:
+1. Postman
+   a. POST http://localhost:8083/xapi/statements
+   b. Headers
+      1. key = X-Experience-API-Version
+      2. value = 1.0.3
+   c. Body raw, JSON
+[
+  {"actor":{"name":"Sophia Lewis","mbox":"mailto:sophia.lewis@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d9f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
+]
+
+
+
+Remove Application from Docker:
+1. Docker Desktop --> Containers
+   a. Check elrr_docker_resources --> Delete
+
+2. 1. Docker Desktop --> Volumes
+   a. Check elrr_docker_resources_db_data_lrs --> Delete
+   b. Check elrr_docker_resources_db_data_service --> Delete
+   c. Check elrr_docker_resources_db_data_sync --> Delete
+   d. Check elrr_docker_resources_db_Kalfka_storage --> Delete
+
+
+
+View runnung Docker containers:
+1. Open terminal
+   a. docker ps
+
+
+
+View Kafka topics
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 25b1e4809004594d65fc1dfad0834d6528cc5162b2cb76e5de99db26ecbfaed9 /bin/bash
+   c. ./kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+
+
+View Kafka topic messages:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 25b1e4809004594d65fc1dfad0834d6528cc5162b2cb76e5de99db26ecbfaed9 /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-1 --from-beginning
+   e. Ctrl+C to end
+   f. exit
+
+
+KafkaMagic:
+1. Start Docker
+2. Run "C:\Dev\KafkaMagic_win-x64\KafkaMagic.exe"
+3. Register New
+   a. Name = Kafka
+   b. Bootstrap Server = localhost:9092
+
+
+
+Commit To Remote Git Repository From Command Line:
+1. Open terminal 
+   a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+
+   b. git status
+
+   c. git pull
+
+   d. git add /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+   
+      git add /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform/<file>
+   
+   e. git commit -m "<message>"
+   
+   f. git push
+
+   e. git log
+      1. Q (to quit)  
+
+
+
+Create a new Git feature branch from an existing branch:
+1. Open terminal 
+   a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+
+   b. git checkout develop
+ 
+   c. Create a new branch from develop 
+      git checkout -b BugFix_RGHT-135859-ignore-customized-questions develop
+
+   d. Push to origin 
+      git push origin BugFix_RGHT-135859-ignore-customized-questions
+
+
+
+
+Create Pull Request:
+1. URL = https://github.com/SavvasLearning
+   a. Username = SavvasPhilLeven
+   b. Password = Cynthia1##
+   
+2. Dashboard context = adaptive-learning-platform
+
+3. Repository = SavvasLearning/adaptive-learning-platform
+   a. Branch = develop
+   b. Compare and Pull Request
+   c. base = master, compare = develop
+   d. Add to comments (write) = @sudhakar.shanmugam@savvas.com 
+   e. Create pull request
+
+
+
+Analyzing code with the Maven PMD plugin:
+1. Open terminal
+   a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+   b. mvn pmd:pmd pmd:cpd
+   c. Check target pmd.xml
+
+
+
+Update Maven Project:
+1. Eclipse --> Right clock on assignment-service --> Maven --> Update project
+
+
+
+List Files In Local Git Repository:
+1.Open terminal
+  a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+  b. git ls-files
+
+
+
+Show Git Remote Tracking Branches:
+1. Open terminal
+   a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+   b. git branch -vv
+
+   3rd column is remote tracking branch:
+   * develop 61e08fb [origin/develop] add bucket policy for build bucket
+
+
+
+Show Maven Effective POM:
+1.Open terminal
+  a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+  b. mvn help:effective-pom
+
+
+
+Show Git Remote Origin:
+1. Open terminal
+   a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
+   b. git remote show origin
+   
+
+
+Git Remove a file that you have added but not committed:
+1. Open terminal
+   a. git rm --cached .gitignore
+
+
+
+Git Discard Changes in Working Directory:
+1. Open terminal
+   a. git checkout -- .gitignore
+
+
+
+Git Remove single file from committed area (local latest commit)
+1. Open terminal
+    a. git reset --soft HEAD^1
+    b. git rm --cached .gitignore
+    c. git commit -m "Commit to local"
+
+
+
+Git Undo Last Commit to Local Repository:
+This command will undo your last commit while leaving your working tree (the state of your files on disk) untouched. 
+1. Open terminal
+   a. git reset HEAD~
+
+
+Show Git Configuration:
+1. Open terminal
+   a. git config --list --show-origin
+
+
+
+Delete local Git Branch:
+1. Open terminal
+   a. git branch -d BugFix_RGHT-135859-ignore-customized-questions
+
+
+
+Create a new local Git Repository:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git init
+
+
+
+Commit files to local Git Repository:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git add .
+   c. git commit -m "Initial commit."
+
+
+
+ 
+
+
