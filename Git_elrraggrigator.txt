@@ -225,6 +225,29 @@ Create a new Eclipse Workspace:
 
       ##server.use-forward-headers=true
   
+  i. Modify pom.xml for erllservices
+     <start-class>com.deloitte.elrr.ElrrApplication</start-class> (line 21)
+
+  j. modify application-local.porperties for elrrservices:
+     ## PostgreSQL
+     ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
+     ##spring.datasource.username=${PG_RW_USER}
+     ##spring.datasource.password=${PG_RW_PASSWORD}
+
+     spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
+     spring.datasource.username=service_user
+     spring.datasource.password=service_password
+
+  k. modify application.porperties for elrrservices:
+     ## PostgreSQL
+     ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
+     ##spring.datasource.username=${PG_RW_USER}
+     ##spring.datasource.password=${PG_RW_PASSWORD}
+
+     spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
+     spring.datasource.username=service_user
+     spring.datasource.password=service_password
+
 
 
 Create Docker Containers:
@@ -281,6 +304,15 @@ Run elrrdatasynch:
 Run elrraggregation:
     1. Open terminal
       a. cd C:\Users\phleven\git\elrraggregation
+      b. mvn clean
+      c. mvn spring-boot:run
+      d. Ctrl+C to end --> Terminate batch job = Y 
+
+
+
+Run elrrservices:
+    1. Open terminal
+      a. cd C:\Users\phleven\git\elrrservices
       b. mvn clean
       c. mvn spring-boot:run
       d. Ctrl+C to end --> Terminate batch job = Y 
@@ -513,32 +545,5 @@ Commit files to local Git Repository:
    c. git commit -m "Initial commit."
 
 
-Create a Remote GitHub Repository:
-1. Open http://www.github.com/ in browser  
-
-2. Log into GitHub
-   a. user name - phleven
-   b. password = phil55.cindy61 
-     (email = phleven@deloitte.com)
-   c. New -or- Create Repository
-      1. Repository name = elrr_documentation
-      2. Check public
-      3. Check Add readMe file
-
-
-
-Add Remote Git repository to Local Git Repository:
-1. Open terminal
-   a. cd C:\Dev\elrr_documentation
-   b. git remote add elrr_documentation https://github.com/phleven/elrr_documentation.git
-   c. git remote
- 
-
-
-Synchronize Local and Remote Git Repositories:
-1. Open terminal
-   a. cd C:\Dev\elrr_documentation
-   b. git pull elrr_documentation main --allow-unrelated-histories
-   c. git push elrr_documentation main
 
 

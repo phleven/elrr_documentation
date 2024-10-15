@@ -1,0 +1,149 @@
+https://github.com/US-ELRR/elrrexternalservices - polls with an LRS to get xapi data
+https://github.com/US-ELRR/elrrdatasync - Grabs xAPI data via externalservices and dumps it onto a kafka topic
+https://github.com/US-ELRR/elrraggregator - aggregates all of the statements from the topic and writes them to the database accordingly
+https://github.com/US-ELRR/elrrservices - API layer to CRUD data in the database has context menu
+https://github.com/phleven/elrr_documentation
+
+
+
+Create local feature branch for elrrservices
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrrservices
+      b. git switch -c dev-svc-update-local-fixes-and-docs-1
+      c. git branch -a
+
+Commit changes to dev-svc-update-local-fixes-and-docs-1 feature branch for elrrservices
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrrservices
+      b. git status
+      c. git add pom.xml
+      d. git commit -m "Fix .pom."
+
+Push changes to remote branch for elrrservices
+ 1. Open terminal
+    a. cd C:\Users\phleven\git\elrrservices
+    b. git remote add elrrservices https://github.com/US-ELRR/elrrservices.git
+    c. git remote -v
+    d. git push --set-upstream elrrservices dev-svc-update-local-fixes-and-docs-1
+    e. git branch -a
+
+
+
+Create local feature branch for elrrexternalservices
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrrexternalservices
+      b. git switch -c dev-ext-update-local-fixes-and-docs-1
+      c. git branch -a
+
+Commit changes to dev-ext-update-local-fixes-and-docs-1 feature branch for elrrexternalservices
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrrexternalservices
+      b. git status
+      c. git add pom.xml
+      d. git commit -m "Fix .pom."
+
+Push changes to remote branch for elrrexternalservices
+ 1. Open terminal
+    a. cd C:\Users\phleven\git\elrrexternalservices
+    b. git remote add elrrexternalservices https://github.com/US-ELRR/elrrexternalservices.git
+    c. git remote -v
+    d. git push --set-upstream elrrexternalservices dev-ext-update-local-fixes-and-docs-1
+    e. git branch -a
+
+
+
+Create local feature branch for elrrdatasync
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrrdatasync
+      b. git switch -c dev-pom-update-local-fixes-and-docs-1
+      c. git branch -a
+
+Commit changes to dev-pom-update-local-fixes-and-docs-1 feature branch for elrrdatasync
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrrdatasync
+      b. git status
+      c. git add src/main/java/com/deloitte/elrr/datasync/KafkaAdminConfiguration.java
+         git add src/main/java/com/deloitte/elrr/datasync/scheduler/LRSSyncSchedulingService.java
+      d. git commit -m "Fix KafkaAdminConfiguration and LRSSynchSchedulingService."
+
+Push changes to remote branch for elrrdatasync
+ 1. Open terminal
+    a. cd C:\Users\phleven\git\elrrdatasync
+    b. git remote add elrrdatasync https://github.com/US-ELRR/elrrdatasync.git
+    c. git remote -v
+    d. git push --set-upstream elrrdatasync dev-pom-update-local-fixes-and-docs-1
+    e. git branch -a
+
+
+
+Create local feature branch for elrraggregator
+ 1. Open terminal
+    a. cd C:\Users\phleven\git\elrraggregator
+    b. git switch -c dev-agg-update-local-fixes-and-docs-1
+    c. git branch -a
+
+Commit changes to dev-agg-update-local-fixes-and-docs-1 feature branch for elrraggregator
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrraggregator
+      b. git status
+      c. git add src/main/java/com/deloitte/elrr/datasync/KafkaAdminConfiguration.java
+         git add src/main/java/com/deloitte/elrr/datasync/scheduler/LRSSyncSchedulingService.java
+      d. git commit -m "Fix KafkaAdminConfiguration and LRSSynchSchedulingService."
+
+Push changes to remote branch for elrraggregator
+ 1. Open terminal
+    a. cd C:\Users\phleven\git\elrraggregator
+    b. git remote add elrraggregator https://github.com/US-ELRR/elrraggregator.git
+    c. git remote -v
+    d. git push --set-upstream elrraggregator dev-agg-update-local-fixes-and-docs-1
+    e. git branch -a
+
+
+
+Create a Remote elrr_documentation GitHub Repository:
+1. Open http://www.github.com/ in browser  
+
+2. Log into GitHub
+   a. user name - phleven
+   b. password = phil55.cindy61 
+     (email = phleven@deloitte.com)
+   c. New -or- Create Repository
+      1. Repository name = elrr_documentation
+      2. Check public
+      3. Check Add readMe file
+      https://github.com/phleven/elrr_documentation
+
+Add Remote Git repository to Local Git Repository:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git remote add elrr_documentation https://github.com/phleven/elrr_documentation.git
+   c. git remote -v
+ 
+Synchronize Local and Remote Git Repositories:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git pull elrr_documentation main --allow-unrelated-histories
+   c. git push --set-upstream elrr_documentation master
+
+
+
+Create local Git repository, commit locally and push to remote repository
+1. Open terminal
+   a. cd C:\Dev\elrrdockercompose
+   b. git init
+   c. git add .
+   d. git commit -m "Initial commit."
+   e. git remote add elrrdockercompose https://github.com/US-ELRR/elrrdockercompose.git
+   f. git push --set-upstream elrrdockercompose master 
+
+
+
+Fix local branch tracking to wrong remote repository 
+ 1. Open terminal
+    a. cd C:\Users\phleven\git\elrraggregator
+    b. git remote -v                Dispays list of all remote repositories associated with your local repository, along with their URLs. 
+                                    Ensure that you are targeting the correct remote origin for removal
+    c. git remote remove origin     Only affe cts local repository.  It does not delete the remote repository or its contents on the server
+
+Add missing remote/origin - only iused for cloning, not needed.
+ 
