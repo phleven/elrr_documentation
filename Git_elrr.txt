@@ -6,10 +6,7 @@ Install Dependencies
 Clone Remote Git Repository
 Create a new Eclipse Workspace
 Import Project Into Eclipse
-Modify application.properties for elrrexternalservices
-Modify application-local.properties for elrrexternalservices
-Modify application-local.properties for ellrdatasynch
-Create Docker Containers
+Create Docker Containers (Docker compose)
 Create and populate PostgreSQL staging schema
 Run elrrexternalservices
 Application UI
@@ -38,8 +35,6 @@ Git Remove single file from committed area (local latest commit)
 Git Undo Last Commit to Local Repository
 Show Git Configuration
 Delete local Git Branch
-Create a new local Git Repository
-Commit files to local Git Repository
 
 
 
@@ -117,144 +112,14 @@ Create a new Eclipse Workspace:
          a. Import source = C:\Users\phleven\git\elrrservices
          b. Check all folders
 
-   c. Modify application.properties for elrrexternalservices
-      ##server.use-forward-headers=true
-
-   d. Modify application-local.properties for each elrrexternalservices
-	#lrs.url=ENC(TKizOCFQLrB9Inn7WSwf7VL4pApgBW4b3srw0bYT4f8X6gZD2s2fjt6GANLa59L57qEXQbikEKcSbrGAUR9Kb9vRYN0gKQ7Hlc9mhyJUMNw=)
-	#lrs.username=ENC(SBKUQHXtVO0crH+J98hBcx/FW+s4WfJyMvxqEuNS//aHJ2V4BE9rT0QrbkIqERqz2dcKlK49m8UVHuKRmzNW8eEIef+MeznReyHxu7i9vHg=)
-	#lrs.password=ENC(OkZckJquUf+sH9pdcvAt/	+yyDS7Mpf67RwPUgnLMErzAl1GXRQkhwHdX8O29x/yVW0Zoh8CVmStR3VXM5zFUxQQmJ0N2Qp/uGBktp3pL2AajEMehsiphEdS6X+TZq+WPh5RMFRdtFpQD7PhdqY4NYg==)
-
-	lrs.url=http://localhost:8083/xapi
-	lrs.username=my_key
-	lrs.password=my_secret
-
-      	##server.use-forward-headers=true
-
-   e. Modify application-local.properties for elrrdatasynch
-      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
-      ##spring.datasource.username=${PG_RW_USER}
-      ##spring.datasource.password=${PG_RW_PASSWORD}
-      ##spring.datasource.platform=staging
-      ##spring.jpa.properties.hibernate.default_schema=staging
-      ##spring.jpa.show-sql=true
-
-      spring.datasource.url=jdbc:postgresql://localhost:5431/sync_db
-      spring.datasource.username=sync_user
-      spring.datasource.password=sync_password
-      spring.datasource.platform=staging
-      spring.jpa.properties.hibernate.default_schema=staging
-      spring.jpa.show-sql=true      
-
-      ##brokerUrl=elrr-kafka:9092
-      brokerUrl=localhost:9092
-
-      ##server.use-forward-headers=true
-
-   f. Modify application.properties for ellrdatasynch
-      ##spring.datasource.url={PG_DATABASE}/postgres
-      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
-      ##spring.datasource.username=${PG_RW_USER}
-      ##spring.datasource.password=${PG_RW_PASSWORD}
-      ##spring.datasource.platform=staging
-      ##spring.jpa.properties.hibernate.default_schema=staging
-      ##spring.jpa.show-sql=true
-
-      spring.datasource.url=jdbc:postgresql://localhost:5431/sync_db
-      spring.datasource.username=sync_user
-      spring.datasource.password=sync_password
-      spring.datasource.platform=staging
-      spring.jpa.properties.hibernate.default_schema=staging
-      spring.jpa.show-sql=true
-
-      cronExpression=0 0/1 * * * *
-
-      ##brokerUrl=elrr-kafka:9092
-      brokerUrl=localhost:9092
-
-      ##server.use-forward-headers=true
-
-   h. Modify application.properties for elrraggregator
-      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
-      ##spring.datasource.username=${PG_RW_USER}
-      ##spring.datasource.password=${PG_RW_PASSWORD}
-      ##spring.datasource.platform=elrr
-      ##spring.jpa.properties.hibernate.default_schema=elrr
-      ##spring.jpa.show-sql=true
-
-      spring.datasource.url=jdbc:postgresql://localhost:5431/services_db
-      spring.datasource.username=service_user
-      spring.datasource.password=service_password
-      spring.datasource.platform=staging
-      spring.jpa.properties.hibernate.default_schema=staging
-      spring.jpa.show-sql=true
-
-      ##brokerUrl=elrr-kafka:9092
-      brokerUrl=localhost:9092
-
-      ##server.use-forward-headers=true
-     
-   g. Modify application-local.properties for elrraggregator
-      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
-      ##spring.datasource.username=${PG_RW_USER}
-      ##spring.datasource.password=${PG_RW_PASSWORD}
-
-      spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
-      spring.datasource.username=service_user
-      spring.datasource.password=service_password
-
-      spring.datasource.platform=elrr
-      spring.jpa.properties.hibernate.default_schema=elrr
-      spring.jpa.show-sql=true
-
-   h. Modify application.properties for elrraggregator
-      ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
-      ##spring.datasource.username=${PG_RW_USER}
-      ##spring.datasource.password=${PG_RW_PASSWORD}
-
-      spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
-      spring.datasource.username=service_user
-      spring.datasource.password=service_password
-
-      spring.datasource.platform=elrr
-      spring.jpa.properties.hibernate.default_schema=elrr
-      spring.jpa.show-sql=true
-
-      ##brokerUrl=elrr-kafka:9092
-      brokerUrl=localhost:9092
-
-      ##server.use-forward-headers=true
-  
-  i. Modify pom.xml for erllservices
-     <start-class>com.deloitte.elrr.ElrrApplication</start-class> (line 21)
-
-  j. modify application-local.porperties for elrrservices:
-     ## PostgreSQL
-     ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
-     ##spring.datasource.username=${PG_RW_USER}
-     ##spring.datasource.password=${PG_RW_PASSWORD}
-
-     spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
-     spring.datasource.username=service_user
-     spring.datasource.password=service_password
-
-  k. modify application.porperties for elrrservices:
-     ## PostgreSQL
-     ##spring.datasource.url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PG_DATABASE}
-     ##spring.datasource.username=${PG_RW_USER}
-     ##spring.datasource.password=${PG_RW_PASSWORD}
-
-     spring.datasource.url=jdbc:postgresql://localhost:5432/service_db
-     spring.datasource.username=service_user
-     spring.datasource.password=service_password
-
-
+   
 
 Create Docker Containers:
 1. Start Docker Desktop
 2. Open terminal
-   a. cd C:\Dev\elrr_docker_resources
+   a. cd cd C:\Dev\elrrdockercompose
    b. docker compose up
+   c. docker compose logs
    c. Check for new containers in Docker Desktop
       1. elrr_docker_resources
          a. sync-db-1
@@ -276,37 +141,31 @@ Create and populate PostgreSQL staging schema:
 
 
 Run elrrexternalservices:
-1. Open terminal
-   a. cd C:\Users\phleven\git\elrrexternalservices
-   b. mvn clean
-   c. mvn spring-boot:run
-   d. Ctrl+C to end --> Terminate batch job = Y 
-
-
-
-Run elrrdatasynch:
 1. Run elrrexternalservices
    a. Open terminal
       1. cd C:\Users\phleven\git\elrrexternalservices
-      2. mvn clean
-      3. mvn spring-boot:run
-      4. Ctrl+C to end --> Terminate batch job = Y 
+      2. git switch dev-ext-update-local-fixes-and-docs-1
+      3. mvn clean
+      4. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      5. Ctrl+C to end --> Terminate batch job = Y 
 
 2. Run elrrdatasynch:
    a. Open terminal
       1. cd C:\Users\phleven\git\elrrdatasync
-      2. mvn clean
-      3. mvn spring-boot:run
-      4. Ctrl+C to end --> Terminate batch job = Y 
+      2. git switch dev-pom-update-local-fixes-and-docs-1
+      3. mvn clean
+      4. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      5. Ctrl+C to end --> Terminate batch job = Y 
 
 
 
 Run elrraggregation:
     1. Open terminal
-      a. cd C:\Users\phleven\git\elrraggregation
-      b. mvn clean
-      c. mvn spring-boot:run
-      d. Ctrl+C to end --> Terminate batch job = Y 
+      a. cd C:\Users\phleven\git\elrraggregator
+      b. git switch dev-agg-update-local-fixes-and-docs-1
+      c. mvn clean
+      d. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      e. Ctrl+C to end --> Terminate batch job = Y 
 
 
 
@@ -314,7 +173,7 @@ Run elrrservices:
     1. Open terminal
       a. cd C:\Users\phleven\git\elrrservices
       b. mvn clean
-      c. mvn spring-boot:run
+      c. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
       d. Ctrl+C to end --> Terminate batch job = Y 
 
 
@@ -412,37 +271,6 @@ Commit To Remote Git Repository From Command Line:
 
 
 
-Create a new Git feature branch from an existing branch:
-1. Open terminal 
-   a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
-
-   b. git checkout develop
- 
-   c. Create a new branch from develop 
-      git checkout -b BugFix_RGHT-135859-ignore-customized-questions develop
-
-   d. Push to origin 
-      git push origin BugFix_RGHT-135859-ignore-customized-questions
-
-
-
-
-Create Pull Request:
-1. URL = https://github.com/SavvasLearning
-   a. Username = SavvasPhilLeven
-   b. Password = Cynthia1##
-   
-2. Dashboard context = adaptive-learning-platform
-
-3. Repository = SavvasLearning/adaptive-learning-platform
-   a. Branch = develop
-   b. Compare and Pull Request
-   c. base = master, compare = develop
-   d. Add to comments (write) = @sudhakar.shanmugam@savvas.com 
-   e. Create pull request
-
-
-
 Analyzing code with the Maven PMD plugin:
 1. Open terminal
    a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
@@ -528,22 +356,3 @@ Remove remote Git Repository:
 1. Open terminal
    a. cd C:\Dev\elrr_documentation
    b. git remote remove ellr_documentation
-
-
-
-Create a new local Git Repository:
-1. Open terminal
-   a. cd C:\Dev\elrr_documentation
-   b. git init
-
-
-
-Commit files to local Git Repository:
-1. Open terminal
-   a. cd C:\Dev\elrr_documentation
-   b. git add .
-   c. git commit -m "Initial commit."
-
-
-
-
