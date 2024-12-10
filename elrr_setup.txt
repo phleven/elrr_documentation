@@ -101,7 +101,7 @@ Create a new Eclipse Workspace:
 Create Docker Containers:
 1. Start Docker Desktop
 2. Open terminal
-   a. cd cd C:\Dev\elrrdockercompose
+   a. cd C:\Dev\elrrdockercompose
    b. docker compose up
    c. docker compose logs
    c. Check for new containers in Docker Desktop
@@ -124,12 +124,12 @@ Create and populate PostgreSQL staging schema:
 
 
 
-Run elrrexternalservices:
+Run ellrexternalservices and elrrdataasync:
 1. Run elrrexternalservices
    a. Open terminal
       1. cd C:\Users\phleven\git\elrrexternalservices
       2. git switch dev-ext-update-local-fixes-and-docs-1
-      3. mvn clean
+      3. mvn clean install
       4. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
       5. Ctrl+C to end --> Terminate batch job = Y 
 
@@ -137,17 +137,17 @@ Run elrrexternalservices:
    a. Open terminal
       1. cd C:\Users\phleven\git\elrrdatasync
       2. git switch dev-pom-update-local-fixes-and-docs-1
-      3. mvn clean
+      3. mvn clean install
       4. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
       5. Ctrl+C to end --> Terminate batch job = Y 
 
 
 
-Run elrraggregation:
+Run elrraggregator:
     1. Open terminal
       a. cd C:\Users\phleven\git\elrraggregator
       b. git switch dev-agg-update-local-fixes-and-docs-1
-      c. mvn clean
+      c. mvn clean install
       d. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
       e. Ctrl+C to end --> Terminate batch job = Y 
 
@@ -156,9 +156,10 @@ Run elrraggregation:
 Run elrrservices:
     1. Open terminal
       a. cd C:\Users\phleven\git\elrrservices
-      b. mvn clean
-      c. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
-      d. Ctrl+C to end --> Terminate batch job = Y 
+      b. git switch dev-svc-update-local-fixes-and-docs-1
+      c. mvn clean install
+      d. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      e. Ctrl+C to end --> Terminate batch job = Y 
 
 
 
@@ -199,6 +200,15 @@ Remove Application from Docker:
    c. Check elrr_docker_resources_db_data_sync --> Delete
    d. Check elrr_docker_resources_db_Kalfka_storage --> Delete
 
+3. Create and populate PostgreSQL staging schema:
+   a. Open DBeaver
+      1. Run "C:\Dev\elrrSQL\Create_sync_db.sql"
+      2. Run "C:\Dev\elrrSQL\sync_db_insert.sql"
+      3. Run "C:\Dev\elrrSQL\Create_service_db.sql"
+      4. Run "C:\Dev\elrrSQL\service_db_insert.sql"
+
+4. Run Postman to populate lrs-d
+
 
 
 View runnung Docker containers:
@@ -207,22 +217,46 @@ View runnung Docker containers:
 
 
 
-View Kafka topics
+List Kafka topics:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 25b1e4809004594d65fc1dfad0834d6528cc5162b2cb76e5de99db26ecbfaed9 /bin/bash
-   c. ./kafka-topics.sh --bootstrap-server localhost:9092 --list
-
-
-
-View Kafka topic messages:
-1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 25b1e4809004594d65fc1dfad0834d6528cc5162b2cb76e5de99db26ecbfaed9 /bin/bash
+   b. docker exec -t -i a15e78246172eb2260ae93b7847a577ef4f616b7b52898f8c9487039b6ce9b26 /bin/bash
    c. cd /opt/bitnami/kafka/bin
-   d. ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-1 --from-beginning
-   e. Ctrl+C to end
-   f. exit
+   d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
+
+
+
+View Kafka topic details:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i a15e78246172eb2260ae93b7847a577ef4f616b7b52898f8c9487039b6ce9b26 /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
+   e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
+
+
+
+Delete and Recreate Kafka topic:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i a15e78246172eb2260ae93b7847a577ef4f616b7b52898f8c9487039b6ce9b26 /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
+   e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
+
+
+
+Consume Kafka Topic Messages:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i a15e78246172eb2260ae93b7847a577ef4f616b7b52898f8c9487039b6ce9b26 /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
+   e. Ctrl + C to end 
+
+
+{"auditRecord":{"auditId":101,"auditDeailIds":[51]},"learnerChange":{"contactEmailAddress":"mailto:sophia.lewis@us.navy.mil","name":"Sophia Lewis","courses":[{"courseId":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","courseName":null,"userCourseStatus":"https://adlnet.gov/expapi/verbs/achieved"}]}}
+
 
 
 KafkaMagic:
@@ -231,3 +265,17 @@ KafkaMagic:
 3. Register New
    a. Name = Kafka
    b. Bootstrap Server = localhost:9092
+
+
+
+Re-run creating Kafka message
+1. Truncate and re-populate synch_db staging tables (synch_db_insert.sql)
+2. Make sure import.importenddate < import.lastmodified
+3. TRuncate and re-populate service_db tables (service_db_insert.sql)
+4. Starts with LRSSyncSChedulingService.run() --> NewDataSevice.process()
+5. ELRRMessageListener.listen()
+
+{"auditRecord": {"auditId": 1, "auditDeailIds": [1]}, "learnerChange": {"name": "test", "courses": [{"courseId": "5", "courseName": "coursename", "userCourseStatus": "inserted"}], "contactEmailAddress": "test@deloitte.com"}}
+
+{"auditRecord":{"auditId":2,"auditDeailIds":[2]},"learnerChange":{"contactEmailAddress":"mailto:sophia.lewis@us.navy.mil","name":"Sophia Lewis","courses":[{"courseId":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","courseName":null,"userCourseStatus":"https://adlnet.gov/expapi/verbs/achieved"}]}}
+https://w3id.org/xapi/credential/GIAC Security Essentials Certification %28GSEC%29

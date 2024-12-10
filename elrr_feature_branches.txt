@@ -2,8 +2,15 @@ https://github.com/US-ELRR/elrrexternalservices - polls with an LRS to get xapi 
 https://github.com/US-ELRR/elrrdatasync - Grabs xAPI data via externalservices and dumps it onto a kafka topic
 https://github.com/US-ELRR/elrraggregator - aggregates all of the statements from the topic and writes them to the database accordingly
 https://github.com/US-ELRR/elrrservices - API layer to CRUD data in the database has context menu
+https://github.com/yetanalytics/xapi-java-client
 https://github.com/US-ELRR/elrrdockercompose
 https://github.com/phleven/elrr_documentation
+
+
+
+Docker credentials
+phleven (phleven@deloitte.com)
+Cynthia1#
 
 
 
@@ -362,10 +369,14 @@ Create a new local Git Repository:
 Commit files to local Git Repository:
 1. Open terminal
    a. cd C:\Dev\elrr_documentation
-   b. git add .
-   c. git commit -m "Initial commit."
+   b. git status
+   c. git add <filename>
+   d. git commit -m "<message>"
+   e. git push
+   f. git log
+      1. Q (to quit)
 
-
+   
 
 Create local Git repository, commit locally and push to remote repository
 1. Open terminal
@@ -385,5 +396,5 @@ Fix local branch tracking to wrong remote repository
                                     Ensure that you are targeting the correct remote origin for removal
     c. git remote remove origin     Only affe cts local repository.  It does not delete the remote repository or its contents on the server
 
-Add missing remote/origin - only iused for cloning, not needed.
+Add missing remote/origin - only used for cloning, not needed.
  
