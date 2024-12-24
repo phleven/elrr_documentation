@@ -4,7 +4,7 @@ elrr
 Commit To Remote Git Repository From Command Line
 Create a new Git feature branch from an existing branch
 Create Pull Request
-Analyzing code with the Maven PMD plugin
+Analyzing code with mvn dependency:analyze
 Update Maven Project
 List Files In Local Git Repo
 Show Git Remote Tracking Branches
@@ -40,11 +40,11 @@ Commit To Remote Git Repository From Command Line:
 
 
 
-Analyzing code with the Maven PMD plugin:
+Analyzing code with mvn dependency:analyze:
 1. Open terminal
-   a. cd /Users/phil/Dev/AdaptiveLearningPlatform/adaptive-learning-platform
-   b. mvn pmd:pmd pmd:cpd
-   c. Check target pmd.xml
+   a. cd C:\Users\phleven\git\elrrcommon
+   b. mvn dependency:analyze
+ 
 
 
 
