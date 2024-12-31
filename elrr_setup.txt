@@ -126,10 +126,10 @@ Create Docker Containers:
 
 Create and populate PostgreSQL staging schema:
 1. Open DBeaver
-2. Run "C:\Dev\elrrSQL\Create_sync_db.sql"
-3. Run "C:\Dev\elrrSQL\sync_db_insert.sql"
-4. Run "C:\Dev\elrrSQL\Create_service_db.sql"
-5. Run "C:\Dev\elrrSQL\service_db_insert.sql"
+2. Run Create_sync_db.sql
+3. Run sync_db_insert.sql
+4. Run Create_service_db.sql
+5. Run service_db_insert.sql
 
 
 
@@ -236,10 +236,10 @@ Remove Application from Docker:
 
 4. Create and populate PostgreSQL staging schema:
    a. Open DBeaver
-      1. Run "C:\Dev\elrrSQL\Create_sync_db.sql"
-      2. Run "C:\Dev\elrrSQL\sync_db_insert.sql"
-      3. Run "C:\Dev\elrrSQL\Create_service_db.sql"
-      4. Run "C:\Dev\elrrSQL\service_db_insert.sql"
+      1. Run Create_sync_db.sql
+      2. Run sync_db_insert.sql
+      3. Run Create_service_db.sql
+      4. Run service_db_insert.sql
 
 5. Run Postman to populate lrs-db
    a. Run Postman
@@ -303,8 +303,7 @@ Consume Kafka Topic Messages:
    e. Ctrl + C to end 
 
 
-{"auditRecord":{"auditId":101,"auditDeailIds":[51]},"learnerChange":{"contactEmailAddress":"mailto:sophia.lewis@us.navy.mil","name":"Sophia Lewis","courses":[{"courseId":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","courseName":null,"userCourseStatus":"https://adlnet.gov/expapi/verbs/achieved"}]}}
-
+{"auditRecord":{"auditId":6,"auditDetailId":6},"statement":{"id":"d9f1328b-bcc2-4b9c-b954-03cb88a240c8","actor":{"objectType":"Agent","name":"Sophia Lewis","mbox":"mailto:sophia.lewis@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"objectType":"Activity","id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"authority":{"objectType":"Agent","account":{"homePage":"http://example.org","name":"0193f924-b470-89c9-a5f2-35cd03409e9c"}},"timestamp":"2024-09-20T21:37:23.835Z","stored":"2024-12-24T14:51:40.346Z","version":"1.0.0"}}
 
 
 KafkaMagic:
@@ -319,11 +318,6 @@ KafkaMagic:
 Re-run creating Kafka message
 1. Truncate and re-populate synch_db staging tables (synch_db_insert.sql)
 2. Make sure import.importenddate < import.lastmodified
-3. TRuncate and re-populate service_db tables (service_db_insert.sql)
+3. Truncate and re-populate service_db tables (service_db_insert.sql)
 4. Starts with LRSSyncSChedulingService.run() --> NewDataSevice.process()
 5. ELRRMessageListener.listen()
-
-{"auditRecord": {"auditId": 1, "auditDeailIds": [1]}, "learnerChange": {"name": "test", "courses": [{"courseId": "5", "courseName": "coursename", "userCourseStatus": "inserted"}], "contactEmailAddress": "test@deloitte.com"}}
-
-{"auditRecord":{"auditId":2,"auditDeailIds":[2]},"learnerChange":{"contactEmailAddress":"mailto:sophia.lewis@us.navy.mil","name":"Sophia Lewis","courses":[{"courseId":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","courseName":null,"userCourseStatus":"https://adlnet.gov/expapi/verbs/achieved"}]}}
-https://w3id.org/xapi/credential/GIAC Security Essentials Certification %28GSEC%29

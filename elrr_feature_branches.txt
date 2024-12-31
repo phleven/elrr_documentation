@@ -348,8 +348,6 @@ Commit to Remote Git dev-agg-update-local-fixes-and-docs-1 feature branch for el
       1. Q (to quit)
 
 
-
-
  
 Synchronize Local and Remote Git Repositories:
 1. Open terminal

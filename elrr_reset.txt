@@ -30,10 +30,10 @@ Remove Application from Docker:
 
 4. Create and populate PostgreSQL staging schema:
    a. Open DBeaver
-      1. Run "C:\Dev\elrrSQL\Create_sync_db.sql"
-      2. Run "C:\Dev\elrrSQL\sync_db_insert.sql"
-      3. Run "C:\Dev\elrrSQL\Create_service_db.sql"
-      4. Run "C:\Dev\elrrSQL\service_db_insert.sql"
+      1. Run Create_sync_db.sql
+      2. Run sync_db_insert.sql
+      3. Run Create_service_db.sql
+      4. Run service_db_insert.sql
 
 5. Run Postman to populate lrs-db
    a. POST http://localhost:8083/xapi/statements
