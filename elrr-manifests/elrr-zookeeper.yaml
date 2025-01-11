@@ -1,0 +1,67 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: elrr-zookeeper
+#   labels:
+#     app: elrr-zookeeper
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: elrr-zookeeper
+#   template:
+#     metadata:
+#       labels:
+#         app: elrr-zookeeper
+#     spec:
+#       initContainers:
+#       - name: volume-permissions
+#         image: busybox
+#         command: ['sh', '-c', 'chmod -R 777 /bitnami/zookeeper']
+#         volumeMounts:
+#         - mountPath: /bitnami/zookeeper
+#           name: zookeeper-data
+#       containers:
+#       - name: elrr-zookeeper
+#         image: bitnami/zookeeper:latest
+#         ports:
+#         - containerPort: 2181
+#         env:
+#         - name: ALLOW_ANONYMOUS_LOGIN
+#           value: "yes"
+#         volumeMounts:
+#         - name: zookeeper-data
+#           mountPath: /bitnami/zookeeper
+#       volumes:
+#       - name: zookeeper-data
+#         persistentVolumeClaim:
+#           claimName: elrr-zookeeper-pvc
+
+# ---
+
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: elrr-zookeeper-pvc
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 2Gi
+
+# ---
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: elrr-zookeeper-svc
+# spec:
+#   selector:
+#     app: elrr-zookeeper
+#   type: ClusterIP
+#   ports:
+#     - name: zookeeper
+#       protocol: TCP
+#       port: 2181
+#       targetPort: 2181

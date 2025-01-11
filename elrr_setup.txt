@@ -188,6 +188,9 @@ Application UI:
 
 Run Postman to populate lrs-db:
 1. Postman
+   phleven
+   Cynthia1#
+
    a. POST http://localhost:8083/xapi/statements
    b. Authorization
       1. Basic Auth
@@ -205,6 +208,13 @@ Run Postman to populate lrs-db:
   {"actor":{"name":"Phil Leven","mbox":"mailto:phil.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d8f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
 ]
 
+[
+  {"actor":{"name":"Phil Leven","mbox":"mailto:phil.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials2%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials2 Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-12-01T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d7f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-12-01T21:37:23.835000000Z","version":"1.0.0"}
+]
+
+[
+  {"actor":{"name":"Cindy Leven","mbox":"mailto:cindy.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials2%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials2 Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-12-01T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d6f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-12-01T21:37:23.835000000Z","version":"1.0.0"}
+]
 
 
 Remove Application from Docker:
@@ -256,6 +266,14 @@ Remove Application from Docker:
   {"actor":{"name":"Phil Leven","mbox":"mailto:phil.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d8f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
 ]
 
+[
+  {"actor":{"name":"Phil Leven","mbox":"mailto:phil.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials2%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials2 Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-12-01T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d7f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-12-01T21:37:23.835000000Z","version":"1.0.0"}
+]
+
+[
+  {"actor":{"name":"Cindy Leven","mbox":"mailto:cindy.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials2%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials2 Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-12-01T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d6f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-12-01T21:37:23.835000000Z","version":"1.0.0"}
+]
+
 
 
 View runnung Docker containers:
@@ -267,7 +285,7 @@ View runnung Docker containers:
 List Kafka topics:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i fac2358fc96dd41061a42c4f574bad3b207120e47257568f6612cebe8ebebedc /bin/bash
+   b. docker exec -t -i 17110ec728d61fc65cc8fd84ca95b2d77695b26cd33f85efba8ce938f2a99276 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
@@ -276,7 +294,7 @@ List Kafka topics:
 View Kafka topic details:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i fac2358fc96dd41061a42c4f574bad3b207120e47257568f6612cebe8ebebedc /bin/bash
+   b. docker exec -t -i 17110ec728d61fc65cc8fd84ca95b2d77695b26cd33f85efba8ce938f2a99276 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
    e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
@@ -286,7 +304,7 @@ View Kafka topic details:
 Delete and Recreate Kafka topic: 
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i fac2358fc96dd41061a42c4f574bad3b207120e47257568f6612cebe8ebebedc /bin/bash
+   b. docker exec -t -i 17110ec728d61fc65cc8fd84ca95b2d77695b26cd33f85efba8ce938f2a99276 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
    e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
@@ -297,7 +315,7 @@ Delete and Recreate Kafka topic:
 Consume Kafka Topic Messages:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i fac2358fc96dd41061a42c4f574bad3b207120e47257568f6612cebe8ebebedc /bin/bash
+   b. docker exec -t -i 17110ec728d61fc65cc8fd84ca95b2d77695b26cd33f85efba8ce938f2a99276 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
    e. Ctrl + C to end 

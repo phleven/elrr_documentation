@@ -16,6 +16,7 @@ Git Remove single file from committed area (local latest commit)
 Git Undo Last Commit to Local Repository
 Show Git Configuration
 Delete local Git Branch
+Git Unstage a specific file
 
 
 
@@ -110,6 +111,7 @@ This command will undo your last commit while leaving your working tree (the sta
    a. git reset HEAD~
 
 
+
 Show Git Configuration:
 1. Open terminal
    a. git config --list --show-origin
@@ -121,7 +123,15 @@ Delete local Git Branch:
    a. git branch -d BugFix_RGHT-135859-ignore-customized-questions
 
 
+
 Remove remote Git Repository:
 1. Open terminal
    a. cd C:\Dev\elrr_documentation
    b. git remote remove ellr_documentation
+
+
+
+Git Unstage a specific file:
+1. Open terminal
+   a. git restore --staged <file>
+
