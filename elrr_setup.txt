@@ -65,7 +65,7 @@ Create a new Eclipse Workspace:
          a. Name = Lombok
          b. Location = https://projectlombok.org/p2
 
-   d. Import Project into Eclipse
+    d. Import Project into Eclipse
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrraggregator.git
          b. Select dev-update-branch branch, deselect all other branches
