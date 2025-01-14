@@ -16,8 +16,8 @@ Create a new Eclipse Workspace:
          c. Local Destination = C:\Users\phleven\git\elrr_documentation
         
       2. Eclipse --> Show View --> Git Repositories --> Right click on ellr_documentation [master] C:\Users\phleven\git\elrr_documentation\.git 
-	--> Working Tree - C:\Users\phleven\git\elrraggregator\.git --> Import Projects 
-         a. Import source = C:\Users\phleven\git\elrraggregator
+	--> Working Tree - C:\Users\phleven\git\elrr_documentation.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrr_documentation
          b. Check all folders
         
    b. Add .pdf to file associations

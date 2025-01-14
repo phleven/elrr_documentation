@@ -53,68 +53,105 @@ Create a new Eclipse Workspace:
    a. Set Java version in Eclipse
       1. Eclipse --> Preferences --> Java --> Installed JREs
          a. Check Java SE 17
-
          b. Right click on ellraggrigator --> Properties --> Project Facets
             1. Java = 17 --> Apply and Close
-            
-    b. Show all files
-         1. Package Explorer --> 3 dots --> Filters --> un-check .* resources
-
-    c. Add Lombok PLugin to Eclipse
+   b. Show all files
+       1. Package Explorer --> 3 dots --> Filters --> un-check .* resources
+   c. Add Lombok Plugin to Eclipse:
       1. Eclipse --> Help --> Install New Software --> Add
          a. Name = Lombok
-         b. Location = https://projectlombok.org/p2 
+         b. Location = https://projectlombok.org/p2
+
 
     d. Import Project into Eclipse
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrraggregator.git
-         b. Select dev--update-base branch, deselect all other branches
-         c. Local Destination = C:\Users\1phil\git\elrraggregator
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrraggregator
         
-      2. Eclipse --> Show View --> Git Repositories --> Right click on ellaggrigator [dev-update-base] C:\Users\1phil\git\elrraggregator\.git 
-	--> Working Tree - C:\Users\1phil\git\elrraggregator\.git --> Import Projects 
-         a. Import source = C:\Users\1phil\git\elrraggregator
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellaggrigator [dev-update-branch] C:\Users\phleven\git\elrraggregator\.git 
+	--> Working Tree - C:\Users\phleven\git\elrraggregator\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrraggregator
          b. Check all folders
         
-
-      3. File --> Import --> Git --> Projects from Git --> Clone URI
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrraggregator
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+ 
+ 
+      4. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrexternalservices.git
-         b. Select dev-update-base, deselect all other branches
-         c. Local Destination = C:\Users\1phil\git\elrrexternalservices
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrrexternalservices
         
-      4. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-base] C:\Users\1phil\git\elrrexternalservices\.git 
-	--> Working Tree - C:\Users\1phil\git\elrraggregator\.git --> Import Projects 
-         a. Import source = C:\Users\1phil\git\elrrexternalservices
+      5. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-branch] C:\Users\phleven\git\elrrexternalservices\.git 
+	--> Working Tree - C:\Users\phleven\git\elrrexternalservices\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrexternalservices
          b. Check all folders
-
-
-      5. File --> Import --> Git --> Projects from Git --> Clone URI
-         a. URI = https://github.com/US-ELRR/elrrdatasync.git
-         b. Select dev-update-base, deselect all other branches
-         c. Local Destination = C:\Users\1phil\git\elrrdtatsynch
-        
-      6. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-base] C:\Users\1phil\git\elrrdatasynch\.git 
-	--> Working Tree - C:\Users\1phil\git\elrrdatasynch\.git --> Import Projects 
-         a. Import source = C:\Users\1phil\git\elrrdatasynch
-         b. Check all folders
-
+         
+      6. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrrexternalservices
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+ 
 
       7. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrdatasync.git
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrrdtatsynch
+         
+      8. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-branch] C:\Users\phleven\git\elrrdatasynch\.git 
+	--> Working Tree - C:\Users\phleven\git\elrrdatasynch\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrdatasynch
+         b. Check all folders
+         
+      9. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrrdatasync
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+      
+
+      10. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrservices.git
-         b. Select dev-update-base branch, deselect all other branches
-         c. Local Destination = C:\Users\1phil\git\elrrservices
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrrservices
         
-      8. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-base] C:\Users\1phil\git\elrrservices\.git 
-	--> Working Tree - C:\Users\1phil\git\elrrservices\.git --> Import Projects 
-         a. Import source = C:\Users\1phil\git\elrrservices
+      11. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-branch] C:\Users\phleven\git\elrrservices\.git 
+	--> Working Tree - C:\Users\phleven\git\elrrservices\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrservices
          b. Check all folders
 
+      12. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrrservices
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+   
    
 
-Make sure TCP port 2181 for Zookeeper is not in use:
+Make sure TCP port 2181 for Zookeeper is not in use (one time):
 1. Open Terminal
-   a. net stop winnat
-   b. net start winnat
+   a. FixWINNAT.bat
 
 
 
