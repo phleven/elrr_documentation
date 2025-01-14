@@ -1,0 +1,131 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   creationTimestamp: null 
+#   name: elrr-aggregator
+#   namespace: openlxp-elrr
+#   labels:
+#     app: elrr-aggregator
+# spec:
+#   selector:
+#     matchLabels:
+#       app: elrr-aggregator
+#   replicas: 1
+#   revisionHistoryLimit: 1 
+#   template:
+#     metadata:
+#       creationTimestamp: null  
+#       labels:
+#         app: elrr-aggregator
+#     spec:
+#       containers:
+#         - name: elrr-aggregator
+#           image: 955038580167.dkr.ecr.us-east-1.amazonaws.com/openlxp-elrr:elrraggregator
+#           imagePullPolicy: Always
+#           env:
+#             - name: "ENV"
+#               value: "dev"
+#             - name: SPRING_DATASOURCE_URL
+#               value: jdbc:postgresql://elrr-postgres-aggsvc-service:5432/mydatabase
+#             - name: SPRING_DATASOURCE_USERNAME
+#               value: myuser
+#             - name: SPRING_DATASOURCE_PASSWORD
+#               value: mypassword
+#             - name: NAME
+#               value: elrr-aggregator
+#             - name: brokerUrl
+#               value: "elrr-kafka-svc:9092" # Replace with your Zookeeper service
+#             - name: spring.kafka.bootstrap-servers
+#               value: "elrr-kafka-svc:9092"
+#             - name: JASYPT_ENCRYPTOR_PASSWORD
+#               value: elrr-aggregator
+#             - name: ALGORITHM
+#               value: PBEWithHMACSHA512AndAES_256
+#           ports:
+#             - containerPort: 8092
+
+# # ---
+
+# # apiVersion: v1
+# # kind: Service
+# # metadata:
+# #   name: elrr-aggregator-svc
+# # spec:
+# #   selector:
+# #     app: elrr-aggregator
+# #   type: NodePort
+# #   ports:
+# #     - protocol: TCP
+# #       port: 8092
+# #       targetPort: 8092
+# #       nodePort: 30037
+
+# # ---
+
+# # apiVersion: v1
+# # kind: Service
+# # metadata:
+# #   labels:
+# #     app: elrr-aggregator
+# #   name: elrr-aggregator-lb
+# #   namespace: openlxp-elrr
+# # spec:
+# #   ports:
+# #   - name: http
+# #     port: 80
+# #     protocol: TCP
+# #     targetPort: 8089
+# #   - name: https
+# #     port: 443
+# #     protocol: TCP
+# #     targetPort: 8089
+# #   selector:
+# #     app: elrr-aggregator
+# #   type: LoadBalancer
+# # status:
+# #   loadBalancer: {}
+
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: elrr-aggregator-clusterip
+#   namespace: openlxp-elrr
+#   labels:
+#     app: elrr-aggregator
+# spec:
+#   selector:
+#     app: elrr-aggregator
+#   ports:
+#     - protocol: TCP
+#       port: 80
+#       targetPort: 8089
+#   type: ClusterIP
+
+# ---
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: elrr-aggregator-ingress
+#   namespace: openlxp-elrr
+#   labels:
+#     app: elrr-aggregator
+#   annotations:
+#     kubernetes.io/ingress.class: "alb"
+#     alb.ingress.kubernetes.io/scheme: "internet-facing"
+#     alb.ingress.kubernetes.io/target-type: "ip"
+#     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+#     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-east-1:955038580167:certificate/c2d50ebe-7997-4809-ad90-12ffdfa1a854"
+# spec:
+#   rules:
+#   - host: aggelrr-aggregator.deloitteopenlxp.com
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: elrr-aggregator-clusterip
+#             port:
+#               number: 80
