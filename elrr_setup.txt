@@ -184,17 +184,19 @@ Run ellrexternalservices and elrrdatasync:
 1. Run elrrexternalservices
    a. Open terminal
       1. cd C:\Users\phleven\git\elrrexternalservices
-      2. git switch dev-ext-update-local-fixes-and-docs-1
+      2. git switch <branch>
       3. mvn clean install
       4. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
       5. Ctrl+C to end --> Terminate batch job = Y 
 
 2. Run elrrdatasynch:
    a. Open terminal
       1. cd C:\Users\phleven\git\elrrdatasync
-      2. git switch dev-pom-update-local-fixes-and-docs-1
+      2. git switch <branch>
       3. mvn clean install
       4. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
       5. Ctrl+C to end --> Terminate batch job = Y 
 
 
@@ -202,9 +204,10 @@ Run ellrexternalservices and elrrdatasync:
 Run elrraggregator:
     1. Open terminal
       a. cd C:\Users\phleven\git\elrraggregator
-      b. git switch dev-agg-update-local-fixes-and-docs-1
+      b. git switch <branch>
       c. mvn clean install
       d. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
       e. Ctrl+C to end --> Terminate batch job = Y 
 
 
@@ -212,9 +215,10 @@ Run elrraggregator:
 Run elrrservices:
     1. Open terminal
       a. cd C:\Users\phleven\git\elrrservices
-      b. git switch dev-svc-update-local-fixes-and-docs-1
+      b. git switch <branch>
       c. mvn clean install
       d. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
       e. Ctrl+C to end --> Terminate batch job = Y 
 
 
