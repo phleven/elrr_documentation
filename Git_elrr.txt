@@ -15,6 +15,7 @@ Git Discard Changes in Working Directory
 Git Remove single file from committed area (local latest commit)
 Git Undo Last Commit to Local Repository
 Show Git Configuration
+Delete remote Git Branch
 Delete local Git Branch
 Git Unstage a specific file
 
@@ -118,9 +119,18 @@ Show Git Configuration:
 
 
 
+Delete remote Git Branch:
+1. Open terminal
+   a. git switch <a different local branch>
+   b. git push origin --delete <remoteBranchName>
+   
+   
+    
 Delete local Git Branch:
 1. Open terminal
-   a. git branch -d BugFix_RGHT-135859-ignore-customized-questions
+   a. git switch <a different local branch>
+   b. git branch -d <localBranchName>
+      git branch -D <localBranchName> (to force)
 
 
 
