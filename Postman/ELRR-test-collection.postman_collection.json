@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "51872369-195b-44f9-915d-fabb5cd93917",
+		"_postman_id": "6eb620cf-dcc5-455c-9e60-3941953c048c",
 		"name": "ELRR-test-collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29414547"
+		"_exporter_id": "38802312"
 	},
 	"item": [
 		{
@@ -37,7 +37,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8088/api/lrsdata?lastReadDate=2100-12-30T00:00:00Z",
+							"raw": "http://localhost:8088/api/lrsdata?lastReadDate=2000-12-30T00:00:00Z",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -50,7 +50,7 @@
 							"query": [
 								{
 									"key": "lastReadDate",
-									"value": "2100-12-30T00:00:00Z"
+									"value": "2000-12-30T00:00:00Z"
 								}
 							]
 						}
@@ -147,12 +147,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8809/api/getImports?name=test",
+							"raw": "http://localhost:8092/api/getImports?name=test",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8809",
+							"port": "8092",
 							"path": [
 								"api",
 								"getImports"
@@ -184,12 +184,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8809/api/getImports?name=test",
+							"raw": "http://localhost:8092/api/getImports?name=test",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8809",
+							"port": "8092",
 							"path": [
 								"api",
 								"getImports"
@@ -226,12 +226,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8809/api/getImports",
+							"raw": "http://localhost:8092/api/getImports",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8809",
+							"port": "8092",
 							"path": [
 								"api",
 								"getImports"
@@ -269,12 +269,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8809/api/getAllImports",
+							"raw": "http://localhost:8092/api/getAllImports",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8809",
+							"port": "8092",
 							"path": [
 								"api",
 								"getAllImports"
@@ -307,12 +307,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8809/api/getAllImports",
+							"raw": "http://localhost:8092/api/getAllImports",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8809",
+							"port": "8092",
 							"path": [
 								"api",
 								"getAllImports"
@@ -641,7 +641,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/competency/1",
+									"raw": "http://localhost:8092/api/competency/100",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -650,7 +650,7 @@
 									"path": [
 										"api",
 										"competency",
-										"1"
+										"100"
 									],
 									"query": [
 										{
@@ -924,7 +924,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/contactinformation/9959",
+									"raw": "http://localhost:8092/api/contactinformation/100",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -933,7 +933,7 @@
 									"path": [
 										"api",
 										"contactinformation",
-										"9959"
+										"100"
 									],
 									"query": [
 										{
@@ -1013,7 +1013,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/contactinformation/9959",
+									"raw": "http://localhost:8092/api/contactinformation/100",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1022,7 +1022,7 @@
 									"path": [
 										"api",
 										"contactinformation",
-										"9959"
+										"100"
 									],
 									"query": [
 										{
@@ -1141,7 +1141,7 @@
 									"raw": "{\r\n    \"courseaccreditationid\": \"9952\",\r\n    \"accreditedby\": \"Matt\",\r\n    \"accreditationtype\": \"type\",\r\n    \"accreditationadminprocess\": \"process\",\r\n    \"accreditationawarddate\": \"02/02/2000\",\r\n    \"accreditationexpirationdate\": \"2100-12-31\",\r\n    \"recordstatus\": \"success\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/courseaccreditation/4",
+									"raw": "http://localhost:8092/api/courseaccreditation/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1150,7 +1150,7 @@
 									"path": [
 										"api",
 										"courseaccreditation",
-										"4"
+										"1"
 									],
 									"query": [
 										{
@@ -1187,7 +1187,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/courseaccreditation/4",
+									"raw": "http://localhost:8092/api/courseaccreditation/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1196,7 +1196,7 @@
 									"path": [
 										"api",
 										"courseaccreditation",
-										"4"
+										"1"
 									],
 									"query": [
 										{
@@ -1671,7 +1671,7 @@
 									"raw": "{\r\n    \"name\": \"title\",\r\n    \"coursesubjectmatter\": \"sme\",\r\n    \"coursesubjectabbreviation\": \"abb\",\r\n    \"courseidentifier\": \"6\",\r\n    \"courselevel\": \"level\",\r\n    \"coursenumber\": \"1\",\r\n    \"courseinstructionmethod\": \"method\",\r\n    \"coursestartdate\": \"30/12/2000\",\r\n    \"courseenddate\": \"30/12/2100\",\r\n    \"courseenrollmentdate\": \"30/12/2000\",\r\n    \"courseacademicgrade\": \"grade\",\r\n    \"courseprovidername\": \"provider\",\r\n    \"departmentname\": \"depart\",\r\n    \"coursegradescalecode\": \"gradecode\",\r\n    \"coursemetadatarepository\": \"repo\",\r\n    \"courselrsendpoint\": \"\",\r\n    \"coursedescription\": \"desc\",\r\n    \"recordstatus\": \"inserted\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/course/1",
+									"raw": "http://localhost:8092/api/course/65",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1680,7 +1680,7 @@
 									"path": [
 										"api",
 										"course",
-										"1"
+										"65"
 									],
 									"query": [
 										{
@@ -1992,7 +1992,7 @@
 									"raw": "{\r\n    \"employerName\": \"name\",\r\n    \"employerdepartment\": \"department\",\r\n    \"hiredate\": \"01/01/2000\",\r\n    \"employmentstartdate\": \"2100-12-31\",\r\n    \"employmentenddate\": \"01/01/2000\",\r\n    \"joblevel\": \"level\",\r\n    \"occupation\": \"occupation\",\r\n    \"employed\": \"Y\",\r\n    \"primarycarrercategory\": \"primary\",\r\n    \"secondcarrercategory\": \"secondary\",\r\n    \"recordstatus\": \"success\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/employment/1",
+									"raw": "http://localhost:8092/api/employment/100",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -2001,7 +2001,7 @@
 									"path": [
 										"api",
 										"employment",
-										"1"
+										"100"
 									],
 									"query": [
 										{
@@ -2035,7 +2035,7 @@
 									"raw": "{\r\n    \"employerName\": \"name\",\r\n    \"employerdepartment\": \"department\",\r\n    \"hiredate\": \"01/01/2000\",\r\n    \"employmentstartdate\": \"2100-12-31\",\r\n    \"employmentenddate\": \"01/01/2000\",\r\n    \"joblevel\": \"level\",\r\n    \"occupation\": \"occupation\",\r\n    \"employed\": \"Y\",\r\n    \"primarycarrercategory\": \"primary\",\r\n    \"secondcarrercategory\": \"secondary\",\r\n    \"recordstatus\": \"success\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/employment/1",
+									"raw": "http://localhost:8092/api/employment/58",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -2044,7 +2044,7 @@
 									"path": [
 										"api",
 										"employment",
-										"1"
+										"58"
 									],
 									"query": [
 										{
@@ -2533,7 +2533,7 @@
 									"raw": "{\r\n    \"organizationid\": \"1\",\r\n    \"organizationname\": \"org name\",\r\n    \"organizationidentifier\": \"7829\",\r\n    \"organizationidentificationcode\": \"29\",\r\n    \"organizationidentificationsystem\": \"system\",\r\n    \"industrytypeidentifier\": \"type\",\r\n    \"organizationfein\": \"fein\",\r\n    \"organizationdescription\": \"desc\",\r\n    \"parentorganization\": \"parent org\",\r\n    \"recordstatus\": \"failure\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8092/api/organization/1",
+									"raw": "http://localhost:8092/api/organization/60",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -2542,7 +2542,7 @@
 									"path": [
 										"api",
 										"organization",
-										"1"
+										"60"
 									],
 									"query": [
 										{
