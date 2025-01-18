@@ -179,10 +179,10 @@ Create and populate PostgreSQL staging schema:
       5432
       service_user
       service_password
-   b.sync_db
-     5431
-     sync_user
-     sync_password
+   b. sync_db
+      5431
+      sync_user
+      sync_password
 3. Run Create_sync_db.sql
 4. Run sync_db_insert.sql
 5. Run Create_service_db.sql

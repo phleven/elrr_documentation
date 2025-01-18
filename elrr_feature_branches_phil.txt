@@ -27,7 +27,7 @@ ELRRSERVICES
 ------------
 Create new local feature branch elrr-improve-request-validation for elrrservices and push to GitHub
  1. Open terminal
-      a. cd C:\Users\phleven\git\elrrservices
+      a. cd C:\Users\1phil\git\elrrservices
       b. git switch dev-update-base
       c. git switch -c elrr-improve-request-validation
       d. git push --set-upstream origin elrr-improve-request-validation
@@ -39,7 +39,7 @@ Create new local feature branch elrr-improve-request-validation for elrrservices
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrservices
+   a. cd C:\Users\1phil\git\elrrservices
    b. git remote set-branches --add origin elrr-improve-request-validation
    c. git fetch origin
    d. git checkout --track origin/elrr-improve-request-validation
@@ -48,7 +48,7 @@ Create a new local feature branch elrr-improve-request-validation from existing 
    
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrservices
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrservices
+   a. cd C:\Users\1phil\git\elrrservices
    b. git switch elrr-improve-request-validation
    c. git remote -v
    d. mvn clean 
@@ -85,7 +85,7 @@ ELRREXTERNALSERVICES
 --------------------
 Create new local feature branch elrr-improve-request-validation for elrrexternalservices and push to GitHub
  1. Open terminal
-      a. cd C:\Users\phleven\git\elrrexternalservices
+      a. cd C:\Users\1phil\git\elrrexternalservices
       b. git switch dev-update-base
       c. git switch -c elrr-improve-request-validation
       d. git push --set-upstream origin elrr-improve-request-validation
@@ -97,7 +97,7 @@ Create new local feature branch elrr-improve-request-validation for elrrexternal
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrexternalservices
+   a. cd C:\Users\1phil\git\elrrexternalservices
    b. git remote set-branches --add origin elrr-improve-request-validation
    c. git fetch origin
    d. git checkout --track origin/elrr-improve-request-validation
@@ -106,7 +106,7 @@ Create a new local feature branch elrr-improve-request-validation from existing 
 
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrexternalservices
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrexternalservices
+   a. cd C:\Users\1phil\git\elrrexternalservices
    b. git switch elrr-improve-request-validation
    c. git remote -v
    d. mvn clean 
@@ -143,7 +143,7 @@ ELRRDATASYNC
 ------------
 Create new local feature branch elrr-improve-request-validation for elrrdatasync and push to GitHub
  1. Open terminal
-      a. cd C:\Users\phleven\git\elrrdatasync
+      a. cd C:\Users\1phil\git\elrrdatasync
       b. git switch dev-update-base
       c. git switch -c elrr-improve-request-validation
       d. git push --set-upstream origin elrr-improve-request-validation
@@ -155,7 +155,7 @@ Create new local feature branch elrr-improve-request-validation for elrrdatasync
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrdatasync
+   a. cd C:\Users\1phil\git\elrrdatasync
    b. git remote set-branches --add origin elrr-improve-request-validation
    c. git fetch origin
    d. git checkout --track origin/elrr-improve-request-validation
@@ -164,7 +164,7 @@ Create a new local feature branch elrr-improve-request-validation from existing 
 
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrdatasync
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrdatasync
+   a. cd C:\Users\1phil\git\elrrdatasync
    b. git switch elrr-improve-request-validation
    c. git remote -v
    d. mvn clean 
@@ -201,7 +201,7 @@ ELRRAGGREGATOR
 --------------
 Create new local feature branch elrr-improve-request-validation for elrraggregator and push to GitHub
  1. Open terminal
-      a. cd C:\Users\phleven\git\elrraggregator
+      a. cd C:\Users\1phil\git\elrraggregator
       b. git switch dev-update-base
       c. git switch -c elrr-improve-request-validation
       d. git push --set-upstream origin elrr-improve-request-validation
@@ -213,7 +213,7 @@ Create new local feature branch elrr-improve-request-validation for elrraggregat
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrraggregator
+   a. cd C:\Users\1phil\git\elrraggregator
    b. git remote set-branches --add origin elrr-improve-request-validation
    c. git fetch origin
    d. git checkout --track origin/elrr-improve-request-validation
@@ -222,7 +222,7 @@ Create a new local feature branch elrr-improve-request-validation from existing 
 
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrraggregator
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrraggregator
+   a. cd C:\Users\1phil\git\elrraggregator
    b. git switch elrr-improve-request-validation
    c. git remote -v
    d. mvn clean 
@@ -259,7 +259,7 @@ Create Pull Request from elrr-improve-request-validation to dev-update-base:
 --------------------
 Create new local feature branch elrr-improve-request-validation for elrrservices and push to GitHub
  1. Open terminal
-      a. cd C:\Users\phleven\git\elrrservices
+      a. cd C:\Users\1phil\git\elrrservices
       b. git switch dev-update-base
       c. git switch -c elrr-improve-request-validation
       d. git push --set-upstream origin elrr-improve-request-validation
@@ -271,7 +271,7 @@ Create new local feature branch elrr-improve-request-validation for elrrservices
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrservices
+   a. cd C:\Users\1phil\git\elrrservices
    b. git remote set-branches --add origin elrr-improve-request-validation
    c. git fetch origin
    d. git checkout --track origin/elrr-improve-request-validation
@@ -280,7 +280,7 @@ Create a new local feature branch elrr-improve-request-validation from existing 
 
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrservices
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrservices
+   a. cd C:\Users\1phil\git\elrrservices
    b. git switch elrr-improve-request-validation
    c. git remote -v
    d. mvn clean 
@@ -316,7 +316,7 @@ Create Pull Request from elrr-improve-request-validation to dev-update-base:
  
 Synchronize Local and Remote Git Repositories:
 1. Open terminal
-   a. cd C:\Users\phleven\git\elrr_documentation
+   a. cd C:\Users\1phil\git\elrr_documentation
    b. git pull elrr_documentation main --allow-unrelated-histories
    c. git push --set-upstream elrr_documentation master
 
@@ -324,14 +324,14 @@ Synchronize Local and Remote Git Repositories:
 
 Create a new local Git Repository:
 1. Open terminal
-   a. cd C:\Users\phleven\git\elrr_documentation
+   a. cd C:\Users\1phil\git\elrr_documentation
    b. git init
 
 
 
 Commit files to local Git Repository:
 1. Open terminal
-   a. cd C:\Users\phleven\git\elrr_documentation
+   a. cd C:\Users\1phil\git\elrr_documentation
    b. git status
    c. git add <filename>
    d. git commit -m "<message>"
@@ -343,7 +343,7 @@ Commit files to local Git Repository:
 
 Create local Git repository, commit locally and push to remote repository
 1. Open terminal
-   a. cd cd C:\Users\phleven\git\elrr_documentation\elrrdockercompose
+   a. cd C:\Users\1phil\git\elrr_documentation\elrrdocker compose
    b. git init
    c. git add .
    d. git commit -m "Initial commit."
@@ -354,7 +354,7 @@ Create local Git repository, commit locally and push to remote repository
 
 Fix local branch tracking to wrong remote repository 
  1. Open terminal
-    a. cd C:\Users\phleven\git\elrraggregator
+    a. cd C:\Users\1phil\git\elrraggregator
     b. git remote -v                Dispays list of all remote repositories associated with your local repository, along with their URLs. 
                                     Ensure that you are targeting the correct remote origin for removal
     c. git remote remove origin     Only affe cts local repository.  It does not delete the remote repository or its contents on the server
