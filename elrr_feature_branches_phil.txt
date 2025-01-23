@@ -26,16 +26,16 @@ Create a new local GIT repository
 
 ELRREXTERNALSERVICES
 --------------------
-Create new local feature branch elrr-improve-request-validation for elrrexternalservices and push to GitHub
+Create new local feature branch elrr-drools for elrrexternalservices and push to GitHub
  1. Open terminal
       a. cd C:\Users\1phil\git\elrrexternalservices
       b. git switch dev-update-base
-      c. git switch -c elrr-improve-request-validation
-      d. git push --set-upstream origin elrr-improve-request-validation
-      (displays: branch 'elrr-improve-request-validation' set up to track 'origin/elrr-improve-request-validation'.)
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+      (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
       e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
       f. git branch -a
-      g. git switch elrr-improve-request-validation
+      g. git switch elrr-drools
 
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
@@ -90,16 +90,16 @@ Create Pull Request from elrr-improve-request-validation to dev-update-base:
 
 ELRRDATASYNC
 ------------
-Create new local feature branch elrr-improve-request-validation for elrrdatasync and push to GitHub
+Create new local feature branch elrr-drools for elrrdatasync and push to GitHub
  1. Open terminal
       a. cd C:\Users\1phil\git\elrrdatasync
       b. git switch dev-update-base
-      c. git switch -c elrr-improve-request-validation
-      d. git push --set-upstream origin elrr-improve-request-validation
-         (displays: branch 'elrr-improve-request-validation' set up to track 'origin/elrr-improve-request-validation'.)
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+         (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
       e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
       f. git branch -a
-      g. git switch elrr-improve-request-validation
+      g. git switch elrr-drools
 
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
@@ -154,16 +154,16 @@ Create Pull Request from elrr-improve-request-validation to dev-update-base:
 
 ELRRAGGREGATOR
 --------------
-Create new local feature branch elrr-improve-request-validation for elrraggregator and push to GitHub
+Create new local feature branch elrr-drools for elrraggregator and push to GitHub
  1. Open terminal
       a. cd C:\Users\1phil\git\elrraggregator
       b. git switch dev-update-base
-      c. git switch -c elrr-improve-request-validation
-      d. git push --set-upstream origin elrr-improve-request-validation
-         (displays: branch 'elrr-improve-request-validation' set up to track 'origin/elrr-improve-request-validation'.)
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+         (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
       e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
       f. git branch -a
-      g. git switch elrr-improve-request-validation
+      g. git switch elrr-drools
 
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
@@ -218,16 +218,16 @@ Create Pull Request from elrr-improve-request-validation to dev-update-base:
  
  ELRRSERVICES
 --------------------
-Create new local feature branch elrr-improve-request-validation for elrrservices and push to GitHub
+Create new local feature branch elrr-drools for elrrservices and push to GitHub
  1. Open terminal
       a. cd C:\Users\1phil\git\elrrservices
       b. git switch dev-update-base
-      c. git switch -c elrr-improve-request-validation
-      d. git push --set-upstream origin elrr-improve-request-validation
-         (displays: branch 'elrr-improve-request-validation' set up to track 'origin/elrr-improve-request-validation'.)
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+         (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
       e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
       f. git branch -a
-      g. git switch elrr-improve-request-validation
+      g. git switch elrr-drools
 
 
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
