@@ -1,0 +1,6 @@
+ cd C:\Users\phleven\git\elrrexternalservices
+ cd C:\Users\phleven\git\elrrdatasync
+ cd C:\Users\phleven\git\elrraggregator
+ cd C:\Users\phleven\git\elrrservices
+ 
+ cd C:\Users\phleven\git\elrr_documentation

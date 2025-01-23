@@ -1,0 +1,6 @@
+ cd C:\Users\1phil\git\elrrexternalservices
+ d C:\Users\1phil\git\elrrdatasync
+ cd C:\Users\1phil\git\elrraggregator
+ cd C:\Users\1phil\git\elrrservices
+ 
+ cd C:\Users\1phil\git\elrr_documentation
