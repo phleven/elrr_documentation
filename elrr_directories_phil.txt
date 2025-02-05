@@ -4,3 +4,5 @@
  cd C:\Users\1phil\git\elrrservices
  
  cd C:\Users\1phil\git\elrr_documentation
+ 
+ mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
