@@ -18,6 +18,7 @@ Show Git Configuration
 Delete remote Git Branch
 Delete local Git Branch
 Git Unstage a specific file
+Remove all dependencies in local repository for a project
 
 
 
@@ -144,4 +145,18 @@ Remove remote Git Repository:
 Git Unstage a specific file:
 1. Open terminal
    a. git restore --staged <file>
-
+   
+   
+   
+ Remove all dependencies in local repository for a project
+ 1. Open terminal
+   a. cd <project directory>
+   b. mvn dependency:purge-local-repository -DreResolve=true
+   
+   
+   
+ Remove all dependencies in local repository
+ 1. Open terminal
+    a. rd C:\Users\phleven\.m2\repository
+    b. cd <project directory>
+    c. mvn clean package  

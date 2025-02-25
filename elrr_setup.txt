@@ -62,7 +62,27 @@ Create a new Eclipse Workspace:
          b. Location = https://projectlombok.org/p2
 
 
-    d. Import Project into Eclipse
+
+Import Project into Eclipse
+elrrserviceentities
+-------------------
+      1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrserviceentities.git
+         b. Select initial_schema branch, deselect all other branches
+         c. Local Destination = C:\Users\phleven\git\elrrserviceentities
+        
+      2. Eclipse --> Show View --> Git Repositories --> Right click on elrrserviceentities [dev-update-branch] C:\Users\phleven\git\elrrserviceentities\.git 
+	--> Working Tree - C:\Users\phleven\git\elrrserviceentities\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrserviceentities
+         b. Check all folders
+         
+      3. Open terminal
+         a. cd cd C:\Users\phleven\git\elrrserviceentities
+         b. mvn clean install
+    
+    
+elrraggregator
+--------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrraggregator.git
          b. Select dev-update-branch branch, deselect all other branches
@@ -84,17 +104,20 @@ Create a new Eclipse Workspace:
          g. Debug
  
  
-      4. File --> Import --> Git --> Projects from Git --> Clone URI
+ 
+elrrexternalservices
+--------------------
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrexternalservices.git
          b. Select dev-update-branch branch, deselect all other branches
          c. Local Destination = C:\Users\phleven\git\elrrexternalservices
         
-      5. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-branch] C:\Users\phleven\git\elrrexternalservices\.git 
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-branch] C:\Users\phleven\git\elrrexternalservices\.git 
 	--> Working Tree - C:\Users\phleven\git\elrrexternalservices\.git --> Import Projects 
          a. Import source = C:\Users\phleven\git\elrrexternalservices
          b. Check all folders
          
-      6. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
          a. Name = Debug 8000
          b. Project = elrrexternalservices
          c. Host = localhost
@@ -104,18 +127,21 @@ Create a new Eclipse Workspace:
             1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
          g. Debug
  
+ 
 
-      7. File --> Import --> Git --> Projects from Git --> Clone URI
+elrrdatasync
+------------
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrdatasync.git
          b. Select dev-update-branch branch, deselect all other branches
          c. Local Destination = C:\Users\phleven\git\elrrdtatsynch
          
-      8. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-branch] C:\Users\phleven\git\elrrdatasynch\.git 
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-branch] C:\Users\phleven\git\elrrdatasynch\.git 
 	--> Working Tree - C:\Users\phleven\git\elrrdatasynch\.git --> Import Projects 
          a. Import source = C:\Users\phleven\git\elrrdatasynch
          b. Check all folders
          
-      9. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
          a. Name = Debug 8000
          b. Project = elrrdatasync
          c. Host = localhost
@@ -126,17 +152,20 @@ Create a new Eclipse Workspace:
          g. Debug
       
 
-      10. File --> Import --> Git --> Projects from Git --> Clone URI
+
+elrrservices
+------------
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrservices.git
          b. Select dev-update-branch branch, deselect all other branches
          c. Local Destination = C:\Users\phleven\git\elrrservices
         
-      11. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-branch] C:\Users\phleven\git\elrrservices\.git 
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-branch] C:\Users\phleven\git\elrrservices\.git 
 	--> Working Tree - C:\Users\phleven\git\elrrservices\.git --> Import Projects 
          a. Import source = C:\Users\phleven\git\elrrservices
          b. Check all folders
 
-      12. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
          a. Name = Debug 8000
          b. Project = elrrservices
          c. Host = localhost
@@ -173,10 +202,17 @@ Create Docker Containers:
 
 Create and populate PostgreSQL staging schema:
 1. Open DBeaver
-2. Run Create_sync_db.sql
-3. Run sync_db_insert.sql
-4. Run Create_service_db.sql
-5. Run service_db_insert.sql
+   a. New Connections
+      1. service_db
+          5432
+          service_user
+          service_password
+      2. sync_db
+          5431
+          sync_user
+          sync_password
+   b. Run Drop_Create_Insert sync_db.sql
+   c. Run proposed_schema.sql
 
 
 
