@@ -24,6 +24,21 @@ Create a new local GIT repository
 
 
 
+ELRRSERVICEENTITIES
+--------------------
+Create new local feature branch elrr-drools for elrrServiceentities and push to GitHub
+ 1. Open terminal
+      a. cd C:\Users\phleven\git\elrrserviceentities
+      b. git switch records_refactor
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+      (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
+      e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
+      f. git branch -a
+      g. git switch elrr-drools
+
+
+
 ELRREXTERNALSERVICES
 --------------------
 Create new local feature branch elrr-drools for elrrexternalservices and push to GitHub
