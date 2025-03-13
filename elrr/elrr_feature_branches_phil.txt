@@ -63,12 +63,6 @@ Create a new local feature branch elrr-improve-request-validation from existing 
    e. git branch -a
 
 
-Create a new local feature branch dev-update-base from existing remote feature branch dev-update-base
-1. Open terminal 
-   a. cd C:\Users\1phil\git\elrrexternalservices
-   b. git checkout -b dev-update-base origin/dev-update-base
-
-
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrexternalservices
 1. Open terminal 
    a. cd C:\Users\1phil\git\elrrexternalservices
@@ -125,12 +119,6 @@ Create a new local feature branch elrr-improve-request-validation from existing 
    c. git fetch origin
    d. git checkout --track origin/elrr-improve-request-validation
    e. git branch -a
-
-
-Create a new local feature branch dev-update-base from existing remote feature branch dev-update-base
-1. Open terminal 
-   a. cd C:\Users\1phil\git\elrrdatasync
-   b. git checkout -b dev-update-base origin/dev-update-base
 
 
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrdatasync
@@ -191,12 +179,6 @@ Create a new local feature branch elrr-improve-request-validation from existing 
    e. git branch -a
 
 
-Create a new local feature branch dev-update-base from existing remote feature branch dev-update-base
-1. Open terminal 
-   a. cd C:\Users\1phil\git\elrraggregator
-   b. git checkout -b dev-update-base origin/dev-update-base
-
-
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrraggregator
 1. Open terminal 
    a. cd C:\Users\1phil\git\elrraggregator
@@ -253,12 +235,6 @@ Create a new local feature branch elrr-improve-request-validation from existing 
    c. git fetch origin
    d. git checkout --track origin/elrr-improve-request-validation
    e. git branch -a
-
-
-Create a new local feature branch dev-update-base from existing remote feature branch dev-update-base
-1. Open terminal 
-   a. cd C:\Users\1phil\git\elrrservices
-   b. git checkout -b dev-update-base origin/dev-update-base
 
 
 Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrservices
