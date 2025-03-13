@@ -68,7 +68,7 @@ elrrserviceentities
 -------------------
       1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrserviceentities.git
-         b. Select initial_schema branch, deselect all other branches
+         b. Select main branch, deselect all other branches
          c. Local Destination = C:\Users\phleven\git\elrrserviceentities
         
       2. Eclipse --> Show View --> Git Repositories --> Right click on elrrserviceentities [dev-update-branch] C:\Users\phleven\git\elrrserviceentities\.git 
