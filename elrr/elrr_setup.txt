@@ -201,6 +201,16 @@ Create Docker Containers:
 
 
 
+Create Kafka Dead Letter Queue: 
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1-dlq
+   e. Stop and restart elrrdockercompose container
+   
+   
+   
 Create and populate PostgreSQL staging schema:
 1. Open DBeaver
    a. New Connections
@@ -325,7 +335,7 @@ View runnung Docker containers:
 List Kafka topics:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 17110ec728d61fc65cc8fd84ca95b2d77695b26cd33f85efba8ce938f2a99276 /bin/bash
+   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
