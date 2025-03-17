@@ -2,8 +2,6 @@ Drools Rules
 
 1. Rule #1 = If actor != null get account.
  
-2. Rule #2 = If actor != null and account != null get person
+3. Rule #2 = If object != null get object type
 
-3. Rule #3 = If object != null get object type
-
-4. Rule #4 = If object =! null and object type = ACTIVITY process activity.
+4. Rule #3 = If object =! null and object type = ACTIVITY process activity.

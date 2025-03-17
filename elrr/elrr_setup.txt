@@ -7,6 +7,7 @@ Clone Remote Git Repository
 Create a new Eclipse Workspace
 Import Project Into Eclipse
 Create Docker Containers (Docker compose)
+Create Kafka Dead Letter Queue
 Create and populate PostgreSQL staging schema
 Run elrrexternalservices
 Application UI
@@ -213,6 +214,16 @@ Create and populate PostgreSQL staging schema:
           sync_password
    b. Run Drop_Create_Insert sync_db.sql
    c. Run proposed_schema.sql
+
+
+
+Create Kafka Dead Letter Queue: 
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1-dlq
+   e. Stop and restart elrrdockercompose container
 
 
 
