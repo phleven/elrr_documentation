@@ -227,16 +227,6 @@ Create and populate PostgreSQL staging schema:
 
 
 
-Create Kafka Dead Letter Queue: 
-1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
-   c. cd /opt/bitnami/kafka/bin
-   d. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1-dlq
-   e. Stop and restart elrrdockercompose container
-
-
-
 Run ellrexternalservices and elrrdatasync:
 1. Run elrrexternalservices
    a. Open terminal
@@ -322,6 +312,28 @@ Run Postman to populate lrs-db:
 
 [
   {"actor":{"name":"Cindy Leven","mbox":"mailto:cindy.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d6f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
+  
+  [
+  	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb2",
+    "actor": {
+        "name": "Cliff Casey",
+        "mbox": "mailto:cliff@yetanalytics.com"
+    },
+    "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/completed",
+        "display": { "en-us": "Completed" }
+    },
+    "object": {
+        "id": "http://example.edlm/activities/activity1",
+        "definition": {
+            "name": { "en-us": "Activity 1" },
+            "description": { "en-us": "Example Activity 1" }
+        }
+    },
+    "result": {
+        "completion": true
+    },
+    "timestamp": "2025-03-07T09:15:12-05:00"}
 ]
 
 
