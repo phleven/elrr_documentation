@@ -39,7 +39,16 @@ Create new local feature branch elrr-drools for elrrServiceentities and push to 
       g. git switch elrr-drools
 
 
-
+Create a new local feature branch main from existing remote feature branch main
+1. Open terminal 
+   a. cd C:\Users\phleven\git\elrrexternalservices
+   b. git remote set-branches --add origin main
+   c. git fetch origin
+   d. git checkout --track origin/main
+   e. git branch -a
+   
+   
+   
 ELRREXTERNALSERVICES
 --------------------
 Create new local feature branch elrr-drools for elrrexternalservices and push to GitHub
