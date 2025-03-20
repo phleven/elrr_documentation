@@ -40,7 +40,7 @@ Create new local feature branch elrr-drools for elrrServiceentities and push to 
       
       
       
-      Create a new local feature branch main from existing remote feature branch main
+Create a new local feature branch main from existing remote feature branch main
 1. Open terminal 
    a. cd C:\Users\1phil\git\elrrexternalservices
    b. git remote set-branches --add origin main
