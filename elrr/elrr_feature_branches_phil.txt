@@ -1,0 +1,332 @@
+https://github.com/US-ELRR/elrrserviceentities
+https://github.com/US-ELRR/elrrexternalservices - polls with an LRS to get xapi data
+https://github.com/US-ELRR/elrrdatasync - Grabs xAPI data via externalservices and dumps it onto a kafka topic
+https://github.com/US-ELRR/elrraggregator - aggregates all of the statements from the topic and writes them to the database accordingly
+https://github.com/US-ELRR/elrrservices - API layer to CRUD data in the database has context menu
+https://github.com/yetanalytics/xapi-java-client
+https://github.com/US-ELRR/elrrdockercompose
+https://github.com/phleven/elrr_documentation
+
+
+
+Docker credentials
+phleven (phleven@deloitte.com)
+Cynthia1#
+
+
+
+Create new local feature branch elrr-improve-request-validation and push to GitHub
+Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
+Create a new local feature branch dev-update-base from existing remote feature branch dev-update-base
+Commit to Local and Remote Git elrr-improve-request-validation feature branch
+Create Pull Request from elrr-improve-request-validation to dev-update-base
+Synchronize Local and Remote Git Repositories
+Create a new local GIT repository
+
+
+
+ELRRSERVICEENTITIES
+--------------------
+Create new local feature branch elrr-drools for elrrServiceentities and push to GitHub
+ 1. Open terminal
+      a. cd C:\Users\1phil\git\elrrserviceentities
+      b. git switch records_refactor
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+      (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
+      e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
+      f. git branch -a
+      g. git switch elrr-drools
+      
+      
+      
+Create a new local feature branch main from existing remote feature branch main
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrexternalservices
+   b. git remote set-branches --add origin main
+   c. git fetch origin
+   d. git checkout --track origin/main
+   e. git branch -a
+   
+   
+      
+ELRREXTERNALSERVICES
+--------------------
+Create new local feature branch elrr-drools for elrrexternalservices and push to GitHub
+ 1. Open terminal
+      a. cd C:\Users\1phil\git\elrrexternalservices
+      b. git switch dev-update-base
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+      (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
+      e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
+      f. git branch -a
+      g. git switch elrr-drools
+
+
+Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrexternalservices
+   b. git remote set-branches --add origin elrr-improve-request-validation
+   c. git fetch origin
+   d. git checkout --track origin/elrr-improve-request-validation
+   e. git branch -a
+
+
+Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrexternalservices
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrexternalservices
+   b. git switch elrr-improve-request-validation
+   c. git remote -v
+   d. mvn clean 
+   e. git status
+   f. git pull
+   g. git add <filename>
+   h. git commit -m "<message>"
+   i. git push
+   j. git log
+      1. Q (to quit)
+
+
+Create Pull Request from elrr-improve-request-validation to dev-update-base:
+1. URL = https://github.com/US-ELRR/elrrexternalservices
+
+2. Sign in
+   a. username = phleven
+   b. password = phil55.cindy61
+   
+3. Pull requests --> New pull request
+   a. base = dev-update-base, compare = elrr-improve-request-validation
+   b. Create pull request
+      1. Reviewers
+         a. cliffcaseyyet
+      2. Asignees
+         a. phleven
+      3. Description
+         a. <description>
+   c. Create pull request
+
+
+
+ELRRDATASYNC
+------------
+Create new local feature branch elrr-drools for elrrdatasync and push to GitHub
+ 1. Open terminal
+      a. cd C:\Users\1phil\git\elrrdatasync
+      b. git switch dev-update-base
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+         (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
+      e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
+      f. git branch -a
+      g. git switch elrr-drools
+
+
+Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrdatasync
+   b. git remote set-branches --add origin elrr-improve-request-validation
+   c. git fetch origin
+   d. git checkout --track origin/elrr-improve-request-validation
+   e. git branch -a
+
+
+Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrdatasync
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrdatasync
+   b. git switch elrr-improve-request-validation
+   c. git remote -v
+   d. mvn clean 
+   e. git status
+   f. git pull
+   g. git add <filename>
+   h. git commit -m "<message>"
+   i. git push
+   j. git log
+      1. Q (to quit)
+
+
+Create Pull Request from elrr-improve-request-validation to dev-update-base:
+1. URL = https://github.com/US-ELRR/elrrdatasync
+
+2. Sign in
+   a. username = phleven
+   b. password = phil55.cindy61
+   
+3. Pull requests --> New pull request
+   a. base = dev-update-base, compare = elrr-improve-request-validation
+   b. Create pull request
+      1. Reviewers
+         a. cliffcaseyyet
+      2. Asignees
+         a. phleven
+      3. Description
+         a. <description>
+   c. Create pull request
+
+
+
+ELRRAGGREGATOR
+--------------
+Create new local feature branch elrr-drools for elrraggregator and push to GitHub
+ 1. Open terminal
+      a. cd C:\Users\1phil\git\elrraggregator
+      b. git switch dev-update-base
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+         (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
+      e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
+      f. git branch -a
+      g. git switch elrr-drools
+
+
+Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrraggregator
+   b. git remote set-branches --add origin elrr-improve-request-validation
+   c. git fetch origin
+   d. git checkout --track origin/elrr-improve-request-validation
+   e. git branch -a
+
+
+Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrraggregator
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrraggregator
+   b. git switch elrr-improve-request-validation
+   c. git remote -v
+   d. mvn clean 
+   e. git status
+   f. git pull
+   g. git add <filename>
+   h. git commit -m "<message>"
+   i. git push
+   j. git log
+      1. Q (to quit)
+
+
+Create Pull Request from elrr-improve-request-validation to dev-update-base:
+1. URL = https://github.com/US-ELRR/elrraggregator
+
+2. Sign in
+   a. username = phleven
+   b. password = phil55.cindy61
+   
+3. Pull requests --> New pull request
+   a. base = dev-update-base, compare = elrr-improve-request-validation
+   b. Create pull request
+      1. Reviewers
+         a. cliffcaseyyet
+      2. Asignees
+         a. phleven
+      3. Description
+         a. <description>
+   c. Create pull request
+
+
+ 
+ ELRRSERVICES
+--------------------
+Create new local feature branch elrr-drools for elrrservices and push to GitHub
+ 1. Open terminal
+      a. cd C:\Users\1phil\git\elrrservices
+      b. git switch dev-update-base
+      c. git switch -c elrr-drools
+      d. git push --set-upstream origin elrr-drools
+         (displays: branch 'elrr-drools' set up to track 'origin/elrr-drools'.)
+      e. git config --get-regexp ^branch\. (upstream branch.main.remote and branch.main.merge)
+      f. git branch -a
+      g. git switch elrr-drools
+
+
+Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrservices
+   b. git remote set-branches --add origin elrr-improve-request-validation
+   c. git fetch origin
+   d. git checkout --track origin/elrr-improve-request-validation
+   e. git branch -a
+
+
+Commit to Local and Remote Git elrr-improve-request-validation feature branch for elrrservices
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrservices
+   b. git switch elrr-improve-request-validation
+   c. git remote -v
+   d. mvn clean 
+   e. git status
+   f. git pull
+   g. git add <filename>
+   h. git commit -m "<message>"
+   i. git push
+   j. git log
+      1. Q (to quit)
+
+
+Create Pull Request from elrr-improve-request-validation to dev-update-base:
+1. URL = https://github.com/US-ELRR/elrrservices
+
+2. Sign in
+   a. username = phleven
+   b. password = phil55.cindy61
+   
+3. Pull requests --> New pull request
+   a. base = dev-update-base, compare = elrr-improve-request-validation
+   b. Create pull request
+      1. Reviewers
+         a. cliffcaseyyet
+      2. Asignees
+         a. phleven
+      3. Description
+         a. <description>
+   c. Create pull request
+
+
+
+ 
+Synchronize Local and Remote Git Repositories:
+1. Open terminal
+   a. cd C:\Users\1phil\git\elrr_documentation
+   b. git pull elrr_documentation main --allow-unrelated-histories
+   c. git push --set-upstream elrr_documentation master
+
+
+
+Create a new local Git Repository:
+1. Open terminal
+   a. cd C:\Users\1phil\git\elrr_documentation
+   b. git init
+
+
+
+Commit files to local Git Repository:
+1. Open terminal
+   a. cd C:\Users\1phil\git\elrr_documentation
+   b. git status
+   c. git add <filename>
+   d. git commit -m "<message>"
+   e. git push
+   f. git log
+      1. Q (to quit)
+
+   
+
+Create local Git repository, commit locally and push to remote repository
+1. Open terminal
+   a. cd C:\Users\1phil\git\elrr_documentation\elrrdocker compose
+   b. git init
+   c. git add .
+   d. git commit -m "Initial commit."
+   e. git remote add elrrdockercompose https://github.com/US-ELRR/elrrdockercompose.git
+   f. git push --set-upstream elrrdockercompose master 
+
+
+
+Fix local branch tracking to wrong remote repository 
+ 1. Open terminal
+    a. cd C:\Users\1phil\git\elrraggregator
+    b. git remote -v                Dispays list of all remote repositories associated with your local repository, along with their URLs. 
+                                    Ensure that you are targeting the correct remote origin for removal
+    c. git remote remove origin     Only affe cts local repository.  It does not delete the remote repository or its contents on the server
+
+Add missing remote/origin - only used for cloning, not needed.
+ 

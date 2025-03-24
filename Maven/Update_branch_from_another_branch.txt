@@ -1,0 +1,11 @@
+Update ranch from another branch
+
+
+Update elrrserviceentities elrr-drools branch from records-refactor branch
+1. Open terminal
+   a. cd C:\Users\phleven\git\elrrserviceentities
+   b. git commit -m <description>
+   c. git switch records_refactor
+   d. git pull
+   e. git switch elrr-drools
+   f. git merge records_refactor 
