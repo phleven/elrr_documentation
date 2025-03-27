@@ -76,6 +76,54 @@ No Mailbox
 
 
 
+Group
+{
+   "actor": {
+     objectType: "Group",
+   	 mbox: "mailto:support@peck.consulting",
+   	 name: "Peck Consulting Support Team",
+   	 member: [
+      {
+        mbox: "mailto:devlin@peck.consulting",
+        name: "Devlin Peck"
+      },
+      {
+        mbox: "mailto:taylor@peck.consulting",
+        name: "Taylor Villucci Peck"
+      }
+    ]
+  },
+  "verb": {
+    "id": "https://adlnet.gov/expapi/verbs/achieved",
+    "display": {
+      "en-us": "Achieved"
+    }
+  },
+  "object": {
+    "id": "https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29",
+    "objectType": "Activity",
+    "definition": {
+      "name": {
+        "en-us": "GIAC Security Essentials Certification (GSEC)"
+      },
+      "type": "https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"
+    }
+  },
+  "stored": "2025-01-13T18:20:06.272000000Z",
+  "authority": {
+    "account": {
+      "homePage": "http://example.org",
+      "name": "0194609d-5948-87ff-b11a-0eec04f384c2"
+    },
+    "objectType": "Agent"
+  },
+  "id": "d6f1348b-bcc2-4b9c-b954-03cb88a240c8",
+  "timestamp": "2024-09-20T21:37:23.835000000Z",
+  "version": "1.0.0"
+}
+
+
+
 Statement 1: Completed
 {
 "id": "7a8073a4-2d0c-48da-986d-b82223730eb2",
