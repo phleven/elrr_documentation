@@ -1,0 +1,8 @@
+fatal: detected dubious ownership in repository at 'C:/Users/1phil/git/elrr_documentation'
+'C:/Users/1phil/git/elrr_documentation' is owned by:
+        BUILTIN/Administrators (S-1-5-32-544)
+but the current user is:
+        PHIL01/1phil (S-1-5-21-388727148-3784640247-2909946183-1001)
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory C:/Users/1phil/git/elrr_documentation
