@@ -469,6 +469,7 @@ Consume Kafka Topic Messages:
    b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
+      ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning      
    e. Ctrl + C to end 
 
 
