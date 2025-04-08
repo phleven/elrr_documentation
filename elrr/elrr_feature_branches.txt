@@ -4,6 +4,7 @@ elrr feature branches
 
 Create new local feature branch elrr-improve-request-validation and push to GitHub
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
+Update local feature branch elrr-drools from existing remote Feature branch main  
 Commit to Local and Remote Git elrr-improve-request-validation feature branch
 Create Pull Request from elrr-improve-request-validation to dev-update-base
 Synchronize Local and Remote Git Repositories
@@ -28,13 +29,25 @@ Create new local feature branch elrr-drools for elrrServiceentities and push to 
 
 Create a new local feature branch main from existing remote feature branch main
 1. Open terminal 
-   a. cd C:\Users\phleven\git\elrrexternalservices
+   a. cd C:\Users\phleven\git\elrrserviceentities
    b. git remote set-branches --add origin main
    c. git fetch origin
    d. git checkout --track origin/main
    e. git branch -a
    
    
+Update local feature branch elrr-drools from existing remote Feature branch main
+1. Open terminal 
+   a. cd C:\Users\phleven\git\elrrserviceentities
+   
+   b. git checkout main
+   c. git pull
+   
+   d. git checkout elrfr-drools
+   e. git merge main 
+   f. git push
+
+
    
 ELRREXTERNALSERVICES
 --------------------

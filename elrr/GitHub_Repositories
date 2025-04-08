@@ -1,4 +1,4 @@
-https://github.com/US-ELRR/elrrserviceentities - Service db entities
+https://github.com/US-ELRR/elrrserviceentities - Service db entities (shared)
 https://github.com/US-ELRR/elrrexternalservices - polls with an LRS to get xapi data
 https://github.com/US-ELRR/elrrdatasync - Grabs xAPI data via externalservices and dumps it onto a kafka topic
 https://github.com/US-ELRR/elrraggregator - aggregates all of the statements from the topic and writes them to the database accordingly
