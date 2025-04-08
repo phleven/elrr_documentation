@@ -40,10 +40,10 @@ Update local feature branch elrr-drools from existing remote Feature branch main
 1. Open terminal 
    a. cd C:\Users\phleven\git\elrrserviceentities
    
-   b. git checkout main
+   b. git switch main
    c. git pull
    
-   d. git checkout elrfr-drools
+   d. git switch elrr-drools
    e. git merge main 
    f. git push
 
