@@ -1,5 +1,13 @@
 Docker CLI
 
+
+
+Docker credentials
+phleven (phleven@deloitte.com)
+Cynthia1#
+
+
+
 1. List all continers
 docker ps -a
 
