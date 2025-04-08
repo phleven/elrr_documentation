@@ -12,6 +12,3 @@ docker images
 4. List containers for a compose project
 cd C:\Information\Applications\ELRR\ELRRDockerCompose
 docker compose ps --all
-
-
-

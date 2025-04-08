@@ -1,4 +1,4 @@
-elrr
+elrr setup
 
 
 Use Java 17
@@ -38,14 +38,6 @@ Install Dependencies:
          a. New UNIX username = phleven
          b. New password = Cynthia1#
    
-
-
-
-Clone elrraggregator Remote Git Repository (NOT USED):
-1. Open terminal
-   a. md C:\Dev\elrraggrigator
-   b. cd C:\Dev\elrraggrigator
-   c. git clone -b agg-update https://github.com/US-ELRR/elrraggregator.git
 
 
 
@@ -210,7 +202,7 @@ Create Kafka Dead Letter Queue:
    
    
    
-Create and populate PostgreSQL staging schema:
+Create and populate PostgreSQL service and staging schema:
 1. Open DBeaver
    a. New Connections
       1. service_db
@@ -221,12 +213,20 @@ Create and populate PostgreSQL staging schema:
           5431
           sync_user
           sync_password
-   b. Run schema.sql
-   c. Run schema.sql
+   b. Run service schema.sql
+   c. Run staging schema.sql
 
 
 
-Run ellrexternalservices and elrrdatasync:
+Run elrrServiceEntities
+    1. Open terminal
+      a. cd C:\Users\1phil\git\elrrserviceentities
+      b. git switch <branch>
+      c. mvn clean install
+
+
+
+Run elrrexternalservices and elrrdatasync:
 1. Run elrrexternalservices
    a. Open terminal
       1. cd C:\Users\1phil\git\elrrexternalservices
@@ -301,48 +301,89 @@ Run Postman to populate lrs-db:
       1. key = X-Experience-API-Version
       2. value = 1.0.3
    d. Body raw, JSON
-[
-  {"actor":{"name":"Sophia Lewis","mbox":"mailto:sophia.lewis@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d9f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
-]
 
-[
-  {"actor":{"name":"Mark Pester","mbox":"mailto:mark.pester@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d8f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
-]
-
-[
-  {"actor":{"name":"Cindy Leven","mbox":"mailto:cindy.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d7f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
-]
-
-[
-  {"actor":{"name":"Cindy Leven","mbox":"mailto:cindy.leven@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification2%20%28GSEC%29","objectType":"Activity","definition":{"name":{"en-us":"GIAC Security Essentials Certification2 (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"stored":"2024-09-20T21:37:23.835000000Z","authority":{"account":{"homePage":"http://example.org","name":"0192115b-03d0-849f-8a65-f217ffbe2207"},"objectType":"Agent"},"id":"d6f1328b-bcc2-4b9c-b954-03cb88a240c8","timestamp":"2024-09-20T21:37:23.835000000Z","version":"1.0.0"}
-]
-
-[
-  	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb2",
-    "actor": {
-        "name": "Cliff Casey",
-        "mbox": "mailto:cliff@yetanalytics.com"
-    },
-    "verb": {
-        "id": "http://adlnet.gov/expapi/verbs/completed",
-        "display": { "en-us": "Completed" }
-    },
-    "object": {
-        "id": "http://example.edlm/activities/activity1",
-        "definition": {
-            "name": { "en-us": "Activity 1" },
-            "description": { "en-us": "Example Activity 1" }
-        }
-    },
-    "result": {
-        "completion": true
-    },
-    "timestamp": "2025-03-07T09:15:12-05:00"}
-]
-
+Competency attainment:
 [
 	{
-	    "id": "7a8073a4-2d0c-48da-986d-b82223730eb3",
+	    "id": "7a8073a4-2d0c-48da-986d-b82223730ea9",
+	    "actor": {
+	        "name": "Cliff Casey",
+	        "mbox": "mailto:cliff@yetanalytics.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/achieved",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/competencies/competency-a",
+	        "definition": {
+	            "name": { "en-us": "Competency A" },
+	            "description": { "en-us": "Object representing Competency A level" },
+	            "type": "https://w3id.org/xapi/tla/activity-types/competency"
+	
+	        }
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+	
+[	
+	{
+	    "id": "7a8073a4-2E0c-48da-986d-b82223730ea9",
+	    "actor": {
+	        "name": "Horatio Nelson",
+	        "mbox": "mailto:horatio@gmail.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/achieved",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/competencies/competency-c",
+	        "definition": {
+	            "name": { "en-us": "Competency A" },
+	            "description": { "en-us": "Object representing Competency C level" },
+	            "type": "https://w3id.org/xapi/tla/activity-types/competency"
+	
+	        }
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]	
+	
+	
+
+   
+Completed:
+[
+	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb2",
+	"actor": {
+	    "name": "Cliff Casey",
+	    "mbox": "mailto:cliff@yetanalytics.com"
+	},
+	"verb": {
+	    "id": "http://adlnet.gov/expapi/verbs/completed",
+	    "display": { "en-us": "Completed" }
+	},
+	"object": {
+	    "id": "http://example.edlm/activities/activity1",
+	    "definition": {
+	        "name": { "en-us": "Activity 1" },
+	        "description": { "en-us": "Example Activity 1" }
+	    }
+	},
+	"result": {
+	    "completion": true
+	},
+	"timestamp": "2025-03-07T09:15:12-05:00"}
+]
+
+
+
+[
+	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb3",
 	    "actor": {
 	        "name": "Cliff Casey",
 	        "mbox": "mailto:cliff@yetanalytics.com"
@@ -366,9 +407,10 @@ Run Postman to populate lrs-db:
 	}
 ]
 
+
+
 [
-	{
-	    "id": "7a8073a4-2d0c-48da-986d-b82223730eb4",
+	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb4",
 	    "actor": {
 	        "name": "Cliff Casey",
 	        "mbox": "mailto:cliff@yetanalytics.com"
@@ -387,6 +429,60 @@ Run Postman to populate lrs-db:
 	    "result": {
 	        "completion": true,
 	        "success": false
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+
+[
+	{
+	"id": "7b8073a4-2d0c-48da-986d-b82223730eb2",
+	    "actor": {
+	        "name": "Phil Leven",
+	        "mbox": "mailto:phleven@deloitte.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/completed",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/activities/activity4",
+	        "definition": {
+	            "name": { "en-us": "Activity 4" },
+	            "description": { "en-us": "Example Activity 4" }
+	        }
+	    },
+	    "result": {
+	        "completion": true
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+
+[
+	{
+	"id": "7b8073b4-2d0c-48da-986d-b82223730eb2",
+	    "actor": {
+	        "name": "Phil Simms",
+	        "mbox": "mailto:philSimms@gmail.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/completed",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/activities/activity5",
+	        "definition": {
+	            "name": { "en-us": "Activity 5" },
+	            "description": { "en-us": "Example Activity 5" }
+	        }
+	    },
+	    "result": {
+	        "completion": true
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
 	}
@@ -456,6 +552,7 @@ Consume Kafka Topic Messages:
    b. docker exec -t -i 6f314219de9a7f8a94add740228ed995896dca962ecf36de65b5f775e6e8cc3e /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
+   	  ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning
    e. Ctrl + C to end 
 
 {"statement":{"id":"d9f1328b-bcc2-4b9c-b954-03cb88a240c8","actor":{"objectType":"Agent","name":"Sophia Lewis","mbox":"mailto:sophia.lewis@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"objectType":"Activity","id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"authority":{"objectType":"Agent","account":{"homePage":"http://example.org","name":"0193f924-b470-89c9-a5f2-35cd03409e9c"}},"timestamp":"2024-09-20T21:37:23.835Z","stored":"2024-12-24T14:51:40.346Z","version":"1.0.0"}
