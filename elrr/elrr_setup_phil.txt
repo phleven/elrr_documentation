@@ -1,4 +1,4 @@
-elrr setup
+elrr (Enterprise Learner Record Repository) setup
 
 
 Use Java 17

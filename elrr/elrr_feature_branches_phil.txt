@@ -1,4 +1,4 @@
-elrr feature branches
+elrr (Enterprise Learner Record Repository) feature branches
 
 
 
