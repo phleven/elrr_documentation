@@ -4,11 +4,11 @@ elrr feature branches
 
 Create new local feature branch elrr-improve-request-validation and push to GitHub
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
-Create a new local feature branch dev-update-base from existing remote feature branch dev-update-base
 Commit to Local and Remote Git elrr-improve-request-validation feature branch
 Create Pull Request from elrr-improve-request-validation to dev-update-base
 Synchronize Local and Remote Git Repositories
 Create a new local GIT repository
+Fix local branch tracking to wrong remote repository
 
 
 
