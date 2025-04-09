@@ -1,9 +1,0 @@
- cd C:\Users\1phil\git\elrrserviceentities 
- cd C:\Users\1phil\git\elrrexternalservices
- cd C:\Users\1phil\git\elrrdatasync
- cd C:\Users\1phil\git\elrraggregator
- cd C:\Users\1phil\git\elrrservices
- 
- cd C:\Users\1phil\git\elrr_documentation
- 
- mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
