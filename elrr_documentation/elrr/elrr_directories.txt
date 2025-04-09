@@ -1,0 +1,9 @@
+ cd C:\Users\phleven\git\elrrserviceentities 
+ cd C:\Users\phleven\git\elrrexternalservices
+ cd C:\Users\phleven\git\elrrdatasync
+ cd C:\Users\phleven\git\elrraggregator
+ cd C:\Users\phleven\git\elrrservices
+ 
+ cd C:\Users\phleven\git\elrr_documentation
+ 
+ mvn spring-boot:run -D"spring-boot.run.profiles"=local -e

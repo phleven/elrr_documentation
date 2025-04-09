@@ -1,0 +1,32 @@
+Resolve POM Dependencies
+
+1. mvn dependency:tree -Dverbose
+
+This command helps you understand the dependencies of your project, detect version conflicts, 
+identify unnecessary dependencies, and resolve build or runtime issues.
+
+
+
+2. mvn dependency:analyze
+
+This command help to find out what are the used, declared, and undeclared dependencies in your project.
+
+
+
+3. mvn dependency:analyze-duplicate
+This command will go over your dependencyMangement and dependencies on the pom.xml and find out the duplicate 
+dependencies used. 
+
+
+
+4. mvn dependency:resolve
+This command helps to resolve all dependencies of your project. 
+Finally, it will printout the details of resolved dependencies.
+
+
+
+5. mvn dependency:sources
+This command is for resolving dependencies with their sources. This help for debugging, getting the logics 
+inside the jars, exploring the working libraries … etc. At the end of this command execution, the system 
+will output what the resolved and non resolved source dependencies are.
+

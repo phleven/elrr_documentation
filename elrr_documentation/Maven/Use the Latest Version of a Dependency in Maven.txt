@@ -1,0 +1,23 @@
+Use the Latest Version of a Dependency in Maven
+
+The Versions Maven Plugin is the de facto standard way to handle versions management nowadays.
+
+
+List of latest updates:
+mvn versions:display-dependency-updates
+
+
+Examine the latest versions of the plugins and their dependencies
+mvn versions:display-plugin-updates
+
+
+Update every non-SNAPSHOT dependency to its latest release:
+mvn versions:use-latest-releases
+
+
+Reverts the changes done to pom.xml from the git/svn repository:
+mvn versions:revert
+
+
+Commits the changes modified to pom.xml to a repository:
+mvn versions:commit 

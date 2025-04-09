@@ -1,0 +1,5 @@
+Docker Fix TCP port 2181 (Zookeeper) is in use error:
+1. Open Terminal
+   a. net stop winnat
+   b. net start winnat
+

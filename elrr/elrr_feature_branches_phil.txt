@@ -1,27 +1,15 @@
-https://github.com/US-ELRR/elrrserviceentities
-https://github.com/US-ELRR/elrrexternalservices - polls with an LRS to get xapi data
-https://github.com/US-ELRR/elrrdatasync - Grabs xAPI data via externalservices and dumps it onto a kafka topic
-https://github.com/US-ELRR/elrraggregator - aggregates all of the statements from the topic and writes them to the database accordingly
-https://github.com/US-ELRR/elrrservices - API layer to CRUD data in the database has context menu
-https://github.com/yetanalytics/xapi-java-client
-https://github.com/US-ELRR/elrrdockercompose
-https://github.com/phleven/elrr_documentation
-
-
-
-Docker credentials
-phleven (phleven@deloitte.com)
-Cynthia1#
+elrr (Enterprise Learner Record Repository) feature branches
 
 
 
 Create new local feature branch elrr-improve-request-validation and push to GitHub
 Create a new local feature branch elrr-improve-request-validation from existing remote feature branch elrr-improve-request-validation
-Create a new local feature branch dev-update-base from existing remote feature branch dev-update-base
+Update local feature branch elrr-drools from existing remote Feature branch main
 Commit to Local and Remote Git elrr-improve-request-validation feature branch
 Create Pull Request from elrr-improve-request-validation to dev-update-base
 Synchronize Local and Remote Git Repositories
 Create a new local GIT repository
+Fix local branch tracking to wrong remote repository
 
 
 
@@ -42,11 +30,25 @@ Create new local feature branch elrr-drools for elrrServiceentities and push to 
       
 Create a new local feature branch main from existing remote feature branch main
 1. Open terminal 
-   a. cd C:\Users\1phil\git\elrrexternalservices
+   a. cd C:\Users\1phil\git\elrrserviceentities
    b. git remote set-branches --add origin main
    c. git fetch origin
    d. git checkout --track origin/main
    e. git branch -a
+
+
+
+
+Update local feature branch elrr-drools from existing remote Feature branch main
+1. Open terminal 
+   a. cd C:\Users\1phil\git\elrrserviceentities
+   
+   b. git switch main
+   c. git pull
+   
+   d. git switch elrr-drools
+   e. git merge main 
+   f. git push
    
    
       

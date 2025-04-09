@@ -1,0 +1,53 @@
+When you run maven clean install, Maven performs a series of tasks:
+
+
+Clean: Deletes the target directory, which contains the compiled classes and other build artifacts.
+Install: Compiles the code, runs tests, and installs the built artifacts (JARs, POMs, etc.) into the local repository.
+Possible Causes and Solutions
+
+
+Dependency Management in Parent POM:
+If your project inherits from a parent POM, ensure that dependencies are correctly managed there. 
+Sometimes, dependencies declared in the parent POM can propagate to child modules.
+
+
+Profiles:
+Check if there are any Maven profiles that might be activated during the build process, 
+which could be adding dependencies to your POM file.
+
+
+Plugins:
+Some Maven plugins might modify the POM file during the build process. Review your pom.xml for any plugins that 
+might be responsible for this behavior.
+Steps to Diagnose and Fix
+
+
+Review pom.xml:
+Carefully inspect your pom.xml file for any unexpected dependencies or plugins that might be causing the issue.
+
+
+Check Effective POM:
+Use the mvn help:effective-pom command to see the effective POM that Maven uses during the build. 
+his can help you identify where the additional dependencies are coming from.
+
+
+Clean Local Repository:
+Sometimes, issues can arise from stale artifacts in the local repository. 
+You can clean your local repository by deleting the .m2/repository directory or specific artifacts within it.
+
+
+Dependency Tree:
+Use the mvn dependency:tree command to visualize the dependency tree and identify any unexpected dependencies.
+
+
+Example Commands
+
+# View the effective POM
+mvn help:effective-pom
+
+# Visualize the dependency tree
+mvn dependency:tree
+
+
+By following these steps, you should be able to identify and resolve the issue of dependencies being added to your 
+snapshot POM file during the maven clean install process. 
