@@ -325,6 +325,32 @@ Competency attainment:
 ]
 
 
+
+[
+	{
+	    "id": "7a8073a4-230c-48da-986d-b82223730ea9",
+	    "actor": {
+	        "name": "Cindy Leven",
+	        "mbox": "mailto:cindy.leven@gmail.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/achieved",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/competencies/competency-a",
+	        "definition": {
+	            "name": { "en-us": "Competency A" },
+	            "description": { "en-us": "Object representing Competency A level" },
+	            "type": "https://w3id.org/xapi/tla/activity-types/competency"
+	
+	        }
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
 	
 [	
 	{
@@ -340,7 +366,7 @@ Competency attainment:
 	    "object": {
 	        "id": "http://example.edlm/competencies/competency-c",
 	        "definition": {
-	            "name": { "en-us": "Competency A" },
+	            "name": { "en-us": "Competency C" },
 	            "description": { "en-us": "Object representing Competency C level" },
 	            "type": "https://w3id.org/xapi/tla/activity-types/competency"
 	

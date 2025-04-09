@@ -1,0 +1,577 @@
+elrr setup
+
+
+Use Java 17
+Install Dependencies
+Clone Remote Git Repository
+Create a new Eclipse Workspace
+Import Project Into Eclipse
+Create Docker Containers (Docker compose)
+Create Kafka Dead Letter Queue
+Create and populate PostgreSQL staging schema
+Run elrrexternalservices
+Application UI
+Run elrrexternalservices
+Run elrrdatasynch
+Run elrraggregation
+Run Postman to populate lrs-db
+Remove Application from Docker
+View runnung Docker containers
+View Kafka topics
+View Kafka topic messages
+KafkaMagic
+
+
+
+Use Java 17:
+   c. java -version
+   d. echo $JAVA_HOME
+
+
+
+Install Dependencies:
+1. Install git
+2. Install Maven
+3. Install Docker Desktop
+   a. Open terminal
+      1. wsl --install
+         a. New UNIX username = phleven
+         b. New password = Cynthia1#
+   
+
+
+
+Create a new Eclipse Workspace:
+1. Open Eclipse
+   a. Set Java version in Eclipse
+      1. Eclipse --> Preferences --> Java --> Installed JREs
+         a. Check Java SE 17
+         b. Right click on ellraggrigator --> Properties --> Project Facets
+            1. Java = 17 --> Apply and Close
+   b. Show all files
+       1. Package Explorer --> 3 dots --> Filters --> un-check .* resources
+   c. Add Lombok Plugin to Eclipse:
+      1. Eclipse --> Help --> Install New Software --> Add
+         a. Name = Lombok
+         b. Location = https://projectlombok.org/p2
+
+
+Import Project into Eclipse
+elrrserviceentities
+-------------------
+      1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrserviceentities.git
+         b. Select records_refactor, deselect all other branches
+         c. Local Destination = C:\Users\phleven1Phil\git\elrrserviceentities
+        
+      2. Eclipse --> Show View --> Git Repositories --> Right click on elrrserviceentities [dev-update-branch] C:\Users\phleven\git\elrrserviceentities\.git 
+	--> Working Tree - C:\Users\phleven1Phil\git\elrrserviceentities\.git --> Import Projects 
+         a. Import source = C:\Users\1Phil\git\elrrserviceentities
+         b. Check all folders
+         
+      3. Open terminal
+         a. cd cd C:\Users\1Phil\git\elrrserviceentities
+         b. mvn clean install
+    
+    
+elrraggregator
+--------------
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrraggregator.git
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\1phil\git\elrraggregator
+        
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellaggrigator [dev-update-branch] C:\Users\phleven\git\elrraggregator\.git 
+	--> Working Tree - C:\Users\1Phil\git\elrraggregator\.git --> Import Projects 
+         a. Import source = C:\Users\1Phil\git\elrraggregator
+         b. Check all folders
+        
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrraggregator
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+ 
+ 
+ 
+elrrexternalservices
+--------------------
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrexternalservices.git
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\1Phil\git\elrrexternalservices
+        
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-branch] C:\Users\phleven\git\elrrexternalservices\.git 
+	--> Working Tree - C:\Users\1Phil\git\elrrexternalservices\.git --> Import Projects 
+         a. Import source = C:\Users\1Phil\git\elrrexternalservices
+         b. Check all folders
+         
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrrexternalservices
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+ 
+ 
+
+elrrdatasync
+------------
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrdatasync.git
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\1Phil\git\elrrdtatsynch
+         
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-branch] C:\Users\phleven\git\elrrdatasynch\.git 
+	--> Working Tree - C:\Users\1Phil\git\elrrdatasynch\.git --> Import Projects 
+         a. Import source = C:\Users\1Phil\git\elrrdatasynch
+         b. Check all folders
+         
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrrdatasync
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+      
+
+
+elrrservices
+------------
+      1. File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/US-ELRR/elrrservices.git
+         b. Select dev-update-branch branch, deselect all other branches
+         c. Local Destination = C:\Users\1Phil\git\elrrservices
+        
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-branch] C:\Users\phleven\git\elrrservices\.git 
+	--> Working Tree - C:\Users\phleven\git\elrrservices\.git --> Import Projects 
+         a. Import source = C:\Users\1Phil\git\elrrservices
+         b. Check all folders
+
+      3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
+         a. Name = Debug 8000
+         b. Project = elrrservices
+         c. Host = localhost
+         d. Port = 8000
+         e. Apply
+         f. Run from terminal
+            1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+         g. Debug
+    
+   
+
+Make sure TCP port 2181 for Zookeeper is not in use (one time):
+1. Open Terminal
+   a. FixWINNAT.bat
+
+
+
+Create Docker Containers:
+1. Start Docker Desktop
+2. Open terminal
+   a. cd C:\Information\Applications\ELRR\ELRRDockerCompose
+   b. docker compose up
+   c. docker compose logs
+   c. Check for new containers in Docker Desktop
+      1. dockercompose
+         a. sync-db-1
+         b. lrs-db-1
+         c. zookeeper-1
+         d. services-db-1
+         e. lrs-1
+         f. kalfka-1
+
+
+Create Kafka Dead Letter Queue: 
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 6f314219de9a7f8a94add740228ed995896dca962ecf36de65b5f775e6e8cc3e /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1-dlq
+   e. Stop and restart elrrdockercompose container
+   
+   
+   
+Create and populate PostgreSQL service and staging schema:
+1. Open DBeaver
+   a. New Connections
+      1. service_db
+          5432
+          service_user
+          service_password
+      2. sync_db
+          5431
+          sync_user
+          sync_password
+   b. Run service schema.sql
+   c. Run staging schema.sql
+
+
+
+Run elrrServiceEntities
+    1. Open terminal
+      a. cd C:\Users\1phil\git\elrrserviceentities
+      b. git switch <branch>
+      c. mvn clean install
+
+
+
+Run elrrexternalservices and elrrdatasync:
+1. Run elrrexternalservices
+   a. Open terminal
+      1. cd C:\Users\1phil\git\elrrexternalservices
+      2. git config --global --add safe.directory C:/Users/1phil/git/elrrexternalservices
+      3. git switch <branch>
+      4. mvn clean install
+      5. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+         mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+      6. Ctrl+C to end --> Terminate batch job = Y 
+
+2. Run elrrdatasynch:
+   a. Open terminal
+      1. cd C:\Users\1phil\git\elrrdatasync
+      2. git config --global --add safe.directory C:/Users/1phil/git/elrrdatasync
+      3. git switch <branch>
+      4. mvn clean install
+      5. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+      6. Ctrl+C to end --> Terminate batch job = Y 
+
+
+
+Run elrraggregator:
+    1. Open terminal
+      a. cd C:\Users\1phil\git\elrraggregator
+      b. git config --global --add safe.directory C:/Users/1phil/git/elrraggregator
+      c. git switch <branch>
+      d. mvn clean install
+      e. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+      f. Ctrl+C to end --> Terminate batch job = Y 
+
+
+
+Run elrrservices:
+    1. Open terminal
+      a. cd C:\Users\1phil\git\elrrservices
+      b. git config --global --add safe.directory C:/Users/1phil/git/elrrservices
+      c. git switch <branch>
+      d. mvn clean install
+      e. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+      	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
+      f. Ctrl+C to end --> Terminate batch job = Y 
+
+
+
+
+Application UI:
+1. http://localhost:8088/api/lrsdata
+
+2. Yet (lrs) 
+   a. http://localhost:8083
+      user = my_username
+      password = my_password
+
+   b. STATEMENT BROWSER
+      1. Credentiails to use = my_key
+
+
+
+Run Postman to populate lrs-db:
+1. Postman
+   phleven
+   Cynthia1#
+
+   a. POST http://localhost:8083/xapi/statements
+   b. Authorization
+      1. Basic Auth
+      2. Username = my_key
+      3. Password = my_secret
+   c. Headers
+      1. key = X-Experience-API-Version
+      2. value = 1.0.3
+   d. Body raw, JSON
+
+Competency attainment:
+[
+	{
+	    "id": "7a8073a4-2d0c-48da-986d-b82223730ea9",
+	    "actor": {
+	        "name": "Cliff Casey",
+	        "mbox": "mailto:cliff@yetanalytics.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/achieved",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/competencies/competency-a",
+	        "definition": {
+	            "name": { "en-us": "Competency A" },
+	            "description": { "en-us": "Object representing Competency A level" },
+	            "type": "https://w3id.org/xapi/tla/activity-types/competency"
+	
+	        }
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+	
+[	
+	{
+	    "id": "7a8073a4-2E0c-48da-986d-b82223730ea9",
+	    "actor": {
+	        "name": "Horatio Nelson",
+	        "mbox": "mailto:horatio@gmail.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/achieved",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/competencies/competency-c",
+	        "definition": {
+	            "name": { "en-us": "Competency A" },
+	            "description": { "en-us": "Object representing Competency C level" },
+	            "type": "https://w3id.org/xapi/tla/activity-types/competency"
+	
+	        }
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]	
+	
+	
+
+   
+Completed:
+[
+	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb2",
+	"actor": {
+	    "name": "Cliff Casey",
+	    "mbox": "mailto:cliff@yetanalytics.com"
+	},
+	"verb": {
+	    "id": "http://adlnet.gov/expapi/verbs/completed",
+	    "display": { "en-us": "Completed" }
+	},
+	"object": {
+	    "id": "http://example.edlm/activities/activity1",
+	    "definition": {
+	        "name": { "en-us": "Activity 1" },
+	        "description": { "en-us": "Example Activity 1" }
+	    }
+	},
+	"result": {
+	    "completion": true
+	},
+	"timestamp": "2025-03-07T09:15:12-05:00"}
+]
+
+
+
+[
+	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb3",
+	    "actor": {
+	        "name": "Cliff Casey",
+	        "mbox": "mailto:cliff@yetanalytics.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/completed",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/activities/activity2",
+	        "definition": {
+	            "name": { "en-us": "Activity 2" },
+	            "description": { "en-us": "Example Activity 2" }
+	        }
+	    },
+	    "result": {
+	        "completion": true,
+	        "success": true
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+
+[
+	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb4",
+	    "actor": {
+	        "name": "Cliff Casey",
+	        "mbox": "mailto:cliff@yetanalytics.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/completed",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/activities/activity3",
+	        "definition": {
+	            "name": { "en-us": "Activity 3" },
+	            "description": { "en-us": "Example Activity 3" }
+	        }
+	    },
+	    "result": {
+	        "completion": true,
+	        "success": false
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+
+[
+	{
+	"id": "7b8073a4-2d0c-48da-986d-b82223730eb2",
+	    "actor": {
+	        "name": "Phil Leven",
+	        "mbox": "mailto:phleven@deloitte.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/completed",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/activities/activity4",
+	        "definition": {
+	            "name": { "en-us": "Activity 4" },
+	            "description": { "en-us": "Example Activity 4" }
+	        }
+	    },
+	    "result": {
+	        "completion": true
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+
+[
+	{
+	"id": "7b8073b4-2d0c-48da-986d-b82223730eb2",
+	    "actor": {
+	        "name": "Phil Simms",
+	        "mbox": "mailto:philSimms@gmail.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/completed",
+	        "display": { "en-us": "Completed" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/activities/activity5",
+	        "definition": {
+	            "name": { "en-us": "Activity 5" },
+	            "description": { "en-us": "Example Activity 5" }
+	        }
+	    },
+	    "result": {
+	        "completion": true
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
+
+Remove Application from Docker:
+1. Docker Desktop --> Containers
+   a. Check elrr_docker_resources --> Delete
+
+2. 1. Docker Desktop --> Volumes
+   a. Check elrr_docker_resources_db_data_lrs --> Delete
+   b. Check elrr_docker_resources_db_data_service --> Delete
+   c. Check elrr_docker_resources_db_data_sync --> Delete
+   d. Check elrr_docker_resources_db_Kalfka_storage --> Delete
+
+3. Create and populate PostgreSQL staging schema:
+   a. Open DBeaver
+      1. Run Create_sync_db.sql
+      2. Run sync_db_insert.sql
+      3. Run Create_service_db.sql
+      4. Run service_db_insert.sql
+
+4. Run Postman to populate lrs-db
+
+
+
+View runnung Docker containers:
+1. Open terminal
+   a. docker ps
+
+
+
+List Kafka topics:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 6f314219de9a7f8a94add740228ed995896dca962ecf36de65b5f775e6e8cc3e /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
+
+
+
+View Kafka topic details:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 6f314219de9a7f8a94add740228ed995896dca962ecf36de65b5f775e6e8cc3e /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
+   e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
+
+
+
+Delete and Recreate Kafka topic:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 6f314219de9a7f8a94add740228ed995896dca962ecf36de65b5f775e6e8cc3e /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
+   e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
+
+
+
+Consume Kafka Topic Messages:
+1. Open terminal
+   a. Get hash for kafka-1 from Docker --> Containers
+   b. docker exec -t -i 6f314219de9a7f8a94add740228ed995896dca962ecf36de65b5f775e6e8cc3e /bin/bash
+   c. cd /opt/bitnami/kafka/bin
+   d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
+   	  ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning
+   e. Ctrl + C to end 
+
+{"statement":{"id":"d9f1328b-bcc2-4b9c-b954-03cb88a240c8","actor":{"objectType":"Agent","name":"Sophia Lewis","mbox":"mailto:sophia.lewis@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"objectType":"Activity","id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"authority":{"objectType":"Agent","account":{"homePage":"http://example.org","name":"0193f924-b470-89c9-a5f2-35cd03409e9c"}},"timestamp":"2024-09-20T21:37:23.835Z","stored":"2024-12-24T14:51:40.346Z","version":"1.0.0"}
+
+
+
+
+KafkaMagic:
+1. Start Docker
+2. Run "C:\Dev\KafkaMagic_win-x64\KafkaMagic.exe"
+3. Register New
+   a. Name = Kafka
+   b. Bootstrap Server = localhost:9092
+
+
+
+Re-run creating Kafka message
+1. Truncate and re-populate synch_db staging tables (synch_db_insert.sql)
+2. Make sure import.importenddate < import.lastmodified
+3. TRuncate and re-populate service_db tables (service_db_insert.sql)
+4. Starts with LRSSyncSChedulingService.run() --> NewDataSevice.process()
+5. ELRRMessageListener.listen()

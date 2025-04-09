@@ -1,0 +1,22 @@
+Docker CLI
+
+
+
+Docker credentials
+phleven (phleven@deloitte.com)
+Cynthia1#
+
+
+
+1. List all continers
+docker ps -a
+
+2. List running containers
+docker ps
+
+3. List images
+docker images
+
+4. List containers for a compose project
+cd C:\Information\Applications\ELRR\ELRRDockerCompose
+docker compose ps --all

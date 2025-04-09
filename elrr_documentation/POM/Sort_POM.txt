@@ -1,0 +1,21 @@
+To sort POM file
+
+If you want to run the SortPom plugin from commandline, it will be more convenient if you add a Plugin group
+to your general Maven Settings. 
+
+To do this, open up "C:\apache-maven-3.9.9\conf\settings.xml" and add the following plugin group:
+
+<settings>
+	...
+	<pluginGroups>
+  		<pluginGroup>com.github.ekryd.sortpom</pluginGroup>
+	</pluginGroups>
+	...
+</settings>
+
+You can then omit the full specification for the plugin and run
+
+mvn sortpom:sort
+
+Create a backup and sort:
+mvn sortpom:verify
