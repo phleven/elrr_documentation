@@ -19,6 +19,8 @@ Delete remote Git Branch
 Delete local Git Branch
 Git Unstage a specific file
 Remove all dependencies in local repository for a project
+Rename a local branch
+Rename a remote branch
 
 
 
@@ -160,3 +162,18 @@ Git Unstage a specific file:
     a. rd C:\Users\phleven\.m2\repository
     b. cd <project directory>
     c. mvn clean package  
+    
+    
+    
+ Rename a local branch:
+  1. Open terminal
+     a. git switch elrr-rules
+     b. git branch -m elrr-test
+     
+     
+     
+  Rename a remote branch:
+  1. Open terminal
+     a. git switch elrr-test
+     b. git push origin :elrr-rules elrr-test
+     c. git push origin -u elrr-test
