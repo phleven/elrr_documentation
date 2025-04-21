@@ -1,0 +1,17 @@
+Create new local feature branch from existing local feature branch
+Merge changes from parent local feature branch into dependent local feature branch  
+
+
+
+Create new local feature branch from existing local feature branch:
+1. Open terminal
+   a. cd <existing local feature branch>
+   b. git pull
+   c. git switch -c <new local feature branch>
+   
+   
+   
+Merge changes from parent local feature branch into dependent local feature branch  
+1. Open terminal
+   a. cd <new local feature branch>
+   b. git merge <existing local feature branch>
