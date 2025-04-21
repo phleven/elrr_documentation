@@ -649,7 +649,7 @@ Initialized:
 	    "id": "9ded3322-e1a5-411a-a67d-6a735c76f119",
 	    "timestamp": "2016-12-18T12:17:00+00:00",
 	    "actor": {
-	      	"objectType": "Agent"
+	      	"objectType": "Agent",
 	      	"name": "Robert Engle",
 	      	"mbox": "mailto:engle.learner@adlnet.gov"
 	    },
