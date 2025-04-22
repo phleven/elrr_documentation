@@ -36,7 +36,7 @@ Create a new local feature branch main from existing remote feature branch main
    e. git branch -a
    
    
-Update local feature branch elrr-drools from existing remote Feature branch main
+Update local feature branch elrr-drools from existing remote feature branch main
 1. Open terminal 
    a. cd C:\Users\phleven\git\elrrserviceentities
    
