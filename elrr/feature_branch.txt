@@ -1,8 +1,8 @@
 Create new local feature branch from existing local feature branch
-
 Merge changes from parent local feature branch into dependent local feature branch
 -- OR --
 Update local feature branch from existing remote feature branch   
+Create a new local feature branch from existing remote feature branch
 
 
 
@@ -32,3 +32,22 @@ Update local feature branch from existing remote feature branch:
    d. git switch elrr-drools
    e. git merge main 
    f. git push
+   
+   
+   
+Create a new local feature branch from existing remote feature branch:
+1. Open terminal 
+   a. cd C:\Users\phleven\git\elrr
+   b. git remote set-branches --add origin main
+   c. git fetch origin
+   d. git checkout --track origin/main
+   e. git branch -a
+   
+   
+ 
+ Rename local feature branch:
+ 1. Open terminal 
+   a. cd C:\Users\phleven\git\elrrexternalservices
+   b. git switch <local branch to be renamed>
+   c. git branch -m <new LOcal branch name>
+ 
