@@ -6,6 +6,10 @@ Create a new local feature branch from existing remote feature branch
 
 
 
+Reset local feature branch to previous commit
+
+
+
 Create new local feature branch from existing local feature branch:
 1. Open terminal
    a. cd <existing local feature branch>
@@ -29,7 +33,7 @@ Update local feature branch from existing remote feature branch:
    b. git switch main
    c. git pull
    
-   d. git switch elrr-drools
+   d. git switch elrr-rules
    e. git merge main 
    f. git push
    
@@ -49,5 +53,12 @@ Create a new local feature branch from existing remote feature branch:
  1. Open terminal 
    a. cd C:\Users\phleven\git\elrrexternalservices
    b. git switch <local branch to be renamed>
-   c. git branch -m <new LOcal branch name>
+   c. git branch -m <new Local branch name>
  
+ 
+ 
+ Reset local feature branch to previous commit
+ 1. Open terminal
+    a. cd C:\Users\phleven\git\elrrexternalservices
+    b. git reset --hard origin/elrr-rules  
+  
