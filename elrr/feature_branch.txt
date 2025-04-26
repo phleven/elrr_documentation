@@ -4,8 +4,6 @@ Merge changes from parent local feature branch into dependent local feature bran
 Update local feature branch from existing remote feature branch   
 Create a new local feature branch from existing remote feature branch
 
-
-
 Reset local feature branch to previous commit
 
 
