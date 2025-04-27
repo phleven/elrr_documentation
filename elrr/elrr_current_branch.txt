@@ -1,0 +1,9 @@
+elrrserviceentities		elrr-rules
+
+elrrexternalservices	elrr-rules
+
+elrrdatasync			elrr-drools
+
+elrraggregator			elrr-junit (from elrr-rules)
+
+elrrservices			elrr-rules
