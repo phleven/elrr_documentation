@@ -4,6 +4,6 @@ elrrexternalservices	elrr-rules
 
 elrrdatasync			elrr-drools
 
-elrraggregator			elrr-junit (from elrr-rules)
+elrraggregator			elrr-new-rules
 
 elrrservices			elrr-rules
