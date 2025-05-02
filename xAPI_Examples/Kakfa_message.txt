@@ -48,6 +48,34 @@ Competency attainment:
 
 
 {
+    "id": "4d8073a4-230c-48da-986d-b82223730ea8",
+    "actor": {
+        "name": "Cindy Leven",
+        "account": {
+      		"name": "1234567d-5948-87ff-b11a-0eec04f384c2",
+      		"homePage": "http://example23.org"
+    	}
+    },
+    "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/achieved",
+        "display": { "en-us": "Completed" }
+    },
+    "object": {
+        "id": "http://example.edlm/competencies/competency-xyz",
+        "definition": {
+            "name": { "en-us": "Competency XYZ" },
+            "description": { "en-us": "Object representing Competency XYZ level" },
+            "type": "https://w3id.org/xapi/tla/activity-types/competency"
+
+        }
+    },
+    "timestamp": "2025-03-07T09:15:12-05:00"
+}
+
+
+
+
+{
     "id": "7a8073a4-2E0c-48da-986d-b82223730ea9",
     "actor": {
         "name": "Horatio Nelson",
