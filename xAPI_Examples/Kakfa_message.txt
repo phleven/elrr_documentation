@@ -100,7 +100,7 @@ Competency attainment:
 
 
 {
-    "id": "6a8073a4-2d0c-48da-986d-b82223730ea9",
+    "id": "6a8073a4-2d0c-48da-986d-b82223730ea4",
     "actor": {
         "name": "William Money",
         "mbox": "mailto:money@gmail.com"
@@ -114,13 +114,10 @@ Competency attainment:
         "definition": {
             "name": { "en-us": "Competency 23" },
             "description": { "en-us": "Object representing Competency 23 level" },
-            "type": "https://w3id.org/xapi/tla/activity-types/competency"
-
-        }
+            "type": "https://w3id.org/xapi/tla/activity-types/competency",
+            "extensions": {"https://w3id.org/xapi/comp/contextextensions/expires": "2026-03-07"}
+         }
     },
- 	"extensions": {
-    	"https://w3id.org/xapi/comp/contextextensions/expires": "2026-03-07 18:00:00.000"
-	},
 	"timestamp": "2025-03-07T09:15:12-05:00"
 }
 
