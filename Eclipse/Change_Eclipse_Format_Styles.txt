@@ -1,0 +1,7 @@
+Change Eclipse Formatting Styles to use spaces instead of Tabs
+
+
+1. Eclipse --> Window --> Preferences --> Java --> Code Style --> Formatter
+   a. Edit
+      1. Profile name = EClipse ELRR
+      2. Indentation --> Tab policy = Spaces only

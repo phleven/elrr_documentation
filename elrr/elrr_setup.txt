@@ -309,7 +309,7 @@ Competency attainment:
 	    },
 	    "verb": {
 	        "id": "http://adlnet.gov/expapi/verbs/achieved",
-	        "display": { "en-us": "Completed" }
+	        "display": { "en-us": "Achieved" }
 	    },
 	    "object": {
 	        "id": "http://example.edlm/competencies/competency-a",
@@ -335,7 +335,7 @@ Competency attainment:
 	    },
 	    "verb": {
 	        "id": "http://adlnet.gov/expapi/verbs/achieved",
-	        "display": { "en-us": "Completed" }
+	        "display": { "en-us": "Achieved" }
 	    },
 	    "object": {
 	        "id": "http://example.edlm/competencies/competency-a",
@@ -364,7 +364,7 @@ Competency attainment:
 	    },
 	    "verb": {
 	        "id": "http://adlnet.gov/expapi/verbs/achieved",
-	        "display": { "en-us": "Completed" }
+	        "display": { "en-us": "Achieved" }
 	    },
 	    "object": {
 	        "id": "http://example.edlm/competencies/competency-xyz",
@@ -390,7 +390,7 @@ Competency attainment:
 	    },
 	    "verb": {
 	        "id": "http://adlnet.gov/expapi/verbs/achieved",
-	        "display": { "en-us": "Completed" }
+	        "display": { "en-us": "Achieved" }
 	    },
 	    "object": {
 	        "id": "http://example.edlm/competencies/competency-c",
@@ -417,7 +417,7 @@ Credential attainment:
 	    },
 	    "verb": {
 	        "id": "http://adlnet.gov/expapi/verbs/achieved",
-	        "display": { "en-us": "Completed" }
+	        "display": { "en-us": "Achieved" }
 	    },
 	    "object": {
 	        "id": "http://example.edlm/credentials/credential-a",
@@ -442,7 +442,7 @@ Credential attainment:
 	    },
 	    "verb": {
 	        "id": "http://adlnet.gov/expapi/verbs/achieved",
-	        "display": { "en-us": "Completed" }
+	        "display": { "en-us": "Achieved" }
 	    },
 	    "object": {
 	        "id": "http://example.edlm/credentials/credential-a",
