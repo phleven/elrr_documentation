@@ -247,6 +247,15 @@ Run elrrexternalservices and elrrdatasync:
       	 mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
       6. Ctrl+C to end --> Terminate batch job = Y 
 
+3. To test from browser
+   a. Open terminal
+      1. cd C:\Users\phleven\git\elrrexternalservices
+      2. git switch <branch>
+      3. mvn clean install
+      4. mvn spring-boot:run -D"spring-boot.run.profiles"=local -e
+   b. Open browser
+      a. http://localhost:8088/api/lrsdata   
+
 
 
 Run elrraggregator:
