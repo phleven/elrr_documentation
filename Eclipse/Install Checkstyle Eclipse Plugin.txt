@@ -1,0 +1,36 @@
+Install Checkstyle Eclipse Plugin
+Import custom rules
+Check Code with Checkstyle
+Enabling the Checkstyle Plugin
+
+
+
+Install Checkstyle Eclipse Plugin:
+1. Eclipse --> Help --> Install New Software --> Add
+   a. Name = Checkstyle
+   b. Location = https://checkstyle.org/eclipse-cs-update-site
+
+
+
+Import Custom Rules:
+1. Eclipse --> Window --> Preferences --> Checkstyle --> New
+   a. Type = Project Relative Configuration
+   b. Name = P1_Rules
+   c. Import --> Browse 
+      1. /elrrserviceentities/checkstyle.xml  
+
+
+
+Check Code with Checkstyle:
+1. Eclipse --> Right click on project --> Checkstyle --> Check Code With Checkstyle
+   a. Results will be displayed in Problems
+
+2. Eclipse --> Right click on project --> Checkstyle --> Clear Checksyyle violations.
+
+
+
+Enabling the Checkstyle Plugin:
+1. To enable the Checkstyle plugin for a particular project
+   a. Right-click on the project.
+   b. Click on Checkstyle and Activate Checkstyle. 
+      (Or, if there is no Checkstyle entry, click on Properties and then select “Checkstyle”, check “Checkstyle active…” and click on OK.)
