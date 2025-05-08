@@ -1,7 +1,10 @@
 Change Eclipse Formatting Styles to use spaces instead of Tabs
+Change Eclipse Formatting Styles to 80 characters per line
 
 
 1. Eclipse --> Window --> Preferences --> Java --> Code Style --> Formatter
    a. Edit
-      1. Profile name = EClipse ELRR
+      1. Profile name = Eclipse ELRR
       2. Indentation --> Tab policy = Spaces only
+      3. Line Wrapping --> Maximum line width = 80
+      4. Comments --> Maximum width for comments = 80
