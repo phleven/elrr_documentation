@@ -439,7 +439,7 @@ Competency attainment:
 	          }
 	    },
 	    "context": {
-	         "extensions": {"https://w3id.org/xapi/comp/contextextensions/expires": "2026-03-07"}
+	         "extensions": {"https://w3id.org/xapi/comp/contextextensions/expires": "2025-12-05T15:30:00Z"}
 	    },
 		"timestamp": "2025-03-07T09:15:12-05:00"
 	}
