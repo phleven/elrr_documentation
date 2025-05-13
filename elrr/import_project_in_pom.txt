@@ -1,0 +1,27 @@
+Import Project in .pom
+
+
+1. Import java-xapi-tools into elrrexternalservices
+   a. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
+      1. URI = https://github.com/yetanalytics/java-xapi-tools.git
+      2. Select all branches
+      3. Local Destination = C:\Users\phleven\git\java-xapi-tools
+        
+   b. Eclipse --> Show View --> Git Repositories --> Right click on java-xapi-tools [initial-client] C:\Users\phleven\git\java-xapi-tools\.git 
+	  --> Working Tree - C:\Users\phleven\git\java-xapi-tools\.git --> Import Projects 
+      1. Import source = C:\Users\phleven\git\java-xapi-tools
+      2. Check all folders
+         
+   c. Open terminal
+      1. cd cd C:\Users\phleven\git\java-xapi-tools
+      2. mvn install
+      
+   d. Edit to elrrexternalservices .pom
+      	<dependency>
+            <groupId>com.yetanalytics</groupId>
+            <artifactId>xapi-tools</artifactId>
+            <version>0.0.2</version>
+        </dependency>
+      
+    
+   

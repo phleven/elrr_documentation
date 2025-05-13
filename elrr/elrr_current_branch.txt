@@ -1,9 +1,9 @@
-elrrserviceentities		elrr-rules
+elrrserviceentities		elrr-yet-client from elrr-rules
 
-elrrexternalservices	elrr-rules
+elrrexternalservices	elrr-yet-client from elrr-rules
 
 elrrdatasync			elrr-drools
 
-elrraggregator			elrr-new-rules
+elrraggregator			elrr-yet-client from elrr-new-rules
 
 elrrservices			elrr-rules
