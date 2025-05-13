@@ -4,5 +4,4 @@ wt -w 0 nt -d C:\Users\phleven\git\elrrexternalservices --title "elrrexternalser
 wt -w 0 nt -d C:\Users\phleven\git\elrrdatasync --title "elrrdatasync"
 wt -w 0 nt -d C:\Users\phleven\git\elrraggregator --title "elrraggregator"
 wt -w 0 nt -d C:\Users\phleven\git\elrrservices --title "elrrservices"
-wt -w 0 nt -d C:\Users\phleven\git\java-xapi-tools --title "java-xapi-tools"
 wt -w 0 nt -d C:\Users\phleven\git\elrr_documentation --title "elrr_documentation"
