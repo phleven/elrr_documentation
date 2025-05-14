@@ -230,6 +230,34 @@ Credential attainment:
 ]
 
 
+
+[
+	{
+	    "id": "7c8073a4-2d0c-48da-986d-b82223730eb5",
+	    "actor": {
+	        "name": "Jethro Tull",
+	        "mbox": "mailto:tull@gmail.com"
+	    },
+	    "verb": {
+	        "id": "http://adlnet.gov/expapi/verbs/achieved",
+	        "display": { "en-us": "Achieved" }
+	    },
+	    "object": {
+	        "id": "http://example.edlm/credentials/credential-a",
+	        "definition": {
+	            "name": { "en-us": "Credential A" },
+	            "description": { "en-us": "Object representing Credential A level" },
+	            "type": "https://w3id.org/xapi/tla/activity-types/credential"
+	        }
+	    },
+	    	"context": {
+	    		"extensions": {"https://w3id.org/xapi/comp/contextextensions/expires": "2025-12-05T15:30:00Z"}
+	    },
+	    "timestamp": "2025-03-07T09:15:12-05:00"
+	}
+]
+
+
    
 Completed:
  [
