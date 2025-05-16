@@ -111,7 +111,7 @@ elrraggregator
          e. Apply
          f. Run from terminal
             1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
-         g. Debug
+         g. Debug from Eclipse
  
  
  
@@ -135,7 +135,7 @@ elrrexternalservices
          e. Apply
          f. Run from terminal
             1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
-         g. Debug
+         g. Debug from Eclipse
  
  
 
@@ -159,7 +159,7 @@ elrrdatasync
          e. Apply
          f. Run from terminal
             1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
-         g. Debug
+         g. Debug from Eclipse
       
 
 
@@ -183,7 +183,7 @@ elrrservices
          e. Apply
          f. Run from terminal
             1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
-         g. Debug
+         g. Debug from Eclipse
     
    
 
