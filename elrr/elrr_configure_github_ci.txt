@@ -1,0 +1,20 @@
+Configure GitHub CI
+
+1. Edit ci-workflow.yaml
+
+	name: CI
+	#building image for argo
+	on:
+	  push:
+	    branches:
+	      - '*'
+      
+      
+      
+   # Entities Repo (must be built before services)
+    - name: Checkout tools repo
+      uses: actions/checkout@v4
+      with:
+        repository: US-ELRR/elrrserviceentities
+        path: elrrserviceentities
+        ref: elrr-rules

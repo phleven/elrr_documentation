@@ -37,13 +37,20 @@ Update local feature branch from existing remote feature branch:
    
    
    
-Create a new local feature branch from existing remote feature branch:
+Create a new local feature branch from existing remote feature branch (if no remote repository exists locally):
 1. Open terminal 
    a. cd C:\Users\phleven\git\elrr
    b. git remote set-branches --add origin main
    c. git fetch origin
    d. git checkout --track origin/main
    e. git branch -a
+   
+Create a new local feature branch from existing remote feature branch (if remote repository exists locally):
+1. Open terminal 
+   a. cd C:\Users\phleven\git\elrr
+   d. git checkout --track origin/dev-update-base
+   e. git branch -a
+   
    
    
  
