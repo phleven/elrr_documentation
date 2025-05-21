@@ -1,8 +1,8 @@
 elrrserviceentities		elrr-rules
 
-elrrexternalservices	elrr-rules
+elrrexternalservices	elrr-linting from elrr-rules
 
-elrrdatasync			elrr-drools
+elrrdatasync			elrr-linting from elrr-drools
 
 elrraggregator			elrr-linting
 
