@@ -4,6 +4,6 @@ elrrexternalservices	elrr-linting from elrr-rules
 
 elrrdatasync			elrr-linting from elrr-drools
 
-elrraggregator			elrr-linting
+elrraggregator			jacoco
 
 elrrservices			elrr-rules
