@@ -2,7 +2,7 @@ elrrserviceentities		elrr-rules
 
 elrrexternalservices	elrr-linting from elrr-rules
 
-elrrdatasync			elrr-linting from elrr-drools
+elrrdatasync			jacoco
 
 elrraggregator			jacoco
 
