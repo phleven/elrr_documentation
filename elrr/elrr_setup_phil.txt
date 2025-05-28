@@ -350,12 +350,7 @@ Competency attainment:
 	        }
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[
+	},
 	{
 	    "id": "7a8073a4-230c-48da-986d-b82223730ea9",
 	    "actor": {
@@ -376,12 +371,7 @@ Competency attainment:
 	        }
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[
+	},
 	{
 	    "id": "4d8073a4-230c-48da-986d-b82223730ea8",
 	    "actor": {
@@ -405,12 +395,7 @@ Competency attainment:
 	        }
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[	
+	},
 	{
 	    "id": "7a8073a4-2E0c-48da-986d-b82223730ea9",
 	    "actor": {
@@ -424,19 +409,14 @@ Competency attainment:
 	    "object": {
 	        "id": "http://example.edlm/competencies/competency-c",
 	        "definition": {
-	            "name": { "en-us": "Competency A" },
+	            "name": { "en-us": "Competency C" },
 	            "description": { "en-us": "Object representing Competency C level" },
 	            "type": "https://w3id.org/xapi/tla/activity-types/competency"
 	
 	        }
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]	
-	
-	
-
-[
+	},
 	{
 	    "id": "6a8073a4-2d0c-48da-986d-b82223730ea4",
 	    "actor": {
@@ -485,12 +465,7 @@ Credential attainment:
 	        }
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[
+	},
 	{
 	    "id": "7c8073a4-2d0c-48da-986d-b82223730ea8",
 	    "actor": {
@@ -510,12 +485,7 @@ Credential attainment:
 	        }
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[
+	},
 	{
 	    "id": "7c8073a4-2d0c-48da-986d-b82223730eb5",
 	    "actor": {
@@ -542,7 +512,7 @@ Credential attainment:
 ]
 
 
-   
+
 Completed:
 [
 	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb2",
@@ -564,12 +534,8 @@ Completed:
 	"result": {
 	    "completion": true
 	},
-	"timestamp": "2025-03-07T09:15:12-05:00"}
-]
-
-
-
-[
+	"timestamp": "2025-03-07T09:15:12-05:00"
+	},
 	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb3",
 	    "actor": {
 	        "name": "Cliff Casey",
@@ -591,12 +557,7 @@ Completed:
 	        "success": true
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[
+	},
 	{"id": "7a8073a4-2d0c-48da-986d-b82223730eb4",
 	    "actor": {
 	        "name": "Cliff Casey",
@@ -618,12 +579,7 @@ Completed:
 	        "success": false
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[
+	},
 	{
 	"id": "7b8073a4-2d0c-48da-986d-b82223730eb2",
 	    "actor": {
@@ -645,12 +601,7 @@ Completed:
 	        "completion": true
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
-	}
-]
-
-
-
-[
+	},
 	{
 	"id": "7b8073b4-2d0c-48da-986d-b82223730eb2",
 	    "actor": {
@@ -689,8 +640,8 @@ Failed:
 	    },
 	    "verb": {
 	      "id": "http://adlnet.gov/expapi/verbs/failed",
-		  "display": { "en-us": "Failed" }
-	    },
+		  "display": { "en-us": "Failed" }	    
+		},
 	    "object": {
 	      "id": "http://example.adlnet.gov/xapi/example/simpleCBT",
 	      "definition": {
@@ -798,8 +749,8 @@ Satisfied:
 	    },
 	    "verb": {
 	      "id": "http://adlnet.gov/expapi/verbs/satisfied",
-		  "display": { "en-us": "Satisfied" }	    
-		},
+	      "display": { "en-us": "Satisfied" }
+	    },
 	    "object": {
 	      "id": "http://example.adlnet.gov/xapi/example/simpleCBT3",
 	      "definition": {
