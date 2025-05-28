@@ -31,7 +31,7 @@ services:
 
   # this DB is for Aggregator and Sync
   services-db:
-    image: postgres:14
+    image: postgres:17
     volumes:
       - db_data_service:/var/lib/postgresql/data
     environment:
@@ -43,7 +43,7 @@ services:
 
   # this DB is for Datasync
   sync-db:
-    image: postgres:14
+    image: postgres:17
     volumes:
       - db_data_sync:/var/lib/postgresql/data
     environment:
