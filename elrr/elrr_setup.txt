@@ -230,7 +230,7 @@ Create postgreSQL17elrrdockercompose Docker Containers:
 Create Kafka Dead Letter Queue: 
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
+   b. docker exec -t -i f1edf903d3dede699f1055431100ebed6db15bb5b634b5d6ebe67bf38f5486aa /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1-dlq
    e. Stop and restart elrrdockercompose container
@@ -864,7 +864,7 @@ View runnung Docker containers:
 List Kafka topics:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
+   b. docker exec -t -i f1edf903d3dede699f1055431100ebed6db15bb5b634b5d6ebe67bf38f5486aa /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
@@ -873,7 +873,7 @@ List Kafka topics:
 View Kafka topic details:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
+   b. docker exec -t -i f1edf903d3dede699f1055431100ebed6db15bb5b634b5d6ebe67bf38f5486aa /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
    e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
@@ -883,7 +883,7 @@ View Kafka topic details:
 Delete and Recreate Kafka topic: 
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
+   b. docker exec -t -i f1edf903d3dede699f1055431100ebed6db15bb5b634b5d6ebe67bf38f5486aa /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
    e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
@@ -894,7 +894,7 @@ Delete and Recreate Kafka topic:
 Consume Kafka Topic Messages:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 48855673d784edabd86cbc656e2905d5ed48944da1a9ddf60400e6a7a59dec91 /bin/bash
+   b. docker exec -t -i f1edf903d3dede699f1055431100ebed6db15bb5b634b5d6ebe67bf38f5486aa /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
       ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning      
