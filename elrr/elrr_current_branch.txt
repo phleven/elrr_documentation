@@ -1,6 +1,6 @@
 elrrserviceentities		elrr-rules
 
-elrrexternalservices	elrr-linting from elrr-rules
+elrrexternalservices	elrr-linting
 
 elrrdatasync			jacoco
 
