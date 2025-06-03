@@ -7,3 +7,6 @@ Clear-History
 
 cat (Get-PSReadlineOption).HistorySavePath
 Remove-Item (Get-PSReadlineOption).HistorySavePath
+
+
+mvn checkstyle:check
