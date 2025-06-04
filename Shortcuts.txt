@@ -10,3 +10,5 @@ Remove-Item (Get-PSReadlineOption).HistorySavePath
 
 
 mvn checkstyle:check
+
+mvn jacoco:report
