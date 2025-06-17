@@ -1,9 +1,9 @@
-elrrserviceentities		elrr-rules
+elrrserviceentities		sonarqube1
 
-elrrexternalservices	elrr-linting from elrr-rules
+elrrexternalservices	sonarqube1
 
-elrrdatasync			jacoco
+elrrdatasync			sonarqube1
 
-elrraggregator			jacoco
+elrraggregator			sonarqube1
 
-elrrservices			main
+elrrservices			sonarqube1

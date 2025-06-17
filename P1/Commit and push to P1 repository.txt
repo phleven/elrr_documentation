@@ -1,0 +1,21 @@
+
+
+
+
+Hey Phil, I know it’s pretty late, but I wanted to get this down before I forget tomorrow, maybe you can give it a try in the morning.
+ 
+I have a hunch your issue might be because there are some commits in the history that don’t have an assigned key (probably from GitHub and not squashed already). Here’s what I think we could do:
+Go back to the ci-datasync2 branch.
+Run: git reset --soft master
+
+We can use this commend to squash the commit history, and it will move all the commits back to the staging (basically going back to git add .)
+Then run:
+git commit -S -m "Merge branch main from GH"
+Then run:
+git push p1 ci-datasync2
+I think this should let you push without any issues since now all the commits in the commit history will have a key attached to them
+ 
+
+ 
+ok
+ 

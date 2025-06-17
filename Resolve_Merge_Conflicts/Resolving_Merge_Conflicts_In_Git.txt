@@ -1,0 +1,63 @@
+Resolving Merge Conflicts in Git
+
+
+When you encounter the error auto-merging readme.md conflict (add/add): merge conflict in readme.md automatic 
+merge failed; fix conflicts and then commit the result, it means that Git cannot automatically merge the changes
+due to conflicting modifications in the readme.md file. You need to resolve these conflicts manually.
+
+Example
+
+$ git merge feature-branch
+Auto-merging readme.md
+CONFLICT (content): Merge conflict in readme.md
+Automatic merge failed; fix conflicts and then commit the result
+Steps to Resolve Merge Conflicts
+
+1. Identify Conflicted Files
+
+	a. Run git status to see which files have conflicts
+	git status
+	
+	On branch master
+	You have unmerged paths
+	(fix conflicts and run "git commit")
+	(use "git merge --abort" to abort the merge)
+	
+	Unmerged paths:
+	(use "git add <file>..." to mark resolution)
+	both modified: readme.md
+
+
+
+2. Open and Edit Conflicted Files
+
+Open the conflicted file (readme.md) in a text editor. 
+You'll see conflict markers like <<<<<<<, =======, and >>>>>>>
+
+This is a new README file
+
+<<<<<<< HEAD
+This is an edit on the master branch
+=======
+This is an edit on the feature branch
+>>>>>>> feature-branch
+Edit the file to resolve the conflicts, removing the conflict markers.
+
+This is a new README file
+
+This is an edit on the master branch and feature branch combined
+
+
+
+3. Mark Conflicts as Resolved
+
+After editing, mark the file as resolved by adding it to the staging area
+git add readme.md
+
+
+
+4. Commit the Merge
+
+Finally, commit the merge to complete the process
+git commit -m "Resolved merge conflict in readme.md"
+By following these steps, you can resolve merge conflicts and successfully complete your merge.
