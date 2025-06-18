@@ -1,21 +1,48 @@
+Merge Github main with Gitlab ci-datasync2 branch
+1. Open terminal
+   a. git switch main
+   b. git pull
+   c. git log 
+   
+2. Check for all commits 
+   a. Set auto sign to true (once)
+      git config --global commit.gpgsign true
+   b. git switch ci-datasync2
+   c. Show last PR merge commits from main branch
+      git log --oneline --no-merges main~1..main
+      
+3. Cherrypick (merge last commit)
+   a. git cherry-pick main~1..main
+   
+4. Fix conflicts
+   a. Click on ... --> Terminal --> New terminal
+      
+   b. vscode --> File --> Open folder  --> select datasycc
+      
+   c. Click on source control icon (3rd down from top)
+      1. Merge changes (conflicts)
+      2. Click on file
+      3. Resolve in merge editor (left is incoming Github, right is GitLab)
+      4. Ckick on double checkmark (incoming)
+      5. Complete merge OR Cntrl+S then plus sign next to file 
+         
+5. git cherry-pick --continue
+   a. close comment file
+   b. enter passphrase = phil55.cindy61
+      3 - 5 for each commit
+   
+ 6. push to p1
+    a. git push p1 ci-datasync2
 
 
-
-
-Hey Phil, I know it’s pretty late, but I wanted to get this down before I forget tomorrow, maybe you can give it a try in the morning.
- 
-I have a hunch your issue might be because there are some commits in the history that don’t have an assigned key (probably from GitHub and not squashed already). Here’s what I think we could do:
-Go back to the ci-datasync2 branch.
-Run: git reset --soft master
-
-We can use this commend to squash the commit history, and it will move all the commits back to the staging (basically going back to git add .)
-Then run:
-git commit -S -m "Merge branch main from GH"
-Then run:
-git push p1 ci-datasync2
-I think this should let you push without any issues since now all the commits in the commit history will have a key attached to them
- 
-
- 
-ok
- 
+ 7. Log into Git lab
+    a. https://code.il2.dso.mil/adl-ousd
+       phleven
+       @$erx786TTyncgdyhtij77   
+   
+   b. Click on ELRR
+   c. Click on elrr-datasync
+   d. Branch = ci-datasync2
+   e. Click on X in circle
+   
+   Retry if needed

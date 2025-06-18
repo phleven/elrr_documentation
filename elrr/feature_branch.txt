@@ -32,7 +32,7 @@ Merge changes from parent local feature branch into dependent local feature bran
    
 -- OR --
 
-Update local feature branch from existing remote feature branch:
+Update local feature branch from existing remote feature branch: <=====
 1. Open terminal 
    a. cd C:\Users\phleven\git\elrrserviceentities
    
