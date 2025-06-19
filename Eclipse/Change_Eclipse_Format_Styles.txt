@@ -8,3 +8,10 @@ Change Eclipse Formatting Styles to 80 characters per line
       2. Indentation --> Tab policy = Spaces only
       3. Line Wrapping --> Maximum line width = 80
       4. Comments --> Maximum width for comments = 80
+
+
+      
+1. Eclipse --> Window --> Preferences --> XML --> XML files --> Editor
+   a. Line width = 80
+   b. Check indent using tabs
+   c. Indentation size = 4     
