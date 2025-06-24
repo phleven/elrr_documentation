@@ -1,2 +1,0 @@
-1. Run mvn org.owasp:dependency-check-maven:check
-

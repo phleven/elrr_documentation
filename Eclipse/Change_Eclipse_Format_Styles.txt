@@ -1,5 +1,7 @@
 Change Eclipse Formatting Styles to use spaces instead of Tabs
 Change Eclipse Formatting Styles to 80 characters per line
+Change XML Editor Formatting
+Open .pom
 
 
 1. Eclipse --> Window --> Preferences --> Java --> Code Style --> Formatter
@@ -12,6 +14,10 @@ Change Eclipse Formatting Styles to 80 characters per line
 
       
 1. Eclipse --> Window --> Preferences --> XML --> XML files --> Editor
-   a. Line width = 80
-   b. Check indent using tabs
-   c. Indentation size = 4     
+   a. Check indent using tabs
+   b. Indentation size = 1 
+
+
+
+Open .pom  
+1. Right click on .pom file --> Open with --> XML Editor
