@@ -1,0 +1,6 @@
+For datasync_db, please access: elrr.staging.dso.mil/datasync-db-pgadmin4
+For services_db, please access: elrr.staging.dso.mil/services-db-pgadmin4
+
+For both pgAdmin instances, use these creds: 
+Username: admin@elrr.staging.dso.mil
+Password: 6YjA520r1LC8UbY6

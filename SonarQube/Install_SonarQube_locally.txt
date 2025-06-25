@@ -1,0 +1,33 @@
+Install SonarQube Locally
+
+1. Open terminal
+   a. docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+   
+2. http://localhost:9000
+   a. user name = admin
+   b. password = admin
+   c. new password = Phil55.cindy61#
+   
+   d. Projects --> Create a local project
+      1. name = elrr
+      2. key = elrr
+      3. main branch = main
+      4. baseline = use global setting
+      
+      5. Locally for testing
+      
+      6. Token = Analyze "elrr"
+      7. Expires in = No expiration
+      8. Generate
+      9. Token = Analyze "elrr" 1: sqp_bed56db52749453a9fe7d046d1234707d26048c6
+
+     10. Run alalysis on your project --> Maven
+     
+     11. Open vscode --> termanal --> new terminal
+         a. cd C:\Users\phleven\git\elrrdatasync
+         b. mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=elrr \
+  -Dsonar.projectName='elrr' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_bed56db52749453a9fe7d046d1234707d26048c6
+   

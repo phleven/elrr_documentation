@@ -15,7 +15,7 @@ Merge Github main with Gitlab ci-datasync2 branch
    a. git cherry-pick main~1..main
    
 4. Fix conflicts
-   a. Click on ... --> Terminal --> New terminal
+   a. vscode --> Click on ... --> Terminal --> New terminal
       
    b. vscode --> File --> Open folder  --> select datasycc
       
@@ -30,6 +30,7 @@ Merge Github main with Gitlab ci-datasync2 branch
    a. close comment file
    b. enter passphrase = phil55.cindy61
       3 - 5 for each commit
+   c. git cherry-pick --quit
    
  6. push to p1
     a. git push p1 ci-datasync2
