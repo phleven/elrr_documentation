@@ -3,6 +3,8 @@ https://github.com/US-ELRR/elrrexternalservices - polls with an LRS to get xapi 
 https://github.com/US-ELRR/elrrdatasync - Grabs xAPI data via externalservices and dumps it onto a kafka topic
 https://github.com/US-ELRR/elrraggregator - aggregates all of the statements from the topic and writes them to the database accordingly
 https://github.com/US-ELRR/elrrservices - API layer to CRUD data in the database has context menu
+https://github.com/US-ELRR/aggregator-parent
+
 https://github.com/yetanalytics/xapi-java-client
 https://github.com/US-ELRR/elrrdockercompose
 https://github.com/phleven/elrr_documentation

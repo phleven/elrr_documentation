@@ -1,4 +1,5 @@
 Merge Github main with Gitlab ci-datasync2 branch
+
 1. Open terminal
    a. git switch main
    b. git pull
@@ -47,3 +48,9 @@ Merge Github main with Gitlab ci-datasync2 branch
    e. Click on X in circle
    
    Retry if needed
+   
+   
+   
+   
+SonarQube change ticket
+https://jira.il2.dso.mil/servicedesk/customer/portal/81/create/1266

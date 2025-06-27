@@ -1,0 +1,66 @@
+Aggregator to P1
+
+1. Aggregator parent repo on GitHub
+   a. Has 2 submodules - used to reference another repo
+      1. elrrserviceentities
+      2. elrraggregatoraggregator 
+      
+2. Open terminal
+   a. cd C:\Users\phleven\git 
+   
+   b. git clone https://github.com/US-ELRR/aggregator-parent.git
+   
+   c. Pull latest from elrraggregator and elrrserviceentities GitHub reomte repos
+   
+      1. cd C:/Users/phleven/git/aggregator-parent
+      
+      2. git submodule init 
+      
+      3. git submodule update
+      
+      4. Run one at a time:
+      
+		# Create the source directory
+		New-Item -ItemType Directory -Path source -Force | Out-Null
+		
+		# Copy elrrserviceentities directory recursively to source/elrrserviceentities
+		Copy-Item -Path elrrserviceentities -Destination source/elrrserviceentities -Recurse -Force
+		
+		# Remove .github and target directories inside source/elrrserviceentities
+		Remove-Item -Path source/elrrserviceentities\.github -Recurse -Force -ErrorAction SilentlyContinue
+		Remove-Item -Path source/elrrserviceentities\target -Recurse -Force -ErrorAction SilentlyContinue
+		
+		# Copy elrraggregator directory recursively to source/elrraggregator
+		Copy-Item -Path elrraggregator -Destination source/elrraggregator -Recurse -Force
+		
+		# Remove target and .github directories inside source/elrraggregator
+		Remove-Item -Path source\elrraggregator\target -Recurse -Force -ErrorAction SilentlyContinue
+		Remove-Item -Path source\elrraggregator\.github -Recurse -Force -ErrorAction SilentlyContinue
+		
+		# Create source/report-aggregate directory
+		New-Item -ItemType Directory -Path source\report-aggregate -Force | Out-Null
+		
+		# Copy report-aggregate/pom.xml to source/report-aggregate/pom.xml
+		Copy-Item -Path report-aggregate\pom.xml -Destination source\report-aggregate\pom.xml -Force
+		
+		# Copy pom.xml and cleanup.xml to source directory
+		Copy-Item -Path pom.xml -Destination source\pom.xml -Force
+		Copy-Item -Path cleanup.xml -Destination source\cleanup.xml -Force
+		
+		# Create a zip archive of the source directory named source.zip
+		Compress-Archive -Path source\* -DestinationPath source.zip -Force
+		
+4. Pull p1 aggergator
+   a. Log into Git lab
+      1. https://code.il2.dso.mil/adl-ousd
+         phleven
+         @$erx786TTyncgdyhtij77   
+         
+   b. Open terrminal
+      1. git remote add p1 https://code.il2.dso.mil/adl-ousd/elrr/elrr-aggregator.git
+      2. git fetch p1
+      3. git checkout master
+      4. git checkout -b aggregator-p1-1
+      5. Copy files in aggregator-parent\source to aggregator
+      
+5. add, commit, push ... 
