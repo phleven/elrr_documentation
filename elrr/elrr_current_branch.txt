@@ -1,9 +1,9 @@
 elrrserviceentities		sonarqube1
 
-elrrexternalservices	sonarqube1
+elrrexternalservices	encrypt_LRS_credentials
 
-elrrdatasync			sonarqube1
+elrrdatasync			hibernate_dll_Auto
 
-elrraggregator			sonarqube1
+elrraggregator			populate-start-and-end-dates
 
-elrrservices			sonarqube1
+elrrservices			delete_duplicate_package_info
