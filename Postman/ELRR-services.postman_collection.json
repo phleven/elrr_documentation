@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "aa678471-1f26-47b3-b22e-d2eb4549ade6",
+		"name": "ELRR-services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38802312"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8092/admin/token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJpYXQiOjE3NTAxNjk2MjQsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluLXVzZXIiLCJncm91cC1zaW1wbGUiOlsiZWxyci1hZG1pbiJdfQ.d3NhUMEoDfKqB6Iii_SA1AiAkqPQ01q74IJ_BC44iEoNQbCih_tBICKVLzxC7bvao1riorB2ygv7-rOP0WpM0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Experience-API-Version",
+						"value": "1.0.3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"label\": \"test-key\",\r\n  \"permissions\": [\r\n    {\r\n      \"resource\": \"*\",\r\n      \"resourceId\": null,\r\n      \"actions\": [\r\n        \"CREATE\",\r\n        \"READ\",\r\n        \"UPDATE\",\r\n        \"DELETE\",\r\n        \"ASSOCIATE\",\r\n        \"DISASSOCIATE\"\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8092/admin/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"admin",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8092/api/person",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZWxyci5leGFtcGxlLmNvbSIsImlhdCI6MTc1MjUxMTc3OCwianRpIjoiMDE5ODA5ZDctOTA0My03YTgxLTllYTktYTI5ZDBhMWJjYjExIiwidG9rZW4tY3JlYXRvciI6ImFkbWluLXVzZXIiLCJlbHJyX3Blcm1pc3Npb25zIjpbeyJyZXNvdXJjZUlkIjpudWxsLCJyZXNvdXJjZSI6IioiLCJhY3Rpb25zIjpbIkNSRUFURSIsIlJFQUQiLCJVUERBVEUiLCJERUxFVEUiLCJBU1NPQ0lBVEUiLCJESVNBU1NPQ0lBVEUiXX1dfQ.MTnkxGIZzJiYM_MApQ4G9_MhuVKBkZrANnYbhzrzjETRiujSE8RmEiuYVZgnjaJVhhkSBA01ttYDrU_MlrCTMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8092/api/learningrecord",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZWxyci5leGFtcGxlLmNvbSIsImlhdCI6MTc1MjUxMTc3OCwianRpIjoiMDE5ODA5ZDctOTA0My03YTgxLTllYTktYTI5ZDBhMWJjYjExIiwidG9rZW4tY3JlYXRvciI6ImFkbWluLXVzZXIiLCJlbHJyX3Blcm1pc3Npb25zIjpbeyJyZXNvdXJjZUlkIjpudWxsLCJyZXNvdXJjZSI6IioiLCJhY3Rpb25zIjpbIkNSRUFURSIsIlJFQUQiLCJVUERBVEUiLCJERUxFVEUiLCJBU1NPQ0lBVEUiLCJESVNBU1NPQ0lBVEUiXX1dfQ.MTnkxGIZzJiYM_MApQ4G9_MhuVKBkZrANnYbhzrzjETRiujSE8RmEiuYVZgnjaJVhhkSBA01ttYDrU_MlrCTMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/api/learningrecord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"learningrecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8092/api/learningresource",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZWxyci5leGFtcGxlLmNvbSIsImlhdCI6MTc1MjUxMTc3OCwianRpIjoiMDE5ODA5ZDctOTA0My03YTgxLTllYTktYTI5ZDBhMWJjYjExIiwidG9rZW4tY3JlYXRvciI6ImFkbWluLXVzZXIiLCJlbHJyX3Blcm1pc3Npb25zIjpbeyJyZXNvdXJjZUlkIjpudWxsLCJyZXNvdXJjZSI6IioiLCJhY3Rpb25zIjpbIkNSRUFURSIsIlJFQUQiLCJVUERBVEUiLCJERUxFVEUiLCJBU1NPQ0lBVEUiLCJESVNBU1NPQ0lBVEUiXX1dfQ.MTnkxGIZzJiYM_MApQ4G9_MhuVKBkZrANnYbhzrzjETRiujSE8RmEiuYVZgnjaJVhhkSBA01ttYDrU_MlrCTMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/api/learningresource",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"learningresource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8092/api/credential",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZWxyci5leGFtcGxlLmNvbSIsImlhdCI6MTc1MjUxMTc3OCwianRpIjoiMDE5ODA5ZDctOTA0My03YTgxLTllYTktYTI5ZDBhMWJjYjExIiwidG9rZW4tY3JlYXRvciI6ImFkbWluLXVzZXIiLCJlbHJyX3Blcm1pc3Npb25zIjpbeyJyZXNvdXJjZUlkIjpudWxsLCJyZXNvdXJjZSI6IioiLCJhY3Rpb25zIjpbIkNSRUFURSIsIlJFQUQiLCJVUERBVEUiLCJERUxFVEUiLCJBU1NPQ0lBVEUiLCJESVNBU1NPQ0lBVEUiXX1dfQ.MTnkxGIZzJiYM_MApQ4G9_MhuVKBkZrANnYbhzrzjETRiujSE8RmEiuYVZgnjaJVhhkSBA01ttYDrU_MlrCTMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/api/credential",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"credential"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8092/api/competency",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vZWxyci5leGFtcGxlLmNvbSIsImlhdCI6MTc1MjUxMTc3OCwianRpIjoiMDE5ODA5ZDctOTA0My03YTgxLTllYTktYTI5ZDBhMWJjYjExIiwidG9rZW4tY3JlYXRvciI6ImFkbWluLXVzZXIiLCJlbHJyX3Blcm1pc3Npb25zIjpbeyJyZXNvdXJjZUlkIjpudWxsLCJyZXNvdXJjZSI6IioiLCJhY3Rpb25zIjpbIkNSRUFURSIsIlJFQUQiLCJVUERBVEUiLCJERUxFVEUiLCJBU1NPQ0lBVEUiLCJESVNBU1NPQ0lBVEUiXX1dfQ.MTnkxGIZzJiYM_MApQ4G9_MhuVKBkZrANnYbhzrzjETRiujSE8RmEiuYVZgnjaJVhhkSBA01ttYDrU_MlrCTMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/api/competency",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"competency"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

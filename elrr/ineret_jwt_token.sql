@@ -1,0 +1,3 @@
+INSERT INTO services_schema.client_token
+(id, inserted_date, last_modified, updated_by, jwt_payload, "label", jwt_id)
+VALUES('019809d7-90a1-7897-be03-36e9b5754d91'::uuid, '2025-07-14 12:49:39.076', '2025-07-14 12:49:39.076', NULL, '{"iat": 1752511778, "iss": "http://elrr.example.com", "jti": "019809d7-9043-7a81-9ea9-a29d0a1bcb11", "token-creator": "admin-user", "elrr_permissions": [{"actions": ["CREATE", "READ", "UPDATE", "DELETE", "ASSOCIATE", "DISASSOCIATE"], "resource": "*", "resourceId": null}]}'::jsonb, 'test-key', '019809d7-9043-7a81-9ea9-a29d0a1bcb11'::uuid);
