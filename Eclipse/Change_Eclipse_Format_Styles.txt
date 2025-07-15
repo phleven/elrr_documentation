@@ -10,6 +10,7 @@ Open .pom
       2. Indentation --> Tab policy = Spaces only
       3. Line Wrapping --> Maximum line width = 80
       4. Comments --> Maximum width for comments = 80
+      5. Method declarations --> declaration = wrap where necessary
 
 
       

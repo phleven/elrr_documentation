@@ -16,7 +16,7 @@ See commits (including where branch was cloned from)
    
    
    
-Create new local feature branch from existing local feature branch:
+Create new local feature branch from existing local feature branch: <=====
 1. Open terminal
    a. cd <existing local feature branch>
    b. git pull

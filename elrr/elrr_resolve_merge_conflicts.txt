@@ -1,0 +1,45 @@
+If GitHub PR says This branch has conflicts that must be resolved
+
+1. Open terminal
+   a. cd <current branch> 
+   b. git switch main
+   c. git pull
+   d. git switch <current branch>
+   e. git merge main 
+   
+   If git says
+   
+   Auto-merging src/main/java/com/deloitte/elrr/datasync/scheduler/LRSSyncSchedulingService.java
+CONFLICT (content): Merge conflict in src/main/java/com/deloitte/elrr/datasync/scheduler/LRSSyncSchedulingService.java
+Auto-merging src/main/resources/application.properties
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+
+2. In Eclips goto file with merge conflict
+
+   a. Look for
+   
+   <<<<<<< HEAD
+
+            // Update import start and end dates
+            importRecord = importService.updateImportStartEndDates(
+                    importRecord);
+
+            // Update import status to INPROCESS
+            importRecord = importService.updateImportStatus(importRecord,
+                    RecordStatus.INPROCESS);
+=======
+            importRecord = updateImportInProcess(importRecord);
+            log.info("Import record updated: " + importRecord);
+>>>>>>> main
+
+and fix code between <<<<<<< HEAD and >>>>>>> main
+
+
+
+3. Back to treminal
+   a. git add .
+   b. git commit -m "Resolve merge conflicts."
+   c.  git push
+   d. git mereg main

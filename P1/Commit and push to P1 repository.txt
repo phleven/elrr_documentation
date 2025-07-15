@@ -18,7 +18,7 @@ Merge Github main with Gitlab ci-datasync2 branch
 4. Fix conflicts
    a. vscode --> Click on ... --> Terminal --> New terminal
       
-   b. vscode --> File --> Open folder  --> select datasycc
+   b. vscode --> File --> Open folder  --> select datasync
       
    c. Click on source control icon (3rd down from top)
       1. Merge changes (conflicts)
