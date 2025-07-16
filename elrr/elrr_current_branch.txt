@@ -1,9 +1,9 @@
-elrrserviceentities		sonarqube1
+elrrserviceentities		populate-startr-and-end-dates
 
-elrrexternalservices	encrypt_LRS_credentials
+elrrexternalservices	do_not_check_header
 
-elrrdatasync			hibernate_dll_Auto
+elrrdatasync			hibernate-dll-Auto
 
 elrraggregator			populate-start-and-end-dates
 
-elrrservices			delete_duplicate_package_info
+elrrservices			populate-start-and-end-dates
