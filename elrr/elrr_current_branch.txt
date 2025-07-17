@@ -4,6 +4,6 @@ elrrexternalservices	do_not_check_header
 
 elrrdatasync			hibernate-dll-Auto
 
-elrraggregator			populate-start-and-end-dates
+elrraggregator			learning-record-status-enrollment-date
 
 elrrservices			populate-start-and-end-dates
