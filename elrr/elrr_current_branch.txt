@@ -1,4 +1,4 @@
-elrrserviceentities		populate-startr-and-end-dates
+elrrserviceentities		populate-start-and-end-dates
 
 elrrexternalservices	do_not_check_header
 
