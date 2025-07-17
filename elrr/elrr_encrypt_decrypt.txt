@@ -1,0 +1,7 @@
+mvn jasypt:decrypt-value -Djasypt.encryptor.password=elrr-services -Djasypt.plugin.value="[cypher]"
+mvn jasypt:encrypt-value -Djasypt.encryptor.password=elrr-services -Djasypt.plugin.value="[value]"
+
+key: 51775089bffa21b764da4cfce867c275022a7347d18871ffdcbe48d7e3dae5ca
+secret: 00f7eb07005f0d9719f5eee1b39738560be457eafb51ad6a24728867a7be36e6
+
+those correspond to lrs.username, lrs.password respectively
