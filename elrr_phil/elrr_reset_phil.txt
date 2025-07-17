@@ -3,13 +3,13 @@ elrr reset
 
 Remove Application from Docker:
 1. Docker Desktop --> Containers
-   a. Check elrr_docker_resources --> Delete
+   a. Check elrrdockercompose --> Delete
 
 2. 1. Docker Desktop --> Volumes
-   a. Check elrr_docker_resources_db_data_lrs --> Delete
-   b. Check elrr_docker_resources_db_data_service --> Delete
-   c. Check elrr_docker_resources_db_data_sync --> Delete
-   d. Check elrr_docker_resources_db_Kalfka_storage --> Delete
+   a. Check elrrdockercompose_db_data_lrs --> Delete
+   b. Check elrrdockercompose_db_data_service --> Delete
+   c. Check elrrdockercompose_db_data_sync --> Delete
+   d. Check elrrdockercompose_db_Kalfka_storage --> Delete
 
 3. Make sure TCP port 2181 for Zookeeper is not in use:
    a. Open Terminal
@@ -19,7 +19,7 @@ Remove Application from Docker:
 4. Create Docker Containers:
    a. Start Docker Desktop
    b. Open terminal
-      1. cd C:\WebDesign\SourceCode\Source\ELRR\DockerCompose
+      1. cd C:\Dev\elrrdockercompose\
       2. docker compose up
       3. docker compose logs
       4. Check for new containers in Docker Desktop
