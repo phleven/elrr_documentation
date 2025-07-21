@@ -137,11 +137,10 @@ Delete local Git Branch:
 
 
 
-Remove remote Git Repository:
+Delete remote Git Repository:
 1. Open terminal
    a. cd C:\Dev\elrr_documentation
-   b. git remote remove ellr_documentation
-
+   b. git push origin --delete <remote-branch -name>
 
 
 Git Unstage a specific file:

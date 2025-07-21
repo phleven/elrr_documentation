@@ -1,0 +1,12 @@
+Delete local Git Branch:
+1. Open terminal
+   a. git switch <a different local branch>
+   b. git branch -d <localBranchName>
+      git branch -D <localBranchName> (to force)
+
+
+
+Delete remote Git Repository:
+1. Open terminal
+   a. cd C:\Dev\elrr_documentation
+   b. git push origin --delete <remote-branch -name>
