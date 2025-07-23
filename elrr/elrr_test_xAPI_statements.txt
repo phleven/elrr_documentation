@@ -598,9 +598,9 @@ elrr test xAPI statements
 	    },
 	    "context": {
 	    	"extensions": {
-	    		"name": "Student",
-	        	"mbox": "mailto:student@gmail.com"
-	        },
+	    		"https://w3id.org/xapi/comp/contextextensions/name": "Student",
+	        	"https://w3id.org/xapi/comp/contextextensions/mbox": "mailto:student@gmail.com"
+	        }
 	    },
 	    "timestamp": "2025-03-07T09:15:12-05:00"
 	}
