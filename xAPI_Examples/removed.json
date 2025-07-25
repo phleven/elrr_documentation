@@ -1,0 +1,73 @@
+// ### Learner Removed Goal
+
+{
+    "actor": {
+        "name": "Study O'Learner",
+        "account": {
+            "name": "1235",
+            "homePage": "https://school.org/students"
+        }
+    },
+    "verb": {
+        "id": "http://activitystrea.ms/removed",
+        "display": {
+            "en-us": "Removed"
+        }
+    },
+    "object": {
+        "id": "http://xapi.edlm/goals/ab4cf800-2208-427c-bc24-7fafda9f0578",
+        "definition": {
+            "name": {
+                "en-us": "Study O'Learner Professional Development Goal 1"
+            },
+            "type": "https://w3id.org/xapi/activities/goal",
+            "extensions": {
+                "http://xapi.edlm/goals/activity-extensions/goal-type": "SELF-ASSIGNED"
+            }
+        }
+    }
+}
+
+// Alternate form for removal by instructor
+
+{
+    "actor": {
+        "name": "Professor Teach",
+        "account": {
+            "name": "1234",
+            "homePage": "https://school.org/teachers"
+        }
+    },
+    "verb": {
+        "id": "http://activitystrea.ms/removed",
+        "display": {
+            "en-us": "Removed"
+        }
+    },
+    "object": {
+        "id": "http://xapi.edlm/goals/ab4cf800-2208-427c-bc24-7fafda9f0578",
+        "definition": {
+            "name": {
+                "en-us": "Study O'Learner Professional Development Goal 1"
+            },
+            "type": "https://w3id.org/xapi/activities/goal",
+            "extensions": {
+                "http://xapi.edlm/goals/activity-extensions/goal-type": "ASSIGNED"
+            }
+        }
+    },
+    "context": {
+        "extensions": {
+            //I would suggest here "from" or "for"
+            "https://yetanalytics.com/profiles/prepositions/concepts/context-extensions/from" {
+                {
+                    "name": "Study O'Learner",
+                    "account": {
+                        "name": "1235",
+                        "homePage": "https://school.org/students"
+                    }
+                }
+            }
+        }
+    }
+}
