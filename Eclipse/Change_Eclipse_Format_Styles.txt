@@ -11,6 +11,12 @@ Open .pom
       3. Line Wrapping --> Maximum line width = 80
       4. Comments --> Maximum width for comments = 80
       5. Method declarations --> declaration = wrap where necessary
+      6. Wrapping Settings --> Annotations --> On Parameters
+         a. Wrap all elements, every element on a new line.
+      7. Wrapping Settings --> Annotations --> Type Annotations
+         a. Wrap all elements, every element on a new line.
+      8. Wrapping Settings --> Annotations --> Element value pairs
+         a. Wrap all elements, except first element if not necessary.
 
 
       
