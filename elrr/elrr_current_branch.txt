@@ -1,9 +1,9 @@
-elrrserviceentities		populate-start-and-end-dates
+elrrserviceentities		assigned-extension-actor
 
 elrrexternalservices	do_not_check_header
 
 elrrdatasync			hibernate-dll-Auto
 
-elrraggregator			assigned-extension-actor from learning-record-status-enrollment-date
+elrraggregator			assigned-extension-actor
 
-elrrservices			populate-start-and-end-dates
+elrrservices			assigned-extension-actor
