@@ -53,7 +53,7 @@ Create a new local feature branch from existing remote feature branch (if no rem
    d. git checkout --track origin/main
    e. git branch -a
    
-Create a new local feature branch from existing remote feature branch (if remote repository exists locally):
+Create a new local feature branch from existing remote feature branch (if remote repository exists locally): <=====
 1. Open terminal 
    a. cd C:\Users\phleven\git\elrr
    d. git checkout --track origin/dev-update-base
