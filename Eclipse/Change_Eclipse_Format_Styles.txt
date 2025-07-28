@@ -18,11 +18,11 @@ Open .pom
       8. Wrapping Settings --> Annotations --> Element value pairs
          a. Wrap all elements, except first element if not necessary.
       9. Wrapping Settings --> Method Declarations --> Declarations
-         a. Wrap all elements, every element on a new line.
+         a. Do not wrap.
       10. Wrapping Settings --> Method Declarations --> Parameters
-         a. Wrap all elements, every element on a new line.
+         a. Wrap where necessary.
       11. Wrapping Settings --> Method Declarations --> throws clause
-         a. Wrap all elements, every element on a new line.
+         a. Wrap where necessary.
 
 
       
