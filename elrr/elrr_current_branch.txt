@@ -1,6 +1,6 @@
 elrrserviceentities		assigned-extension-actor
 
-elrrexternalservices	do_not_check_header
+elrrexternalservices	assigned-extension-actor
 
 elrrdatasync			hibernate-dll-Auto
 

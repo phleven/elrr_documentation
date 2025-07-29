@@ -19,10 +19,15 @@ Open .pom
          a. Wrap all elements, except first element if not necessary.
       9. Wrapping Settings --> Method Declarations --> Declarations
          a. Do not wrap.
-      10. Wrapping Settings --> Method Declarations --> Parameters
+     10. Wrapping Settings --> Method Declarations --> Parameters
          a. Wrap where necessary.
-      11. Wrapping Settings --> Method Declarations --> throws clause
+     11. Wrapping Settings --> Method Declarations --> throws clause
          a. Wrap where necessary.
+     12. Comments --> JavaDocs
+         a. Align javadoc tags in columns = Don't align
+     13. Line Wrapping
+         a. Never join already wrapped lines
+          
 
 
       
