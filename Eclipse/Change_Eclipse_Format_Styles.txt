@@ -7,29 +7,18 @@ Open .pom
 1. Eclipse --> Window --> Preferences --> Java --> Code Style --> Formatter
    a. Edit
       1. Profile name = Eclipse ELRR
-      2. Indentation --> Tab policy = Spaces only
+
+      2. Indentation --> Tab = Spaces only
+
       3. Line Wrapping --> Maximum line width = 80
-      4. Comments --> Maximum width for comments = 80
-      5. Method declarations --> declaration = wrap where necessary
-      6. Wrapping Settings --> Annotations --> On Parameters
-         a. Wrap all elements, every element on a new line.
-      7. Wrapping Settings --> Annotations --> Type Annotations
-         a. Wrap all elements, every element on a new line.
-      8. Wrapping Settings --> Annotations --> Element value pairs
-         a. Wrap all elements, except first element if not necessary.
-      9. Wrapping Settings --> Method Declarations --> Declarations
-         a. Do not wrap.
-     10. Wrapping Settings --> Method Declarations --> Parameters
-         a. Wrap where necessary.
-     11. Wrapping Settings --> Method Declarations --> throws clause
-         a. Wrap where necessary.
-     12. Comments --> JavaDocs
-         a. Align javadoc tags in columns = Don't align
-     13. Line Wrapping
-         a. Never join already wrapped lines
-          
+         
+      4. Default Indentation for Wrapped = 2
 
+      5. Line Wrapping --> Never join already wrapped lines
 
+      6. Comments --> Maximum width for comments = 80
+
+    
       
 1. Eclipse --> Window --> Preferences --> XML --> XML files --> Editor
    a. Check indent using tabs
