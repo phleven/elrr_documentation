@@ -17,9 +17,11 @@ Open .pom
       5. Line Wrapping --> Never join already wrapped lines
 
       6. Comments --> Maximum width for comments = 80
-
-    
       
+      7. Line Wrapping --> Annotations --> On Methods --> Wrap where necessary
+       
+
+         
 1. Eclipse --> Window --> Preferences --> XML --> XML files --> Editor
    a. Check indent using tabs
    b. Indentation size = 1 
