@@ -662,7 +662,7 @@ elrr test xAPI statements
 	        "id": "http://xapi.edlm/goals/ab4cf800-2208-427c-bc24-7fafda9f7777",
 	        "definition": {
 	            "name": {
-	                "en-us": "Study O'Learner Professional Development Goal 2"
+	                "en-us": "Nelson Mandella Professional Development Goal 2"
 	            },
 	            "type": "https://w3id.org/xapi/activities/goal",
 	            "extensions": {
@@ -710,11 +710,11 @@ elrr test xAPI statements
 	   	"timestamp": "2025-05-25T12:34:56Z"
 	},
 	{
-		"id": "7b5073a4-2d0c-48da-986d-b84473730ec8",
+		"id": "7b5073a4-2d0c-48da-986d-b84474130ec8",
 		"actor": {
-        "name": "Study O'Learner",
+        "name": "Dawn Greer",
         "account": {
-            "name": "1235",
+            "name": "DawnAccountName",
             "homePage": "https://school.org/students"
         }
     },
@@ -728,7 +728,7 @@ elrr test xAPI statements
         "id": "http://xapi.edlm/goals/ab4cf800-2208-427c-bc24-7fafda9f0578",
         "definition": {
             "name": {
-                "en-us": "Study O'Learner Professional Development Goal 1"
+                "en-us": "Was assigned goal"
             },
             "type": "https://w3id.org/xapi/activities/goal",
             "extensions": {
@@ -739,9 +739,9 @@ elrr test xAPI statements
     "context": {
         "extensions": {
             "https://yetanalytics.com/profiles/prepositions/concepts/context-extensions/by": { 
-                "name": "Professor Teach",
+                "name": "Was assigned teacher",
                 "account": {
-                    "name": "1234",
+                    "name": "teacherAccountName",
                     "homePage": "https://school.org/teachers"
                 }
             }
@@ -750,21 +750,21 @@ elrr test xAPI statements
             "other": [
                 {
                     "objectType": "Activity",
-                    "id": "http://school.org/courses/course1",
+                    "id": "http://school.org/courses/course5",
                     "definition": {
                         "type": "http://adlnet.gov/expapi/activities/course",
                         "name": {
-                            "en-us": "Course 1"
+                            "en-us": "Course 5"
                         }
                     }
                 },
                 {
                     "objectType": "Activity",
-                    "id": "http://school.org/competencies/competencyA",
+                    "id": "http://school.org/competencies/competency5",
                     "definition": {
                         "type": "https://w3id.org/xapi/cred/activities/credential",
                         "name": {
-                            "en-us": "Credential A"
+                            "en-us": "Credential 5"
                         }
                     }
                 }
@@ -772,5 +772,69 @@ elrr test xAPI statements
         }
     },
    	"timestamp": "2025-05-25T12:34:56Z"
-	}	
+	},
+	{
+    "id": "7b5065c4-2d0c-48da-986d-b84473730ec8",
+    "actor": {
+    "name": "Bill Curry",
+    "account": {
+        "name": "1235678",
+        "homePage": "https://school.org/students"
+    }
+},
+"verb": {
+    "id": "https://w3id.org/xapi/tla/verbs/was-assigned",
+    "display": {
+        "en-us": "Was Assigned"
+    }
+},
+"object": {
+    "id": "http://xapi.edlm/goals/ab4cf800-2208-427c-bc24-7fafda9f4444",
+    "definition": {
+        "name": {
+            "en-us": "Bill Curry Professional Development Goal 1"
+        },
+        "type": "https://w3id.org/xapi/activities/goal",
+        "extensions": {
+            "http://xapi.edlm/goals/activity-extensions/goal-type": "ASSIGNED"
+        }
+    }
+},
+"context": {
+    "extensions": {
+        "https://yetanalytics.com/profiles/prepositions/concepts/context-extensions/by": { 
+            "name": "Professor Thompson",
+            "account": {
+                "name": "1234321",
+                "homePage": "https://school.org/teachers"
+            }
+        }
+    },
+    "contextActivities": {
+        "other": [
+            {
+                "objectType": "Activity",
+                "id": "http://school.org/courses/course100",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/course",
+                    "name": {
+                        "en-us": "Course 100"
+                    }
+                }
+            },
+            {
+                "objectType": "Activity",
+                "id": "http://school.org/competencies/competencyAAA",
+                "definition": {
+                    "type": "https://w3id.org/xapi/comp/activities/competency",
+                    "name": {
+                        "en-us": "Competency AAA"
+                    }
+                }
+            }
+        ]
+    }
+},
+"timestamp": "2025-05-25T12:34:56Z"
+} 	
 ]
