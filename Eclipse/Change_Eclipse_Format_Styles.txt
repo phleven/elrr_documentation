@@ -10,15 +10,33 @@ Open .pom
 
       2. Indentation --> Tab = Spaces only
 
-      3. Line Wrapping --> Maximum line width = 80
+      3. Indentation --> Indentation size = 4
+
+      4. Indentation --> Tab = 4
+
+
+      5. Line Wrapping --> Maximum line width = 80
          
-      4. Default Indentation for Wrapped = 2
+      6. Line Wrapping --> Default Indentation for Wrapped = 2
 
-      5. Line Wrapping --> Never join already wrapped lines
+      7. Line Wrapping --> Uncheck Prefer wrapping outer expressions (keep nested expressions on one line)
 
-      6. Comments --> Maximum width for comments = 80
+
+      8. Wrapping Setings --> Method declaration --> Declaration --> Wrap where necessary
+
+      9. Wrapping Setings --> Method declaration --> throws --> Wrap where necessary
       
-      7. Line Wrapping --> Annotations --> On Methods --> Wrap where necessary
+
+     10. Wrapping Setings --> Annotations --> On methods --> Wrap where necessary
+
+     11. Wrapping Setings --> Annotations --> On parameters --> Wrap where necessary
+
+
+     12. Comments --> Maximum width for comments = 80
+     
+     13. Comments --> UncheckEnable JavaDoc formatting
+     
+      
        
 
          
