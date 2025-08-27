@@ -44,8 +44,8 @@ Install Dependencies:
 Create a new Eclipse Workspace:
 1. Open Eclipse
    a. Set Java version in Eclipse
-      1. Eclipse --> Preferences --> Java --> Installed JREs
-         a. Check Java SE 17
+      1. Eclipse --> Window --> Preferences --> Java --> Installed JREs
+         a. Check jdk17
          b. Right click on ellraggrigator --> Properties --> Project Facets
             1. Java = 17 --> Apply and Close
    b. Show all files
@@ -61,16 +61,18 @@ elrrserviceentities
 -------------------
       1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrserviceentities.git
-         b. Select all branches
-         c. Local Destination = C:\Users\phleven1Phil\git\elrrserviceentities
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\Phil Leven\git\elrrserviceentities
         
-      2. Eclipse --> Show View --> Git Repositories --> Right click on elrrserviceentities [dev-update-branch] C:\Users\phleven\git\elrrserviceentities\.git 
-	--> Working Tree - C:\Users\phleven1Phil\git\elrrserviceentities\.git --> Import Projects 
-         a. Import source = C:\Users\1Phil\git\elrrserviceentities
+      2. Eclipse --> Show View --> Git Repositories --> Right click on elrrserviceentities [dev-update-branch] C:\Users\Phil Leven\git\elrrserviceentities\.git 
+	--> Working Tree - C:\Users\Phil Leven\git\elrrserviceentities\.git --> Import Projects 
+         a. Import source = C:\Users\Phil Leven\git\elrrserviceentities
          b. Check all folders
          
       3. Open terminal
-         a. cd cd C:\Users\1Phil\git\elrrserviceentities
+         a. cd cd C:\Users\Phil Leven\git\elrrserviceentities
          b. mvn install
          
          
@@ -78,16 +80,18 @@ java-xapi-tools
 ---------------
       1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/yetanalytics/java-xapi-tools.git
-         b. Select all branches
-         c. Local Destination = C:\Users\1phil\git\java-xapi-tools
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\Phil Leven\git\java-xapi-tools
         
-      2. Eclipse --> Show View --> Git Repositories --> Right click on java-xapi-tools [initial-client] C:\Users\1phil\git\java-xapi-tools\.git 
-	--> Working Tree - C:\Users\1phil\git\java-xapi-tools\.git --> Import Projects 
-         a. Import source = C:\Users\1phil\git\java-xapi-tools
+      2. Eclipse --> Show View --> Git Repositories --> Right click on java-xapi-tools [initial-client] C:\Users\Phil Leven\git\java-xapi-tools\.git 
+	--> Working Tree - C:\Users\Phil Leven\git\java-xapi-tools\.git --> Import Projects 
+         a. Import source = C:\Users\Phil Leven\git\java-xapi-tools
          b. Check all folders
          
       3. Open terminal
-         a. cd cd C:\Users\1phil\git\java-xapi-tools
+         a. cd cd C:\Users\Phil Leven\git\java-xapi-tools
          b. mvn install  
     
     
@@ -95,12 +99,14 @@ elrraggregator
 --------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrraggregator.git
-         b. Select all branches
-         c. Local Destination = C:\Users\1phil\git\elrraggregator
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\Phil Leven\git\elrraggregator
         
-      2. Eclipse --> Show View --> Git Repositories --> Right click on ellaggrigator [dev-update-branch] C:\Users\phleven\git\elrraggregator\.git 
-	--> Working Tree - C:\Users\1Phil\git\elrraggregator\.git --> Import Projects 
-         a. Import source = C:\Users\1Phil\git\elrraggregator
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellaggrigator [dev-update-branch] C:\Users\Phil Leven\git\elrraggregator\.git 
+	--> Working Tree - C:\Users\Phil Leven\git\elrraggregator\.git --> Import Projects 
+         a. Import source = C:\Users\Phil Leven\git\elrraggregator
          b. Check all folders
         
       3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
@@ -119,12 +125,14 @@ elrrexternalservices
 --------------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrexternalservices.git
-         b. Select all branches
-         c. Local Destination = C:\Users\1Phil\git\elrrexternalservices
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\Phil Leven\git\elrrexternalservices
         
-      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-branch] C:\Users\phleven\git\elrrexternalservices\.git 
-	--> Working Tree - C:\Users\1Phil\git\elrrexternalservices\.git --> Import Projects 
-         a. Import source = C:\Users\1Phil\git\elrrexternalservices
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-branch] C:\Users\Phil Leven\git\elrrexternalservices\.git 
+	--> Working Tree - C:\Users\Phil Leven\git\elrrexternalservices\.git --> Import Projects 
+         a. Import source = C:\Users\Phil Leven\git\elrrexternalservices
          b. Check all folders
          
       3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
@@ -143,12 +151,14 @@ elrrdatasync
 ------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrdatasync.git
-         b. Select all branches
-         c. Local Destination = C:\Users\1Phil\git\elrrdtatsynch
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\Phil Leven\git\elrrdtatsynch
          
-      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-branch] C:\Users\phleven\git\elrrdatasynch\.git 
-	--> Working Tree - C:\Users\1Phil\git\elrrdatasynch\.git --> Import Projects 
-         a. Import source = C:\Users\1Phil\git\elrrdatasynch
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-branch] C:\Users\Phil Leven\git\elrrdatasynch\.git 
+	--> Working Tree - C:\Users\Phil Leven\git\elrrdatasynch\.git --> Import Projects 
+         a. Import source = C:\Users\Phil Leven\git\elrrdatasynch
          b. Check all folders
          
       3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)
@@ -167,12 +177,14 @@ elrrservices
 ------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrservices.git
-         b. Select all branches
-         c. Local Destination = C:\Users\1Phil\git\elrrservices
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\Phil Leven\git\elrrservices
         
-      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-branch] C:\Users\phleven\git\elrrservices\.git 
-	--> Working Tree - C:\Users\phleven\git\elrrservices\.git --> Import Projects 
-         a. Import source = C:\Users\1Phil\git\elrrservices
+      2. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-branch] C:\Users\Phil Leven\git\elrrservices\.git 
+	--> Working Tree - C:\Users\Phil Leven\git\elrrservices\.git --> Import Projects 
+         a. Import source = C:\Users\Phil Leven\git\elrrservices
          b. Check all folders
 
       3. Eclipse --> Run --> Debug Configurations --> Remote Java Application --> New Launch Configuration (1st button on the left)

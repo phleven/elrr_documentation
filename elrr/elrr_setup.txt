@@ -61,8 +61,10 @@ elrrserviceentities
 -------------------
       1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrserviceentities.git
-         b. Select main branch, deselect all other branches
-         c. Local Destination = C:\Users\phleven\git\elrrserviceentities
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select main branch, deselect all other branches
+         e. Local Destination = C:\Users\phleven\git\elrrserviceentities
         
       2. Eclipse --> Show View --> Git Repositories --> Right click on elrrserviceentities [dev-update-branch] C:\Users\phleven\git\elrrserviceentities\.git 
 	--> Working Tree - C:\Users\phleven\git\elrrserviceentities\.git --> Import Projects 
@@ -78,8 +80,10 @@ java-xapi-tools
 ---------------
       1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/yetanalytics/java-xapi-tools.git
-         b. Select all branches
-         c. Local Destination = C:\Users\phleven\git\java-xapi-tools
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\phleven\git\java-xapi-tools
         
       2. Eclipse --> Show View --> Git Repositories --> Right click on java-xapi-tools [initial-client] C:\Users\phleven\git\java-xapi-tools\.git 
 	--> Working Tree - C:\Users\phleven\git\java-xapi-tools\.git --> Import Projects 
@@ -95,8 +99,10 @@ elrraggregator
 --------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrraggregator.git
-         b. Select all branches
-         c. Local Destination = C:\Users\phleven\git\elrraggregator
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\phleven\git\elrraggregator
         
       2. Eclipse --> Show View --> Git Repositories --> Right click on ellaggrigator [dev-update-branch] C:\Users\phleven\git\elrraggregator\.git 
 	--> Working Tree - C:\Users\phleven\git\elrraggregator\.git --> Import Projects 
@@ -119,8 +125,10 @@ elrrexternalservices
 --------------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrexternalservices.git
-         b. Select all branches
-         c. Local Destination = C:\Users\phleven\git\elrrexternalservices
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\phleven\git\elrrexternalservices
         
       2. Eclipse --> Show View --> Git Repositories --> Right click on ellrexternalservices [dev-update-branch] C:\Users\phleven\git\elrrexternalservices\.git 
 	--> Working Tree - C:\Users\phleven\git\elrrexternalservices\.git --> Import Projects 
@@ -143,8 +151,10 @@ elrrdatasync
 ------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrdatasync.git
-         b. Select all branches
-         c. Local Destination = C:\Users\phleven\git\elrrdtatsynch
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\phleven\git\elrrdtatsynch
          
       2. Eclipse --> Show View --> Git Repositories --> Right click on ellrdatasynch [dev-update-branch] C:\Users\phleven\git\elrrdatasynch\.git 
 	--> Working Tree - C:\Users\phleven\git\elrrdatasynch\.git --> Import Projects 
@@ -167,8 +177,10 @@ elrrservices
 ------------
       1. File --> Import --> Git --> Projects from Git --> Clone URI
          a. URI = https://github.com/US-ELRR/elrrservices.git
-         b. Select all branches
-         c. Local Destination = C:\Users\phleven\git\elrrservices
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select all branches
+         e. Local Destination = C:\Users\phleven\git\elrrservices
         
       2. Eclipse --> Show View --> Git Repositories --> Right click on ellrservices [dev-update-branch] C:\Users\phleven\git\elrrservices\.git 
 	--> Working Tree - C:\Users\phleven\git\elrrservices\.git --> Import Projects 
