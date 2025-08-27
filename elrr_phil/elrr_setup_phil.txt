@@ -31,6 +31,9 @@ Use Java 17:
 
 Install Dependencies:
 1. Install git
+     1. cd "C:\Users\Phil Leven\git\elrrserviceentities"
+      2. git config --global user.email "phleven@deloitte.com"
+      3. git config --global user.name "Leven"
 2. Install Maven
 3. Install Docker Desktop
    a. Open terminal
