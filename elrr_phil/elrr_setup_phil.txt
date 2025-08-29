@@ -34,14 +34,20 @@ Install Dependencies:
      1. cd "C:\Users\Phil Leven\git\elrrserviceentities"
       2. git config --global user.email "phleven@deloitte.com"
       3. git config --global user.name "Leven"
+      
 2. Install Maven
+
 3. Install Docker Desktop
    a. Open terminal
       1. wsl --install
          a. New UNIX username = phleven
          b. New password = Cynthia1#
+         
+4. Docker Compose
+   a. Open terminal
+      1. cd C:\Information\Applications\elrr\
+      2. docker compose up -d
    
-
 
 
 Create a new Eclipse Workspace:
@@ -245,7 +251,7 @@ Create postgreSQL17elrrdockercompose Docker Containers:
 Create Kafka Dead Letter Queue: 
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 40b971dfd3e1c560bec1bf378022ed6d59bd86d3450b9928126f23c96d1be8ba /bin/bash
+   b. docker exec -t -i 47960eb7788ed2cc38c7642521f12d12e1a4a83e059fa969b15276c0c916c968 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1-dlq
    e. Stop and restart elrrdockercompose container
@@ -374,7 +380,7 @@ View runnung Docker containers:
 List Kafka topics:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 40b971dfd3e1c560bec1bf378022ed6d59bd86d3450b9928126f23c96d1be8ba /bin/bash
+   b. docker exec -t -i 47960eb7788ed2cc38c7642521f12d12e1a4a83e059fa969b15276c0c916c968 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
@@ -383,7 +389,7 @@ List Kafka topics:
 View Kafka topic details:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 40b971dfd3e1c560bec1bf378022ed6d59bd86d3450b9928126f23c96d1be8ba /bin/bash
+   b. docker exec -t -i 47960eb7788ed2cc38c7642521f12d12e1a4a83e059fa969b15276c0c916c968 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
    e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
@@ -393,7 +399,7 @@ View Kafka topic details:
 Delete and Recreate Kafka topic:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 40b971dfd3e1c560bec1bf378022ed6d59bd86d3450b9928126f23c96d1be8ba /bin/bash
+   b. docker exec -t -i 47960eb7788ed2cc38c7642521f12d12e1a4a83e059fa969b15276c0c916c968 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
    e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
@@ -403,7 +409,7 @@ Delete and Recreate Kafka topic:
 Consume Kafka Topic Messages:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i 40b971dfd3e1c560bec1bf378022ed6d59bd86d3450b9928126f23c96d1be8ba /bin/bash
+   b. docker exec -t -i 47960eb7788ed2cc38c7642521f12d12e1a4a83e059fa969b15276c0c916c968 /bin/bash
    c. cd /opt/bitnami/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
    	  ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning

@@ -35,7 +35,9 @@ Install Dependencies:
       1. cd cd C:\Users\phleven\git\elrrserviceentities
       2. git config --global user.email "phleven@deloitte.com"
       3. git config --global user.name "Leven"
+      
 2. Install Maven
+
 3. Install Docker Desktop
    a. Open terminal
       1. wsl --install
