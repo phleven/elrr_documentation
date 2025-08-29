@@ -1,1 +1,7 @@
+List local and remote brances:
 git branch --format "%(refname:short) %(upstream)"
+
+
+Remove local remote branches that no longer exist:
+git switch main
+git fetch -p
