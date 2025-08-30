@@ -5,3 +5,15 @@ git branch --format "%(refname:short) %(upstream)"
 Remove local remote branches that no longer exist:
 git switch main
 git fetch -p
+
+
+Remove local branches with no remote branch
+git fetch --prune && git branch --delete $(git for-each-ref --format '%(if:equals=gone)%(upstream:track,nobracket)%(then)%(refname:short)%(end)' refs/heads/)
+
+What it's doing: 
+$(git for-each-ref ...) lists local branches, 
+but formats them such that the branch name is printed only if it's an orphaned tracking branch; 
+otherwise, an empty string. This list is passed into git branch --delete. 
+
+You will likely see error: branch '' not found which you can ignore due to the argument 
+list to git branch --delete containing an empty string for each branch that should not be deleted.
