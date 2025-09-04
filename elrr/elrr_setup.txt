@@ -256,18 +256,32 @@ Create Kafka Dead Letter Queue:
    
    
 Create and populate PostgreSQL service and staging schema:
-1. Open DBeaver
-   a. New Connections
-      1. service_db
-          5432
-          service_user
-          service_password
-      2. sync_db
-          5431
-          sync_user
-          sync_password
-   b. Run service schema.sql
-   c. Run staging schema.sql
+1. DBeaver --> Database --> New Database Connection --> PostgreSQL
+   a. Host = localhost
+   b. Port = 5432
+   c. Database = service_db
+   d. Authentication = Database Native
+   e. Username = service_user
+   f. Password = service_password
+   g. Run service schema.sql
+   h. Run insert_jwt_token.sql
+
+2. DBeaver --> Database --> New Database Connection --> PostgreSQL
+   a. Host = localhost
+   b. Port = 5431
+   c. Database = sync_db
+   d. Authentication = Database Native
+   e. Username = sync_user
+   f. Password = sync_password
+   g. Run staging schema.sql
+
+3. DBeaver --> Database --> New Database Connection --> PostgreSQL
+   a. Host = localhost
+   b. Port = 5433
+   c. Database = lrsql_db
+   d. Authentication = Database Native
+   e. Username = username
+   f. Password = password
 
 
 
