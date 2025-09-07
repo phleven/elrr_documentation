@@ -11,7 +11,12 @@ Remove Application from Docker:
    c. Check elrr_docker_resources_db_data_sync --> Delete
    d. Check elrr_docker_resources_db_Kalfka_storage --> Delete
 
-3. Create Docker Containers:
+3. Make sure TCP port 2181 for Zookeeper is not in use:
+   a. Open Terminal
+      1. net stop winnat
+      2. net start winnat
+
+4. Create Docker Containers:
    a. Start Docker Desktop
 
    b.Open terminal
@@ -28,12 +33,35 @@ Remove Application from Docker:
          e. lrs-1
          f. kalfka-1
 
-4. Create and populate PostgreSQL staging schema:
-   a. Open DBeaver
-      1. Run Drop_Create_Insert_sync_db.sql
-      2. Run Drop_CReate_Insert_service_db_insert.sql
+5. Create and populate PostgreSQL service and staging schema:
+   a. DBeaver --> Database --> New Database Connection --> PostgreSQL
+      1. Host = localhost
+      2. Port = 5432
+      3. Database = service_db
+      4. Authentication = Database Native
+      5. Username = service_user
+      6. Password = service_password
+      7. Run service schema.sql
+      8. Run insert_jwt_token.sql
+   
+   b. DBeaver --> Database --> New Database Connection --> PostgreSQL
+      1. Host = localhost
+      2. Port = 5431
+      3. Database = sync_db
+      4. Authentication = Database Native
+      5. Username = sync_user
+      6. Password = sync_password
+      7. Run staging schema.sql
 
-5. Run Postman to populate lrs-db
+   c. DBeaver --> Database --> New Database Connection --> PostgreSQL
+      1. Host = localhost
+      2. Port = 5433
+      3. Database = lrsql_db
+      4. Authentication = Database Native
+      5. Username = username
+      6. Password = password
+
+6. Run Postman to populate lrs-db
    a. POST http://localhost:8083/xapi/statements
    b. Authorization
       1. Basic Auth

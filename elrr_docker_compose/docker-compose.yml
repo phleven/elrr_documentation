@@ -14,7 +14,7 @@ services:
       - ALLOW_ANONYMOUS_LOGIN=yes
 
   kafka:
-    image: 'bitnami/kafka:3.9.0'
+    image: 'bitnami/kafka:3.4.0'
     user: root
     ports:
       - '9092:9092'
@@ -24,6 +24,7 @@ services:
       - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_ENABLE_KRAFT=false
     volumes:
       - kafka_storage:/bitnami/kafka
     depends_on:
@@ -31,7 +32,7 @@ services:
 
   # this DB is for Aggregator and Sync
   services-db:
-    image: postgres:14
+    image: postgres:17
     volumes:
       - db_data_service:/var/lib/postgresql/data
     environment:
@@ -43,7 +44,7 @@ services:
 
   # this DB is for Datasync
   sync-db:
-    image: postgres:14
+    image: postgres:17
     volumes:
       - db_data_sync:/var/lib/postgresql/data
     environment:

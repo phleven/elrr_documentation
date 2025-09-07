@@ -31,14 +31,35 @@ Remove Application from Docker:
             5. lrs-1
             6. kalfka-1
 
-5. Create and populate PostgreSQL staging schema:
-   a. Open DBeaver
-      1. Run Create_sync_db.sql
-      2. Run sync_db_insert.sql
-      3. Run Create_service_db.sql
-      4. Run service_db_insert.sql
+5. Create and populate PostgreSQL service and staging schema:
+   a. DBeaver --> Database --> New Database Connection --> PostgreSQL
+      1. Host = localhost
+      2. Port = 5432
+      3. Database = service_db
+      4. Authentication = Database Native
+      5. Username = service_user
+      6. Password = service_password
+      7. Run service schema.sql
+      8. Run insert_jwt_token.sql
+   
+   b. DBeaver --> Database --> New Database Connection --> PostgreSQL
+      1. Host = localhost
+      2. Port = 5431
+      3. Database = sync_db
+      4. Authentication = Database Native
+      5. Username = sync_user
+      6. Password = sync_password
+      7. Run staging schema.sql
 
-5. Run Postman to populate lrs-db:
+   c. DBeaver --> Database --> New Database Connection --> PostgreSQL
+      1. Host = localhost
+      2. Port = 5433
+      3. Database = lrsql_db
+      4. Authentication = Database Native
+      5. Username = username
+      6. Password = password
+      
+6. Run Postman to populate lrs-db:
    a. POST http://localhost:8083/xapi/statements
    b. Authorization
       1. Basic Auth

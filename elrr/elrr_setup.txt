@@ -217,7 +217,7 @@ Create elrrdockercompose Docker Containers:
    a. cd C:\Dev\elrrdockercompose
    b. docker compose up
    c. docker compose logs
-   c. Check for new containers in Docker Desktop
+   d. Check for new containers in Docker Desktop
       1. elrrdockercompose
          a. sync-db-1
          b. lrs-db-1
@@ -225,36 +225,10 @@ Create elrrdockercompose Docker Containers:
          d. services-db-1
          e. lrs-1
          f. kalfka-1
+f. Reboot
 
 
 
-Create postgreSQL17elrrdockercompose Docker Containers:
-1. Start Docker Desktop
-2. Open terminal
-   a. cd C:\Dev\postgreSQL17elrrdockercompose
-   b. docker compose up
-   c. docker compose logs
-   c. Check for new containers in Docker Desktop
-      1. postgreSQL17elrrdockercompose
-         a. sync-db-1
-         b. lrs-db-1
-         c. zookeeper-1
-         d. services-db-1
-         e. lrs-1
-         f. kalfka-1
-
-
-
-Create Kafka Dead Letter Queue: 
-1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
-   b. docker exec -t -i f1edf903d3dede699f1055431100ebed6db15bb5b634b5d6ebe67bf38f5486aa /bin/bash
-   c. cd /opt/bitnami/kafka/bin
-   d. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1-dlq
-   e. Stop and restart elrrdockercompose container
-   
-   
-   
 Create and populate PostgreSQL service and staging schema:
 1. DBeaver --> Database --> New Database Connection --> PostgreSQL
    a. Host = localhost
