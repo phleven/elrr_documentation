@@ -52,17 +52,70 @@ Install Dependencies:
 
 Create a new Eclipse Workspace:
 1. Open Eclipse
+
    a. Set Java version in Eclipse
       1. Eclipse --> Window --> Preferences --> Java --> Installed JREs
-         a. Check jdk17
+         a. Check jdk-17 (default)
          b. Right click on ellraggrigator --> Properties --> Project Facets
             1. Java = 17 --> Apply and Close
+            
    b. Show all files
        1. Package Explorer --> 3 dots --> Filters --> un-check .* resources
-   c. Add Lombok Plugin to Eclipse:
+       
+   c. Set Light Theme
+      1. Eclipse --> Window --> Preferences --> General --> Apperance
+         a. Theme = Light
+       
+   d. Set Eclipse Formatting
+      1. Eclipse --> Window --> Preferences --> Java --> Code Style --> Formatter
+         a. Edit
+		    1. Profile name = Eclipse ELRR
+		
+		    2. Indentation --> Tab = Spaces only
+		
+		    3. Indentation --> Indentation size = 4
+		
+		    4. Indentation --> Tab = 4
+		
+		
+		    5. Line Wrapping --> Maximum line width = 80
+		         
+		    6. Line Wrapping --> Default Indentation for Wrapped = 2
+		
+		    7. Line Wrapping --> Uncheck Prefer wrapping outer expressions (keep nested expressions on one line)
+		
+		
+		    8. Wrapping Setings --> Method declaration --> Declaration --> Wrap where necessary
+		
+		    9. Wrapping Setings --> Method declaration --> throws --> Wrap where necessary
+		      
+		
+		   10. Wrapping Setings --> Annotations --> On methods --> Wrap where necessary
+		
+		   11. Wrapping Setings --> Annotations --> On parameters --> Wrap where necessary
+
+
+           12. Comments --> Maximum width for comments = 80
+     
+           13. Comments --> Uncheck Enable JavaDoc comment formatting
+           
+   e. Add Lombok Plugin to Eclipse:
       1. Eclipse --> Help --> Install New Software --> Add
          a. Name = Lombok
          b. Location = https://projectlombok.org/p2
+
+   f. Install Checkstyle Eclipse Plugin:
+      1. Eclipse --> Help --> Install New Software --> Add
+         a. Name = Checkstyle
+         b. Location = https://checkstyle.org/eclipse-cs-update-site
+         
+  g. Install Eclipse Color Themes Plugin:
+      1. Eclipse --> Help --> Install New Software --> Add
+         a. Name = Eclipse Color Themes
+         b. Location = http://eclipse-color-theme.github.io/update/
+      2. Eclipse --> Window --> Preferences --> Apperance --> Color Theme
+         a. Select Solarized Light
+
 
 
 Import Project into Eclipse

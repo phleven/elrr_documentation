@@ -34,7 +34,7 @@ Open .pom
 
      12. Comments --> Maximum width for comments = 80
      
-     13. Comments --> UncheckEnable JavaDoc formatting
+     13. Comments --> Uncheck Enable JavaDoc formatting
      
       
        
