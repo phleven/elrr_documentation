@@ -89,11 +89,14 @@ Create a new Eclipse Workspace:
 		   10. Wrapping Setings --> Annotations --> On methods --> Wrap where necessary
 		
 		   11. Wrapping Setings --> Annotations --> On parameters --> Wrap where necessary
+		   
+		   12. Wrapping Setings --> Annotations --> Element value pairs --> Wrap where necessary
+		   
 
 
-           12. Comments --> Maximum width for comments = 80
+           13. Comments --> Maximum width for comments = 80
      
-           13. Comments --> Uncheck Enable JavaDoc comment formatting
+           14. Comments --> Uncheck Enable JavaDoc comment formatting
            
    e. Add Lombok Plugin to Eclipse:
       1. Eclipse --> Help --> Install New Software --> Add

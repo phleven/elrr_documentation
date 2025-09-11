@@ -30,11 +30,14 @@ Open .pom
      10. Wrapping Setings --> Annotations --> On methods --> Wrap where necessary
 
      11. Wrapping Setings --> Annotations --> On parameters --> Wrap where necessary
-
-
-     12. Comments --> Maximum width for comments = 80
      
-     13. Comments --> Uncheck Enable JavaDoc formatting
+	 12. Wrapping Setings --> Annotations --> Element value pairs --> Wrap where necessary
+		   
+
+
+     13. Comments --> Maximum width for comments = 80
+     
+     14. Comments --> Uncheck Enable JavaDoc comment formatting
      
       
        
