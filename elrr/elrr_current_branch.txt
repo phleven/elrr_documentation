@@ -2,7 +2,7 @@ elrrserviceentities		assigned-extension-actor
 
 elrrexternalservices	assigned-extension-actor
 
-elrrdatasync			hibernate-dll-Auto
+elrrdatasync			assigned-extension-actor
 
 elrraggregator			assigned-extension-actor
 

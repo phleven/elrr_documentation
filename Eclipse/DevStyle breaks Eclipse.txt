@@ -1,0 +1,13 @@
+DevStyle Breaks Eclipse
+
+
+
+To Fix:
+1. From your eclipse installation folder, delete all folders and jars with com.genuitec.eclipse. 
+2. Delete the following folder <ECLIPSE>\configuration\org.eclipse.osgi\
+
+
+1.  At the moment the solution seems to be to delete anything com.genuitec.* from .p2\pool\plugins, 
+start a new workspace, then uninstall Darkest Dark from the Eclipse Marketplace view. 
+
+After that I was able to start my old workspaces normally.
