@@ -424,7 +424,7 @@ List Kafka topics:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
-   c. cd /opt/bitnami/kafka/bin
+   c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
 
@@ -433,7 +433,7 @@ View Kafka topic details:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
-   c. cd /opt/bitnami/kafka/bin
+   c. cd /opt/kafka/bin
    d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
    e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
 
@@ -443,7 +443,7 @@ Delete and Recreate Kafka topic:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
-   c. cd /opt/bitnami/kafka/bin
+   c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
    e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
 
@@ -453,7 +453,7 @@ Consume Kafka Topic Messages:
 1. Open terminal
    a. Get hash for kafka-1 from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
-   c. cd /opt/bitnami/kafka/bin
+   c. cd /opt/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
    	  ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning
    e. Ctrl + C to end 
