@@ -2,8 +2,8 @@ elrrserviceentities		assigned-extension-actor
 
 elrrexternalservices	assigned-extension-actor
 
-elrrdatasync			assigned-extension-actor
+elrrdatasync			kafka-topics
 
-elrraggregator			assigned-extension-actor
+elrraggregator			kafka-topics
 
 elrrservices			assigned-extension-actor

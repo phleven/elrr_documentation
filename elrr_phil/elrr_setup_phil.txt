@@ -422,7 +422,7 @@ View runnung Docker containers:
 
 List Kafka topics:
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
@@ -431,31 +431,31 @@ List Kafka topics:
 
 View Kafka topic details:
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
    c. cd /opt/kafka/bin
-   d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
-   e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
+   d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all
+   e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all | grep retention
 
 
 
 Delete and Recreate Kafka topic:
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
    c. cd /opt/kafka/bin
-   d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
-   e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
+   d. ./kafka-topics.sh --delete --topic datasync-statements --bootstrap-server localhost:9092
+   e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic datasync-statements
 
 
 
 Consume Kafka Topic Messages:
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
    c. cd /opt/kafka/bin
-   d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
-   	  ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning
+   d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements --from-beginning
+   	  ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements-dlq --from-beginning
    e. Ctrl + C to end 
 
 {"statement":{"id":"d9f1328b-bcc2-4b9c-b954-03cb88a240c8","actor":{"objectType":"Agent","name":"Sophia Lewis","mbox":"mailto:sophia.lewis@us.navy.mil"},"verb":{"id":"https://adlnet.gov/expapi/verbs/achieved","display":{"en-us":"Achieved"}},"object":{"objectType":"Activity","id":"https://w3id.org/xapi/credential/GIAC%20Security%20Essentials%20Certification%20%28GSEC%29","definition":{"name":{"en-us":"GIAC Security Essentials Certification (GSEC)"},"type":"https://yetanalytics.com/deloitte-edlm/demo-profile/certificate"}},"authority":{"objectType":"Agent","account":{"homePage":"http://example.org","name":"0193f924-b470-89c9-a5f2-35cd03409e9c"}},"timestamp":"2024-09-20T21:37:23.835Z","stored":"2024-12-24T14:51:40.346Z","version":"1.0.0"}

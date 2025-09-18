@@ -415,7 +415,7 @@ View runnung Docker containers:
 
 List Kafka topics:
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
@@ -424,32 +424,32 @@ List Kafka topics:
 
 View Kafka topic details:
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
    c. cd /opt/kafka/bin
-   d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all
-   e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic test-1 --all | grep retention
+   d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all
+   e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all | grep retention
 
 
 
 Delete and Recreate Kafka topic: 
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
    c. cd /opt/kafka/bin
-   d. ./kafka-topics.sh --delete --topic test-1 --bootstrap-server localhost:9092
-   e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-1
+   d. ./kafka-topics.sh --delete --topic datasync-statements --bootstrap-server localhost:9092
+   e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic datasync-statements
    f. Stop and restart elrrdockercompose container
 
 
 
 Consume Kafka Topic Messages:
 1. Open terminal
-   a. Get hash for kafka-1 from Docker --> Containers
+   a. Get hash for kafka from Docker --> Containers
    b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
    c. cd /opt/kafka/bin
-   d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1 --from-beginning
-      ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic test-1-dlq --from-beginning      
+   d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements --from-beginning
+      ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements-dlq --from-beginning      
    e. Ctrl + C to end 
 
 
