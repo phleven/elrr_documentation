@@ -269,17 +269,16 @@ Make sure TCP port 2181 for Zookeeper is not in use (one time):
 Create elrrdockercompose Docker Containers:
 1. Start Docker Desktop
 2. Open terminal
-   a. cd C:\Dev\elrrdockercompose
+   a. cd C:\Dev\elrr_kraft_docker_compose
    b. docker compose up
    c. docker compose logs
    d. Check for new containers in Docker Desktop
       1. elrrdockercompose
          a. sync-db-1
          b. lrs-db-1
-         c. zookeeper-1
-         d. services-db-1
-         e. lrs-1
-         f. kalfka-1
+         c. services-db-1
+         d. lrs-1
+         e. kalfka
 f. Reboot
 
 
@@ -416,7 +415,7 @@ View runnung Docker containers:
 List Kafka topics:
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
+   b. docker exec -t -i b1f007a72afba0031317c00cc3ebae3d64177d9ba553671f3eceba7b5c74247c /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
@@ -425,7 +424,7 @@ List Kafka topics:
 View Kafka topic details:
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
+   b. docker exec -t -i b1f007a72afba0031317c00cc3ebae3d64177d9ba553671f3eceba7b5c74247c /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all
    e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all | grep retention
@@ -435,7 +434,7 @@ View Kafka topic details:
 Delete and Recreate Kafka topic: 
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
+   b. docker exec -t -i b1f007a72afba0031317c00cc3ebae3d64177d9ba553671f3eceba7b5c74247c /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --delete --topic datasync-statements --bootstrap-server localhost:9092
    e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic datasync-statements
@@ -446,7 +445,7 @@ Delete and Recreate Kafka topic:
 Consume Kafka Topic Messages:
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 7f6ebee43e91a55fae1828eedc08bacc793c7d65619517fda919c74980079ca0 /bin/bash
+   b. docker exec -t -i b1f007a72afba0031317c00cc3ebae3d64177d9ba553671f3eceba7b5c74247c /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements --from-beginning
       ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements-dlq --from-beginning      

@@ -20,7 +20,7 @@ Remove Application from Docker:
    a. Start Docker Desktop
 
    b.Open terminal
-     1. cd C:\Dev\elrrdockercompose
+     1. cd C:\Dev\elrr_kraft_docker_compose
      2. docker compose up
      3. docker compose logs
 
@@ -28,10 +28,9 @@ Remove Application from Docker:
       1. elrr_docker_resources
          a. sync-db-1
          b. lrs-db-1
-         c. zookeeper-1
-         d. services-db-1
-         e. lrs-1
-         f. kalfka-1
+         c. services-db-1
+         d. lrs-1
+         e. kalfka
 
 5. Create and populate PostgreSQL service and staging schema:
    a. DBeaver --> Database --> New Database Connection --> PostgreSQL

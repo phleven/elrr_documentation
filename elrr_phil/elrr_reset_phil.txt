@@ -26,10 +26,9 @@ Remove Application from Docker:
          a. elrr_docker_resources
             1. sync-db-1
             2. lrs-db-1
-            3. zookeeper-1
-            4. services-db-1
-            5. lrs-1
-            6. kalfka-1
+            3. services-db-1
+            4. lrs-1
+            5. kalfka
 
 5. Create and populate PostgreSQL service and staging schema:
    a. DBeaver --> Database --> New Database Connection --> PostgreSQL

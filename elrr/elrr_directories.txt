@@ -7,3 +7,5 @@
  cd C:\Users\phleven\git\elrr_documentation
  
  cd C:\Users\phleven\git\java-xapi-tools
+ 
+ cd C:\Dev\elrrdockercompose

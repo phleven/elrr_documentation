@@ -1,0 +1,10 @@
+fatal: 'origin' does not appear to be a git repository
+
+1. Check local remotes
+   a. git remote -v
+   
+2. If not found, add the remote repository
+   a. git remote add origin https://github.com/adlnet/elrr-dockercompose.git
+   
+3. Push changes
+   a. git push origin kafka-Kraft

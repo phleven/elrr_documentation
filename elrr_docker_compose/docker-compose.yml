@@ -25,6 +25,7 @@ services:
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
       - KAFKA_ENABLE_KRAFT=false
+      - KAFKA_LOG_RETENTION_HOURS=1
     volumes:
       - kafka_storage:/bitnami/kafka
     depends_on:

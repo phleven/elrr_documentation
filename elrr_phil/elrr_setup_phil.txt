@@ -279,10 +279,9 @@ Create Docker Containers:
       1. dockercompose
          a. sync-db-1
          b. lrs-db-1
-         c. zookeeper-1
-         d. services-db-1
-         e. lrs-1
-         f. kalfka-1
+         c. services-db-1
+         d. lrs-1
+         e. kalfka
 3. Reboot
 
    
