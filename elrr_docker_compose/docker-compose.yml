@@ -1,77 +1,69 @@
 volumes:
-  db_data_service:
-  db_data_sync:
-  db_data_lrs:
-  kafka_storage:
-
+  db_data_service: null
+  db_data_sync: null
+  db_data_lrs: null
+  kafka_storage: null
 services:
-
-  zookeeper:
-    image: 'bitnami/zookeeper:latest'
-    ports:
-      - '2181:2181'
-    environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
-
   kafka:
-    image: 'bitnami/kafka:3.4.0'
-    user: root
+    image: 'apache/kafka:latest'
+    container_name: kafka
     ports:
       - '9092:9092'
+      - '9093:9093'
     environment:
-      - KAFKA_BROKER_ID=1
-      - KAFKA_LISTENERS=PLAINTEXT://:9092
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
-      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - ALLOW_PLAINTEXT_LISTENER=yes
-      - KAFKA_ENABLE_KRAFT=false
-      - KAFKA_LOG_RETENTION_HOURS=1
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: 'broker,controller'
+      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093'
+      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://localhost:9092'
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@localhost:9093'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT'
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_LOG_RETENTION_HOURS: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      CLUSTER_ID: Mk3OEYBSD34fcwNTJENDM2Qk
     volumes:
       - kafka_storage:/bitnami/kafka
-    depends_on:
-      - zookeeper
 
-  # this DB is for Aggregator and Sync
   services-db:
-    image: postgres:17
+    image: 'postgres:17'
     volumes:
-      - db_data_service:/var/lib/postgresql/data
+      - 'db_data_service:/var/lib/postgresql/data'
     environment:
       POSTGRES_USER: service_user
       POSTGRES_PASSWORD: service_password
       POSTGRES_DB: service_db
     ports:
-      - "5432:5432" # Useful if we only want to run the DB w/o other services
-
-  # this DB is for Datasync
+      - '5432:5432'
   sync-db:
-    image: postgres:17
+    image: 'postgres:17'
     volumes:
-      - db_data_sync:/var/lib/postgresql/data
+      - 'db_data_sync:/var/lib/postgresql/data'
     environment:
       POSTGRES_USER: sync_user
       POSTGRES_PASSWORD: sync_password
       POSTGRES_DB: sync_db
     ports:
-      - "5431:5432" # Useful if we only want to run the DB w/o other services
-
+      - '5431:5432'
   lrs-db:
-    image: postgres:latest
+    image: 'postgres:latest'
     volumes:
-      - db_data_lrs:/var/lib/postgresql/data
+      - 'db_data_lrs:/var/lib/postgresql/data'
     environment:
       POSTGRES_USER: username
       POSTGRES_PASSWORD: password
       POSTGRES_DB: lrsql_db
     ports:
-      - "5433:5432" # Useful if we only want to run the DB w/o other services
+      - '5433:5432'
   lrs:
-    #build: . # switch to this for active dev
-    image: yetanalytics/lrsql:latest
+    image: 'yetanalytics/lrsql:latest'
     command:
       - /lrsql/bin/run_postgres.sh
     ports:
-      - "8083:8080"
+      - '8083:8080'
     depends_on:
       - lrs-db
     environment:
@@ -83,8 +75,6 @@ services:
       LRSQL_DB_NAME: lrsql_db
       LRSQL_DB_USER: username
       LRSQL_DB_PASSWORD: password
-      # If Postgres is too slow to start, increase this
       LRSQL_POOL_INITIALIZATION_FAIL_TIMEOUT: 10000
-      # Set to true if using dev UI, domain name, proxy server, etc.
       LRSQL_ALLOW_ALL_ORIGINS: true
       LRSQL_ENABLE_STMT_HTML: false
