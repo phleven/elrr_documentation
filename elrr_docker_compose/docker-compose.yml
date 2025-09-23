@@ -1,26 +1,26 @@
 volumes:
-  db_data_service: null
-  db_data_sync: null
-  db_data_lrs: null
-  kafka_storage: null
+  db_data_service:
+  db_data_sync:
+  db_data_lrs:
+  kafka_storage:
 services:
   kafka:
-    image: 'apache/kafka:latest'
+    image: apache/kafka:latest
     container_name: kafka
     ports:
-      - '9092:9092'
-      - '9093:9093'
+      - 9092:9092
+      - 9093:9093
     environment:
       KAFKA_NODE_ID: 1
-      KAFKA_PROCESS_ROLES: 'broker,controller'
-      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093'
-      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://localhost:9092'
-      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@localhost:9093'
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT'
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_LOG_DIRS: /var/lib/kafka/data
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: true
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_LOG_RETENTION_HOURS: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
@@ -29,41 +29,41 @@ services:
       - kafka_storage:/bitnami/kafka
 
   services-db:
-    image: 'postgres:17'
+    image: postgres:17
     volumes:
-      - 'db_data_service:/var/lib/postgresql/data'
+      - db_data_service:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: service_user
       POSTGRES_PASSWORD: service_password
       POSTGRES_DB: service_db
     ports:
-      - '5432:5432'
+      - 5432:5432
   sync-db:
-    image: 'postgres:17'
+    image: postgres:17
     volumes:
-      - 'db_data_sync:/var/lib/postgresql/data'
+      - db_data_sync:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: sync_user
       POSTGRES_PASSWORD: sync_password
       POSTGRES_DB: sync_db
     ports:
-      - '5431:5432'
+      - 5431:5432
   lrs-db:
-    image: 'postgres:latest'
+    image: postgres:latest
     volumes:
-      - 'db_data_lrs:/var/lib/postgresql/data'
+      - db_data_lrs:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: username
       POSTGRES_PASSWORD: password
       POSTGRES_DB: lrsql_db
     ports:
-      - '5433:5432'
+      - 5433:5432
   lrs:
-    image: 'yetanalytics/lrsql:latest'
+    image: yetanalytics/lrsql:latest
     command:
       - /lrsql/bin/run_postgres.sh
     ports:
-      - '8083:8080'
+      - 8083:8080
     depends_on:
       - lrs-db
     environment:

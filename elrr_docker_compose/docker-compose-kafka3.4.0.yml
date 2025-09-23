@@ -7,17 +7,17 @@ volumes:
 services:
 
   zookeeper:
-    image: 'bitnami/zookeeper:latest'
+    image: bitnami/zookeeper:latest
     ports:
-      - '2181:2181'
+      - 2181:2181
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
 
   kafka:
-    image: 'bitnami/kafka:3.4.0'
+    image: bitnami/kafka:3.4.0
     user: root
     ports:
-      - '9092:9092'
+      - 9092:9092
     environment:
       - KAFKA_BROKER_ID=1
       - KAFKA_LISTENERS=PLAINTEXT://:9092

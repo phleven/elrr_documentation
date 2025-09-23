@@ -7,7 +7,6 @@ Clone Remote Git Repository
 Create a new Eclipse Workspace
 Import Project Into Eclipse
 Create Docker Containers (Docker compose)
-Create Kafka Dead Letter Queue
 Create and populate PostgreSQL staging schema
 Run elrrexternalservices
 Application UI
@@ -32,17 +31,14 @@ Use Java 17:
 Install Dependencies:
 1. Install git
    a. Open Terminal
-      1. cd cd C:\Users\phleven\git\elrrserviceentities
-      2. git config --global user.email "phleven@deloitte.com"
-      3. git config --global user.name "Leven"
+      1. cd C:\Users\phleven\git\elrrserviceentities
+      2. git install
+      3. git config --global user.email "phleven@deloitte.com"
+      4. git config --global user.name "Leven"
       
 2. Install Maven
 
 3. Install Docker Desktop
-   a. Open terminal
-      1. wsl --install
-         a. new UNIX username = phleven
-         b. new password = Cynthia1# 
 
 
 
@@ -257,13 +253,7 @@ elrrservices
          f. Run from terminal
             1. mvn spring-boot:run -D"spring-boot.run.jvmArgument"s="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" -D"spring-boot.run.profiles"=local -e
          g. Debug from Eclipse
- 
-      
 
-Make sure TCP port 2181 for Zookeeper is not in use (one time):
-1. Open Terminal
-   a. FixWINNAT.bat
-   
    
    
 Create elrrdockercompose Docker Containers:
