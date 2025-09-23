@@ -5,11 +5,12 @@ volumes:
   kafka_storage:
 services:
   kafka:
-    image: apache/kafka:latest
+  # Does NOT work with latest bitnami image!!!
+    image: 'apache/kafka:latest'
     container_name: kafka
     ports:
-      - 9092:9092
-      - 9093:9093
+      - "9092:9092"
+      - "9093:9093"
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
@@ -28,6 +29,7 @@ services:
     volumes:
       - kafka_storage:/bitnami/kafka
 
+  # this DB is for Aggregator and Sync
   services-db:
     image: postgres:17
     volumes:
@@ -37,7 +39,9 @@ services:
       POSTGRES_PASSWORD: service_password
       POSTGRES_DB: service_db
     ports:
-      - 5432:5432
+      - "5432:5432" # Useful if we only want to run the DB w/o other services
+
+  # this DB is for Datasync
   sync-db:
     image: postgres:17
     volumes:
@@ -47,7 +51,7 @@ services:
       POSTGRES_PASSWORD: sync_password
       POSTGRES_DB: sync_db
     ports:
-      - 5431:5432
+      - "5431:5432" # Useful if we only want to run the DB w/o other services
   lrs-db:
     image: postgres:latest
     volumes:
@@ -57,13 +61,14 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: lrsql_db
     ports:
-      - 5433:5432
+      - "5433:5432" # Useful if we only want to run the DB w/o other services
   lrs:
+    #build: . # switch to this for active dev
     image: yetanalytics/lrsql:latest
     command:
       - /lrsql/bin/run_postgres.sh
     ports:
-      - 8083:8080
+      - "8083:8080"
     depends_on:
       - lrs-db
     environment:
@@ -75,6 +80,8 @@ services:
       LRSQL_DB_NAME: lrsql_db
       LRSQL_DB_USER: username
       LRSQL_DB_PASSWORD: password
+      # If Postgres is too slow to start, increase this
       LRSQL_POOL_INITIALIZATION_FAIL_TIMEOUT: 10000
+      # Set to true if using dev UI, domain name, proxy server, etc.
       LRSQL_ALLOW_ALL_ORIGINS: true
       LRSQL_ENABLE_STMT_HTML: false

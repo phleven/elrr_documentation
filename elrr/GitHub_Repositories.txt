@@ -14,4 +14,6 @@ https://github.com/yetanalytics/java-xapi-tools
 
 
 https://github.com/adlnet/elrr-aggregator-parent
+https://github.com/adlnet/elrr-services-parent
+
 https://github.com/adlnet/elrr-dockercompose

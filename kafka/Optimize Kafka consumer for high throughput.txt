@@ -1,0 +1,15 @@
+Explanation of the Optimized Parameters:
+
+fetch.min.bytes is set to 1MB to ensure that the consumer waits until at least 1MB of data is available before fetching, thus reducing the number of fetch requests.
+
+fetch.max.bytes is increased to 100MB to allow fetching more data in each request, which reduces overhead.
+
+max.partition.fetch.bytes is set to 10MB, allowing the consumer to fetch a large amount of data per partition.
+
+max.poll.records is increased to 1000 to allow processing more records in each poll, improving throughput.
+
+receive.buffer.bytes and send.buffer.bytes are increased to 1MB to allow larger data transfers between the consumer and broker.
+
+max.in.flight.requests.per.connection is kept at 5, balancing throughput and memory consumption.
+
+Manual offset commit (enable.auto.commit = false) ensures better control over when offsets are committed, which helps avoid unnecessary reprocessing during failures.
