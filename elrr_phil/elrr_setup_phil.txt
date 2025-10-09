@@ -30,17 +30,36 @@ Use Java 17:
 
 Install Dependencies:
 1. Install git
-   a. Open Terminal
+   a. Run Git-2.51.0.2-64-bit.exe
+      1. Destination Location = C:\Program Files\Git
+      2. Use Notepad as Git's default editor
+      3. Override the default branch name for new repositories = main
+      4. Select Git from the command line and also 3rd party software
+      5. Select Use bundled OPenSSH
+      6. Select Use native Windows Secure Channel library 
+      7. Select Checkout Windows-style, commit Unix-style line endings
+      8. Select Use MinTTY
+      9. Select Fast-forward or merge
+     10. Select Git Credential Manager
+     11. Select Enable file system caching 
+   b. Open Terminal
       1. cd C:\Users\phleven\git\elrrserviceentities
       2. git install
       3. git config --global user.email "phleven@deloitte.com"
       4. git config --global user.name "Leven"
       
 2. Install Maven
+   a. Unzip apache-maven-3.9.11-bin.zip to C:\
+   b. SET M2_HOME=C:\apache-maven-3.9.11
+   c. SET M2=%M2_HOME%\bin
+   d. Add C:\apache-maven-3,9.11\bin to path
 
 3. Install Docker Desktop
-   a. Open terminal
-      1. wsl --install
+   a. Run Docker Desktop Installer.exe
+      1. Check add shortcut to desktop
+   b. Reboot
+   c. Open terminal
+      1. wsl --update
          a. New UNIX username = phleven
          b. New password = Cynthia1#
          
@@ -116,7 +135,7 @@ Create a new Eclipse Workspace:
       1. Eclipse --> Help --> Install New Software --> Add
          a. Name = Eclipse Color Themes
          b. Location = http://eclipse-color-theme.github.io/update/
-      2. Eclipse --> Window --> Preferences --> Apperance --> Color Theme
+      2. Eclipse --> Window --> Preferences --> General --> Apperance --> Color Theme
          a. Select Solarized Light
 
 
