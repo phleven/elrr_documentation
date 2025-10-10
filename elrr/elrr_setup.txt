@@ -135,6 +135,21 @@ Create a new Eclipse Workspace:
 
 
 Import Project into Eclipse
+elrr_documentation
+------------------
+      1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
+         a. URI = https://github.com/phleven/elrr_documentation.git
+         b. User = phleven
+         c. Password = phil55.cindy61
+         d. Select main branch, deselect all other branches
+         e. Local Destination = C:\Users\phleven\git\elrr_documentation
+
+      2. Eclipse --> Show View --> Git Repositories --> Right click on elrrdocumentation 
+	--> Working Tree - C:\Users\phleven\git\elrrdocumentation\.git --> Import Projects 
+         a. Import source = C:\Users\phleven\git\elrrdocumentation
+         b. Check all folders
+
+
 elrrserviceentities
 -------------------
       1. Eclipse --> File --> Import --> Git --> Projects from Git --> Clone URI
