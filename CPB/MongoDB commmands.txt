@@ -25,7 +25,7 @@ db.dropDatabase();
 
 
 Create collection
-db.createCollection('books')
+db.createCollection('vechicleEncounters')
 
 Show collections
 show collections
@@ -34,7 +34,10 @@ Delete collection:
 db.<collection>.drop();
 
 Count documents in a collection
-db.<collection>.countDocuments({});
+db.vechileEncounters.countDocuments({});
+
+Display all documents in a collection
+db.vechileEncounters.find()
 
 
 

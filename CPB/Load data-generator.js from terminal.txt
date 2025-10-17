@@ -1,0 +1,4 @@
+Load data-generator.js from terminal:
+1. Open terminal
+   a. cd "C:\MongoDB Scripts\CBP"
+   a. node "/MongoDB Scripts/CBP/data-generator.js"
