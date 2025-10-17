@@ -46,7 +46,7 @@ db.vechileEncounters.insertMany( [
 			            "encounterDt": "2019-10-01T10:00:00Z",
 			            "location": "Newark"
 			        },
-			        "licensePlate": "ABC12346",
+			        "licensePlate": "ABC12347",
 			        "encounterType": "traffic stop",
 			        "encounterAttributes": [
 			            {"key": "officerId", "value": "O1236"},
