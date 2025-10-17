@@ -1,3 +1,7 @@
+// To run
+// 1. Open terminal
+//    a. node "/MongoDB Scripts/CBP/data-generator.js"
+
 // require the necessary libraries
 const { faker } = require("@faker-js/faker");
 const MongoClient = require("mongodb").MongoClient;
@@ -8,7 +12,7 @@ function randomIntFromInterval(min, max) { // min and max included
 
 async function seedDB() {
     // Connection URL
-    const uri = "<YOUR-URI>";
+    const uri = "mongodb://localhost/example";
 
     const client = new MongoClient(uri);
 

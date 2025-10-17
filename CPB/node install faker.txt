@@ -1,0 +1,4 @@
+Install faker
+1. Open terminal
+   a. cd "C:\MongoDB Scripts\CBP" 
+   b. npm install @faker-js/faker

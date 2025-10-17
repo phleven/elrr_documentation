@@ -1,0 +1,45 @@
+Clear the screen
+console.clear()
+
+
+
+Load script
+load("/MongoDB Scripts/CBP/data-generator.js")
+
+
+Database version
+db.version()
+
+List databases
+show dbs
+
+Current database
+db
+
+Switch current database
+use <db>
+
+Delete current database
+db.dropDatabase();
+
+
+
+Create collection
+db.createCollection('books')
+
+Show collections
+show collections
+
+Delete collection:
+db.<collection>.drop();
+
+Count documents in a collection
+db.<collection>.countDocuments({});
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+Install faker
+1. Open terminal
+   a. cd "C:\MongoDB Scripts\CBP" 
+   b. npm install mongodb -g
+   c. npm link mongodb
