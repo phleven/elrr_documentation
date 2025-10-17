@@ -1,0 +1,6 @@
+{
+    "indexes":[
+        {"lname": 1, "encounter.encounterDt": 1 }, // index to support shard key
+        {"lname": 1, "encounterAttributes.key": 1 , "encounterAttributes.value": 1, "encounter.encounterDt": 1}
+    ]
+}
