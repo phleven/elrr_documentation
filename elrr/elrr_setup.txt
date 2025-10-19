@@ -378,7 +378,8 @@ Run elrrexternalservices and elrrdatasync:
 
 
 Run elrraggregator:
-    1. Open terminal
+    1. Reboot after datasync runs for the first time!!!
+    2. Open terminal
       a. cd C:\Users\phleven\git\elrraggregator
       b. git switch <branch>
       c. mvn clean install
