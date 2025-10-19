@@ -451,7 +451,7 @@ View runnung Docker containers:
 List Kafka topics:
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
+   b. docker exec -t -i b703929d7d93e000744b56e0a45b5cbf1f7a46fea41a26b6df9bfd5d9d98c04b /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --bootstrap-server=localhost:9092 --list
 
@@ -460,7 +460,7 @@ List Kafka topics:
 View Kafka topic details:
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
+   b. docker exec -t -i b703929d7d93e000744b56e0a45b5cbf1f7a46fea41a26b6df9bfd5d9d98c04b /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all
    e. ./kafka-configs.sh --bootstrap-server localhost:9092 --describe --topic datasync-statements --all | grep retention
@@ -470,7 +470,7 @@ View Kafka topic details:
 Delete and Recreate Kafka topic:
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
+   b. docker exec -t -i b703929d7d93e000744b56e0a45b5cbf1f7a46fea41a26b6df9bfd5d9d98c04b /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-topics.sh --delete --topic datasync-statements --bootstrap-server localhost:9092
    e. ./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic datasync-statements
@@ -480,7 +480,7 @@ Delete and Recreate Kafka topic:
 Consume Kafka Topic Messages:
 1. Open terminal
    a. Get hash for kafka from Docker --> Containers
-   b. docker exec -t -i 8d4683a331e5ef90b66fe5b8ad9358a18393105aed51128607358a8d3c93a857 /bin/bash
+   b. docker exec -t -i b703929d7d93e000744b56e0a45b5cbf1f7a46fea41a26b6df9bfd5d9d98c04b /bin/bash
    c. cd /opt/kafka/bin
    d. ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements --from-beginning
    	  ./kafka-console-consumer.sh -bootstrap-server localhost:9092 -topic datasync-statements-dlq --from-beginning
