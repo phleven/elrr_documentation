@@ -1,5 +1,5 @@
 // To run using MongoDB shell
-// load("/MongoDB Scripts/CBP/add_vechicle_documents.js")
+// load("/MongoDB Scripts/CBP/add-vechicle-documents.js")
 
 db = connect('mongodb://localhost/example');
 db.vechileEncounters.insertMany( [ 

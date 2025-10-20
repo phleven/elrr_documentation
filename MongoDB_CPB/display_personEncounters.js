@@ -1,3 +1,3 @@
 db = connect('mongodb://localhost/example');
 
-printjson(db.vechicleEncounters.find({}));
+printjson(db.personEncounters.find({}));

@@ -23,7 +23,7 @@ Switch current database
 use <db>
 
 Delete current database
-db.dropDatabase();
+db.dropDatabase()
 
 
 
@@ -34,14 +34,18 @@ Show collections
 show collections
 
 Delete collection:
-db.<collection>.drop();
+db.<collection>.drop()
 
 Count documents in a collection
-db.vechileEncounters.countDocuments({});
+db.vechileEncounters.countDocuments({})
 
 Display all documents in a collection
 db.vechileEncounters.find()
 db.personEncounters.find()
+
+Display indexes in a collection
+db.vechileEncounters.getIndexes()
+db.personEncounters.getIndexes()
 
 
 
