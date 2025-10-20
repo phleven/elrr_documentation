@@ -2,7 +2,7 @@
     "objects": [
         {
             "encounter": {
-                "encounterDt": "2023-10-01T10:00:00Z",
+                "encounterDt": "2023-10-01T10:00:00Z"
             },
             "fname": "John",
             "lname": "Doe",

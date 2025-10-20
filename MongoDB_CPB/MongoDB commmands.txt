@@ -5,6 +5,9 @@ console.clear()
 
 Load script
 load("/MongoDB Scripts/CBP/data-generator.js")
+load("/MongoDB Scripts/CBP/add-vechile-documents.js")
+load("/MongoDB Scripts/CBP/add-person-documents.js")
+
 
 
 Database version
@@ -38,7 +41,7 @@ db.vechileEncounters.countDocuments({});
 
 Display all documents in a collection
 db.vechileEncounters.find()
-
+db.personEncounters.find()
 
 
 
