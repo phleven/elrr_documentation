@@ -1,3 +1,0 @@
-Load load-data-generator.js from MMongoDB shell:
-1. Open MongoDB shell
-   a. load("/MongoDB Scripts/CBP/load-data-generator.js")

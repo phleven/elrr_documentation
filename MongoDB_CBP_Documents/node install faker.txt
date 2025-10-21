@@ -1,0 +1,5 @@
+Install faker
+1. Open terminal
+   a. cd "C:\Users\phleven\git\CBP" 
+   b. npm install @faker-js/faker -g
+   c. npm link @faker-js/faker

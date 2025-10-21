@@ -4,9 +4,8 @@ console.clear()
 
 
 Load script
-load("/MongoDB Scripts/CBP/data-generator.js")
-load("/MongoDB Scripts/CBP/add-vechile-documents.js")
-load("/MongoDB Scripts/CBP/add-person-documents.js")
+load("/Users/phleven/git/CBP/add-vechile-documents.js")
+load("/Users/phleven/git/CPB/add-person-documents.js")
 
 
 
@@ -36,8 +35,13 @@ show collections
 Delete collection:
 db.<collection>.drop()
 
+Delete all documents in a collection
+db.vechileEncounters.deleteMany({})
+db.personEncounters.deleteMany({})
+
 Count documents in a collection
-db.vechileEncounters.countDocuments({})
+db.vechileEncounters.countDocuments()
+db.personEncounters.countDocuments()
 
 Display all documents in a collection
 db.vechileEncounters.find()
@@ -47,9 +51,5 @@ Display indexes in a collection
 db.vechileEncounters.getIndexes()
 db.personEncounters.getIndexes()
 
-
-
-
-
-
-
+Drop an index in a collection
+db.vechileEncounters.dropIndex("licensePlate_1_encounter.encounterDt_1")

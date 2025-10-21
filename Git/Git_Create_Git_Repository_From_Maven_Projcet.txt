@@ -6,4 +6,4 @@ Create Git Repository From Maven Project
    d. git commit -m "Initial commit"
    e. git remote add origin https://github.com/US-ELRR/elrrservices.git
    f. git pull
-   g. git push -u origin latest
+   g. git push -u origin main
