@@ -14,3 +14,4 @@ Create Git Repository
  Import Git Repository
  1. Eclipse --> File --> Import --> Git --> Projects from Git --> Existing local Repository --> Add
     a. Select C:\Users\phleven\git\CBP\.git
+    b. Import as a general project
