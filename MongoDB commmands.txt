@@ -33,7 +33,7 @@ Show collections
 show collections
 
 Delete collection:
-db.<collection>.drop()
+db.vechicleEncounters.drop()
 
 Delete all documents in a collection
 db.vechileEncounters.deleteMany({})

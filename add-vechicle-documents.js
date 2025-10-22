@@ -26,7 +26,8 @@ db.vechileEncounters.insertMany( [
 				{"key": "eyeColor", "value": "blue"},
 				{"key": "hairColor", "value": "blonde"},
 				{"key": "gender", "value": "male"},
-				{"key": "ethnicity", "value": "caucasian"}
+				{"key": "ethnicity", "value": "caucasian"},
+				{"key": "country", "value": "US"}
 			]
         },
 		{
@@ -53,7 +54,8 @@ db.vechileEncounters.insertMany( [
 				{"key": "eyeColor", "value": "brown"},
 				{"key": "hairColor", "value": "brown"},
 				{"key": "gender", "value": "female"},
-				{"key": "ethnicity", "value": "caucasian"}
+				{"key": "ethnicity", "value": "caucasian"},
+				{"key": "country", "value": "US"}
 			]
         },
 		{
@@ -80,7 +82,8 @@ db.vechileEncounters.insertMany( [
 					{"key": "eyeColor", "value": "brown"},
 					{"key": "hairColor", "value": "grey"},
 					{"key": "gender", "value": "male"},
-					{"key": "ethnicity", "value": "caucasian"}
+					{"key": "ethnicity", "value": "caucasian"},
+					{"key": "country", "value": "US"}
 				]
 		    }
 		])

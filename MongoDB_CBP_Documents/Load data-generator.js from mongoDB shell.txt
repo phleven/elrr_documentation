@@ -1,3 +1,0 @@
-Load data-generator.js from MongoDB shell:
-1. Open MongoDB shell
-   a. load("/Users/phleven/git/CBP/data-generator.js")

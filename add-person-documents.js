@@ -21,7 +21,8 @@ db.personEncounters.insertMany( [
 						{"key": "eyeColor", "value": "brown"},
 						{"key": "hairColor", "value": "brown"},
 						{"key": "gender", "value": "male"},
-						{"key": "ethnicity", "value": "caucasian"}
+						{"key": "ethnicity", "value": "caucasian"},
+						{"key": "country", "value": "US"}
 					]
 			    },
 			    {
@@ -47,7 +48,8 @@ db.personEncounters.insertMany( [
 						{"key": "eyeColor", "value": "brown"},
 						{"key": "hairColor", "value": "brown"},
 						{"key": "gender", "value": "male"},
-						{"key": "ethnicity", "value": "caucasian"}
+						{"key": "ethnicity", "value": "caucasian"},
+						{"key": "country", "value": "US"}
 					]
 			    }
 			])
