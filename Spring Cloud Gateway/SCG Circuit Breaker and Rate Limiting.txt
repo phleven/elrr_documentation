@@ -1,0 +1,12 @@
+We'll be using SCG for circuit breaking and rate limiting from the IStio mesh to external systems.
+
+Circuit breakeking using SCG and Resliilience4J.
+
+Rate Limiting using SCG and BUcket4J.
+
+See Platform Addendum (on IRS side).
+
+In the cloud we'll use EXternal API gateway intstead of SCG.
+In the cloud we'll also be using Elasticache (AWS SDK) and EKS.
+
+CLM 1141373 and 1141374.
