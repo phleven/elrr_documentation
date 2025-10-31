@@ -1,0 +1,47 @@
+Steps Explained:
+
+Checkout Code: Pulls the repository code.
+
+Configure AWS Credentials: Uses GitHub Secrets for secure access to AWS.
+
+Deploy Application: Uploads files to S3 and triggers deployment using AWS CodeDeploy.
+
+3. Configure AWS Resources
+
+a) Create an S3 Bucket
+
+Store deployment artifacts in an S3 bucket:
+
+aws s3 mb s3://your-s3-bucket-name
+Copy
+b) Set Up CodeDeploy
+
+Create a CodeDeploy application and deployment group in the AWS Management Console.
+
+Install the CodeDeploy agent on your EC2 instances.
+
+c) IAM Role for GitHub Actions
+
+Create an IAM role with permissions for S3, CodeDeploy, and EC2.
+
+Add the role's ARN as a GitHub secret (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY).
+
+4. Trigger Deployment
+
+Push changes to the main branch or manually trigger the workflow from the GitHub Actions tab.
+
+5. Verify Deployment
+
+Check the deployment status in the AWS CodeDeploy console.
+
+Access your application via the configured load balancer or EC2 instance URL.
+
+Best Practices
+
+Use OpenID Connect (OIDC) for secure authentication instead of long-lived credentials.
+
+Automate testing stages before deployment in your workflow.
+
+Clean up unused resources to avoid unnecessary costs.
+
+This setup ensures seamless integration between GitHub Action
