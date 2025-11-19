@@ -27,10 +27,10 @@ Create a new Eclipse Workspace:
             1. Browse --> SumatraPDF
             
     c. Add .docx to file associations
-      1. Eclipse --> Window --> Preferences --> General --> Editors --> File Associations --> Add
-         a. Add File type = .docx
-         b. Associated Editors --> Add --> External programs
-            1. Microsoft Word Document
+       1. Eclipse --> Window --> Preferences --> General --> Editors --> File Associations --> Add
+          a. Add File type = .docx
+          b. Associated Editors --> Add --> External programs
+             1. Microsoft Word Document
         
         
         
