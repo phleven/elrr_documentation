@@ -30,7 +30,7 @@ Use Java 17:
 
 Install Dependencies:
 1. Install git
-   a. Run Git-2.51.0.2-64-bit.exe
+   a. Run Git-2.53.0-64-bit.exe
       1. Destination Location = C:\Program Files\Git
       2. Use Notepad as Git's default editor
       3. Override the default branch name for new repositories = main
@@ -49,16 +49,25 @@ Install Dependencies:
       4. git config --global user.name "Leven"
       
 2. Install Maven
-   a. Unzip apache-maven-3.9.11-bin.zip to C:\
-   b. SET M2_HOME=C:\apache-maven-3.9.11
+   a. Unzip apache-maven-3.9.12-bin.zip to C:\
+   b. SET M2_HOME=C:\apache-maven-3.9.12
    c. SET M2=%M2_HOME%\bin
-   d. Add C:\apache-maven-3,9.11\bin to path
+   d. Add C:\apache-maven-3,9.12\bin to path
 
 3. Install Docker Desktop
-   a. Run Docker Desktop Installer.exe
-      1. Check add shortcut to desktop
+   a. Windows key + R --> appwiz.cpl --> Turn Windows features on or off
+      1. Check Hyper-V Platform 
+      2. Check Virtual machine platform
+      
    b. Reboot
-   c. Open terminal
+
+   c. Run Docker Desktop Installer.exe
+      1. Check Use WSL-2 instead ofHyper-V (recommeded)
+      2. Check add shortcut to desktop
+      
+   d. Reboot
+   
+   e. Open terminal
       1. wsl --update
          a. New UNIX username = phleven
          b. New password = Cynthia1#
