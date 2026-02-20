@@ -143,7 +143,7 @@ Create a new Eclipse Workspace:
   g. Install Eclipse Color Themes Plugin:
       1. Eclipse --> Help --> Install New Software --> Add
          a. Name = Eclipse Color Themes
-         b. Location = http://eclipse-color-theme.github.io/update/
+         b. Location = https://eclipse-color-theme.github.io/update/
       2. Eclipse --> Window --> Preferences --> General --> Apperance --> Color Theme
          a. Select Solarized Light
 
